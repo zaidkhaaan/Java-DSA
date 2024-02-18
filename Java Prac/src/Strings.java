@@ -1,6 +1,13 @@
-import java.util.Scanner;
+public class Strings {
 
-public class pali {
+    // tcs nqt sheet section by striver
+
+    /*
+   before understanding string functions let us study important string topics such as
+   string function & string builder , string to array function , string and char functions
+    sheets. char array
+
+     */
     public static void main(String[] args) {
 
         /*
@@ -28,6 +35,12 @@ public class pali {
          */
 
 
+
+
+
+
+
+
         /*
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
@@ -49,6 +62,12 @@ public class pali {
         }
 
          */
+
+
+
+
+
+
 
         /*
                 Scanner sc = new Scanner(System.in);
@@ -72,6 +91,9 @@ public class pali {
          }
          */
 
+
+
+
         /*
         String str = "take u forward";
         System.out.println("String after removing the vowels \n" + RemoveVowels(str));
@@ -83,6 +105,13 @@ public class pali {
         String str = "take u forward";
         System.out.println("String after removing the vowels \n"+RemoveVowels(str));
          */
+
+
+
+
+
+
+
 
 
         /*
@@ -101,6 +130,14 @@ public class pali {
                 System.out.println(noSpacesStr);
 
          */
+
+
+
+
+
+
+
+
         /*
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
@@ -116,12 +153,13 @@ public class pali {
 
          */
 
+        /*
         String str = "abc123def564ghi789";  // Input string
         int sum = 0;  // Initialize sum of numbers
         String num = "";  // Initialize current number
 
         for (int i = 0; i < str.length(); i++) {
-            char c = str.charAt(i);
+            char c =str.charAt(i);
 
             // If the current character is a digit, append it to the current number
             if (Character.isDigit(c)) {
@@ -141,6 +179,14 @@ public class pali {
         System.out.println("The sum of numbers in the string is: " + sum);
     }
 }
+
+         */
+
+
+    }
+}
+
+
 
     /*
           public static String RemoveVowels(String str) {
