@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraysPrac {
@@ -42,6 +43,9 @@ public class ArraysPrac {
 
          */
 
+
+        /*
+
         Scanner sc = new Scanner(System.in);
 
         int a = sc.nextInt();
@@ -77,6 +81,15 @@ public class ArraysPrac {
         }
 
 
+
+         */
+
+
+       }
+
+
+
+
     }
 
 
@@ -99,4 +112,3 @@ public class ArraysPrac {
 
 
 
-}
