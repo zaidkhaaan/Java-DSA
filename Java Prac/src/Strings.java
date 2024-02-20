@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -75,34 +76,363 @@ public class Strings {
          */
 
 
+        // STRIVER'S APPROACH
+/*
+        String str = "ABCDCBA";
+        boolean ans = isPalindrome(str);
+
+        if (ans == true) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }
+
+
+ */
+
+
+        // Stivers Function for palindrome
+
+
+//    static private boolean isPalindrome(String s) {
+//
+//        /*
+//        It starts by setting two pointers, left at the start of
+//        the string and right at the end of the string.
+//         */
+//
+//        int left = 0, right = s.length() - 1;
+//        while (left < right)
+//        /*
+//        Then it enters a loop that continues
+//        as long as left is less than right.
+//         */
+//
+//        {
+//            char l = s.charAt(left), r = s.charAt(right);
+//            /*
+//            It gets the characters at the left and right
+//            positions of the string
+//             */
+//            if (!Character.isLetterOrDigit(l))
+//                left++;
+//
+//            // If the character at the left is not a letter or digit,
+//                // it moves the left pointer one step to the right.
+//
+//            else if (!Character.isLetterOrDigit(r))
+//                right--;
+//
+//            // If the character at the right is not a letter or digit,
+//                // it moves the right pointer one step to the left.
+//
+//            else if (Character.toLowerCase(l) != Character.toLowerCase(r))
+//                return false;
+//            /*
+//            If both characters are letters or digits, it compares them.
+//             If they are not the same (ignoring case),
+//             it immediately returns false, indicating that the string is not a palindrome.
+//             */
+//            else {
+//                left++;
+//                right--;
+//                /*
+//                If the characters are the same,
+//                it moves both pointers towards the center of the string and continues
+//                to the next iteration of the loop.
+//                 */
+//            }
+//        }
+//        return true;
+//        /*
+//        If the function has compared all pairs of characters without finding a mismatch,
+//        it exits the loop and returns true,
+//        indicating that the string is a palindrome.
+//         */
+
+
+        // Q2 Count number of vowels, consonants, spaces in String.
+
+
+        // my approach
+
+
+//        Scanner sc = new Scanner(System.in);
+//        String str = sc.nextLine();
+//        str = str.toLowerCase();
+//        int length = str.length();
+//
+//        int vowels = 0;
+//        int consotants = 0;
+//        int whitespace = 0;
+//
+//        for (int i = 0; i < length; i++) {
+//            char ch = str.charAt(i);
+//           if (ch == 'a' || ch =='e'|| ch =='i'|| ch=='o'|| ch=='u'){
+//               vowels++;
+//           }else if ( ch >= 'a' &&  ch <= 'z'){
+//               consotants++;
+//           } else if (ch == ' ') {
+//               whitespace++;
+//           }
+//        }
+//        System.out.println(vowels);
+//        System.out.println(consotants);
+//        System.out.println(whitespace);
+
+
+        // Q3 Find the ASCII value of a character
+        // Problem Statement: Given a character,
+        // Find the ASCII value of the character.
+
+
+        // My appraoch
 
 
         /*
-        3rd approach convert the string to char array  and use sort function
-        and comapre it with original string
+        // when we convert char into integer datatype we get ascII value
+
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        for (int i = 0; i < str.length(); i++) {
+            int asciII =str.charAt(i);
+            System.out.println(asciII);
+        }
+
+         */
+
+        // Naive approach
+
+        /*
+        char ch = 'A';
+        int ascii = ch;
+        System.out.println(ascii);
+         */
+
+        //  bing ai approach
+
+        /*
+        char ch = 'A'; // replace 'A' with the character you want
+        int ascii = (int) ch;
+        System.out.println("The ASCII value of " + ch + " is: " + ascii);
+
+
+         */
+
+
+        // Q 4 Remove all vowels from the String
+        //Problem Statement: Given a String,
+        // write a program to remove vowels from a given String.
+
+
+
+        /*
+        my approach
+
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+
+        str = str.toLowerCase();
+        String str2 = str.replaceAll("[a e i o u A E I O U]"," ");
+        String str3 = str2.replaceAll("\\s","");
+        System.out.println(str3);
+
+
+         */
+
+
+        // 2nd approach ( By self)
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        str=str.toLowerCase();
+        String wovowel = "";
+
+        for (int i = 0; i < str.length(); i++) {
+
+            char ch = str.charAt(i);
+            if (ch == 'a' || ch =='e'|| ch =='i'|| ch=='o'|| ch=='u'){
+                wovowel += " ";
+            }
+            else{
+                wovowel +=ch;
+            }
+
+        }
+        wovowel = wovowel.replaceAll("\\s","");
+        System.out.println(wovowel);
+
+         */
+
+
+        // Strivers Approach
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        str=str.toLowerCase();
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i)=='a' ||  str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u'){
+                str=str.substring(0,i) + str.substring(i+1);
+            }
+        }
+
+        System.out.println(str);
+
+         */
+
+        // Q4 Given a string,
+        // write a program to remove all the whitespaces from the string
+
+
+        // My appraoch
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        str=str.toLowerCase();
+
+        str=str.replaceAll("\\s","");
+        System.out.println(str);
+
          */
 
 
 
+        /*
+
+         2nd approach
+
         Scanner sc = new Scanner(System.in);
-        String str = sc.next();
+        String str = sc.nextLine();
 
-        char[] arr1 = str.toCharArray();
-        char[] arr2 = str.toCharArray();
+        String str1 = "";
 
-        Arrays.sort(arr2);
-
-        if (arr2.equals(arr1)){
-            System.out.println("Palindrome");
-        }else{
-            System.out.println("Non Palindrome");
+        for (char c :str.toCharArray()){
+            if ( c!= ' '){
+                str1+=c;
+            }
         }
 
+        System.out.println(str1);
+         */
+
+
+        // strivers approach
+
+        /*
+        char[] str = "Take you forward ".toCharArray();
+        int count = 0; // to track spaces seen so far
+
+        for (int i = 0; i < str.length; i++)
+            if (str[i] != ' ') {
+                str[count] = str[i];
+                count++; // increment count
+            }
+
+ //        System.out.println(String.valueOf(str).subSequence(0, count));
+
+         */
+
+
+        // Q6  Write a program to remove all characters from a string except alphabets in a given string.
+
+
+        // My approach
 
 
 
+        /*
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+     //   s=s.toLowerCase();
+        String s2 ="";
 
+        for (int i = 0; i < s.length(); i++) {
+            char ch =s.charAt(i);
+            if (ch >= 'a' && ch <= 'z' || ch >= 'A'&& ch <= 'Z'){
+                s2 +=ch;
+            }else{
+                s2 +=" ";
+            }
+        }
+        s2=s2.replaceAll("\\s","");
+        System.out.println(s2);
     }
+
+         */
+
+        // Bing ai approach
+
+
+        /*
+        String str = "Hello, World! 123";
+        str = str.replaceAll("[^a-zA-Z]", "");
+        System.out.println(str);
+         */
+
+
+        // bing ai second approach
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String s1 = "";
+
+        for (char c: s.toCharArray()){
+            if (Character.isLetter(c)){
+                s1 +=c;
+            }
+        }
+        System.out.println(s1);
+         */
+
+
+
+        // Strivers approach
+
+        /*
+
+        String str = "take12% *&u ^$#forward";
+        int n = str.length();
+        StringBuffer ans = new StringBuffer();
+
+        for (int i = 0; i < n; i++) {
+            int ascii = (int) str.charAt(i); //ascii value
+
+            if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) // if alphabets
+                ans.append(str.charAt(i));
+        }
+
+        System.out.println("Resultant string:");
+        System.out.println(ans.toString());
+
+         */
+
+        // Q7  Write a program that reverses a given string (in-place).
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String rev= "";
+
+        for (int i = s.length()-1; i >=0 ; i--) {
+            rev+=s.charAt(i);
+        }
+        System.out.println(rev);
+
+         */
+
+// Q8 Remove brackets from an algebraic expression
+//In this article, we will solve the most asked interview question: “Remove brackets from an algebraic expression”
+    }
+}
+
+
+
 
             /*
         String str = "take u forward";
@@ -210,4 +540,4 @@ public class Strings {
 
          */
 
-}
+
