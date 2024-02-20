@@ -391,7 +391,6 @@ public class Strings {
          */
 
 
-
         // Strivers approach
 
         /*
@@ -427,9 +426,134 @@ public class Strings {
          */
 
 // Q8 Remove brackets from an algebraic expression
-//In this article, we will solve the most asked interview question: “Remove brackets from an algebraic expression”
-    }
-}
+//In this article, we will solve the most asked interview question:
+// “Remove brackets from an algebraic expression”
+
+
+        // my approach
+        // issue trailing spaces at front
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String s1 = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == '(' || ch == ')') {
+                s1 += " ";
+
+            } else {
+                s1 += ch;
+            }
+        }
+            s1.replaceAll("\\s","");
+            System.out.println(s1);
+
+         */
+
+
+        // striver approach using string builder
+
+
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        StringBuilder answer = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) != '(' && s.charAt(i)!=')'){
+                answer.append(s.charAt(i));
+            }
+
+            answer.toString();
+
+        }
+        System.out.println(answer);
+
+         */
+
+        // Q9
+
+        // Given a string, calculate the sum of numbers in a string
+        // (multiple consecutive digits are considered one number)
+
+
+        // to find out numbers present in a string
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder();
+
+      for (char c : s.toCharArray()){
+          if (Character.isDigit(c)){
+              sb.append(c);
+          }
+      }
+
+        s = sb.toString();
+        System.out.println(s);
+
+         */
+
+
+        // not able to solve
+
+        /*
+            Scanner sc = new Scanner(System.in);
+            String str = sc.nextLine();
+            int sum = 0;
+            String num = "0";
+
+            for (char c : str.toCharArray()) {
+                if (Character.isDigit(c)) {
+                    num += c; // append the digit to num
+                } else {
+                    sum += Integer.parseInt(num); // add the number to sum
+                    num = "0"; // reset num
+                }
+            }
+
+            sum += Integer.parseInt(num); // add the last number to sum
+            System.out.println("The sum of numbers in the string is: " + sum);
+
+
+         */
+
+        // Q 10 Given a string, write a program to
+        // Capitalize the first and last character of each word of that string.
+
+
+        // easier ai approach
+
+        /*
+                  Scanner sc = new Scanner(System.in);
+                  String str = sc.nextLine();
+                  str.toLowerCase();
+               // String str = "hello world"; // replace with your string
+                String[] words = str.split(" ");
+                StringBuilder result = new StringBuilder();
+
+                for (String word : words) {
+                    String firstLetter = word.substring(0, 1).toUpperCase();
+                    String lastLetter = word.substring(word.length() - 1).toUpperCase();
+                    String middle = word.substring(1, word.length() - 1);
+
+                    result.append(firstLetter).append(middle).append(lastLetter).append(" ");
+                }
+
+                System.out.println(result.toString().trim());
+
+         */
+            }
+        }
+
+
+
+
+
+
 
 
 
