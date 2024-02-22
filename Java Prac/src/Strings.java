@@ -546,8 +546,69 @@ public class Strings {
                 System.out.println(result.toString().trim());
 
          */
+
+        // Q11 Problem Statement: Given a string,
+        // calculate the frequency of characters in a string.
+
+
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        str = str.toLowerCase();
+        char c[] = str.toCharArray();
+        Arrays.sort(c);
+
+        char ch = c[0]; //
+        int count = 1;
+        for (int i = 1; i < c.length; i++) {
+            if (c[i] == ch) //
+                count++;
+            else {
+                System.out.print(ch);
+                System.out.print(count + " ");
+                ch = c[i]; //
+                count = 1;
             }
         }
+        System.out.print(ch);
+        System.out.print(count + " ");
+
+         */
+
+
+        // open ai method
+
+/*
+        String str = "Your string here";
+        int[] freq = new int[256];
+
+        for (int i = 0; i < str.length(); i++) {
+            freq[str.charAt(i)]++;
+        }
+
+        for (int i = 0; i < 256; i++) {
+            if (freq[i] > 0) {
+                System.out.println((char) i + " - " + freq[i]);
+            }
+        }
+
+ */
+
+
+
+
+
+
+
+
+
+    }
+}
+
+
+
+
 
 
 

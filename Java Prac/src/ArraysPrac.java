@@ -85,6 +85,55 @@ public class ArraysPrac {
          */
 
 
+        // Q1 find smallest number in an array
+
+
+        // stivers approach
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int [] arr = new int[n];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]=sc.nextInt();
+        }
+
+        Arrays.sort(arr);
+        System.out.println(arr[arr.length-1]);
+
+         */
+
+        // My approach
+
+
+
+
+
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int [] arr = new int[n];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]=sc.nextInt();
+        }
+        int low =arr[0];
+        for (int i = 1; i < arr.length; i++) {
+
+            if (low>arr[i]) {
+                low=arr[i];
+            }
+
+
+        }
+        System.out.println(low);
+
+
+         */
        }
 
 
