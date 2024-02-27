@@ -340,6 +340,8 @@ public class ArraysPrac {
 
          */
 
+
+
         /*
         String[] array = {"apple", "banana", "cherry"};
 
@@ -348,9 +350,33 @@ public class ArraysPrac {
 
          */
 
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+       // System.out.println(str.length());
+
+
+
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i+1; j <=str.length() ; j++) {
+
+                    System.out.println(str.substring(i,j)+" ");
+                }
+            }
+        System.out.println();
+
+
+        }
+
+
+
+
+
+
+
     }
 
-}
+
 
 
 
