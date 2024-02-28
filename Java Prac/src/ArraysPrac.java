@@ -350,28 +350,24 @@ public class ArraysPrac {
 
          */
 
-        Scanner sc = new Scanner(System.in);
-        String str = sc.next();
+
+
 
        // System.out.println(str.length());
 
 
+int [] arr = {10,12,13,14,15,16,17};
+int sum =0;
 
-        for (int i = 0; i < str.length(); i++) {
-            for (int j = i+1; j <=str.length() ; j++) {
+        for (int i = 0; i < arr.length ; i++) {
+            sum +=arr[i];
+        }
 
-                    System.out.println(str.substring(i,j)+" ");
-                }
-            }
-        System.out.println();
+        System.out.println(sum);
+
 
 
         }
-
-
-
-
-
 
 
     }

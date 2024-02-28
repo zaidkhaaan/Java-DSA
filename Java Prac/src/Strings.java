@@ -595,6 +595,93 @@ public class Strings {
 
  */
 
+        // toggle case string question
+
+
+        /*
+       Scanner sc = new Scanner(System.in);
+       String str = sc.nextLine();
+       StringBuilder sb = new StringBuilder(str);
+
+        for (int i = 0; i < sb.length(); i++) {
+            char ch = sb.charAt(i);
+
+            if (ch>='a' && ch <= 'z'){
+                char upc = (char)(ch - 32);
+                sb.setCharAt(i,upc);
+            }else if (ch >= 'A' && ch <= 'Z') {
+                char lch = (char)(ch + 32);
+                sb.setCharAt(i,lch);
+            }
+        }
+        str =sb.toString();
+        System.out.println(str);
+
+         */
+
+        // using college wallah approach
+
+
+
+
+
+
+
+        // PHysiCs -> phYSIcS
+
+        /*
+        for (int i = 0; i < str.length(); i++) {
+
+            boolean flag = true; // true -> captial
+
+            char ch = str.charAt(i);
+            if (ch ==' ') continue;
+            if (ch >= '0' && ch <= '9') continue;
+            int ascii = (int)ch;
+            if (ascii >= 97 && ascii <= 122) flag=false;// small
+         //   if (ascii >= 48 && ascii <= 57) continue;
+            if (flag == true) // captial
+                {
+                ascii += 32;
+                char dh = (char)ascii;
+                str.setCharAt(i,dh);
+            }
+            else // small
+
+            {
+                ascii -= 32;
+                char dh = (char)ascii;
+                str.setCharAt(i,dh);
+            }
+        }
+        System.out.println(str);
+
+
+         */
+
+
+// palindromic substring
+
+        /*
+        Scanner sc = new Scanner(System.in);
+
+        StringBuilder str = new StringBuilder(sc.nextLine());
+        StringBuilder gtr = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i+1; j <= str.length() ; j++) {
+                str=(str.substring(i,j);
+                gtr = str.reverse();
+
+
+            }
+            System.out.println();
+        }
+
+         */
+
+
+
 
 
 
