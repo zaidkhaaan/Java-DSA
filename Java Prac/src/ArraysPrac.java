@@ -356,14 +356,18 @@ public class ArraysPrac {
        // System.out.println(str.length());
 
 
-int [] arr = {10,12,13,14,15,16,17};
-int sum =0;
+int [] arr = {10,12,10,14,15,10,17};
+int value = 10;
+int lastidx = -1;
 
-        for (int i = 0; i < arr.length ; i++) {
-            sum +=arr[i];
+        for (int i = 0; i < arr.length  ; i++) {
+            if (arr[i] == value){
+                lastidx=i;
+            }
         }
+        System.out.println(lastidx);
 
-        System.out.println(sum);
+
 
 
 

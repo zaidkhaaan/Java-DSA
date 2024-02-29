@@ -622,11 +622,6 @@ public class Strings {
         // using college wallah approach
 
 
-
-
-
-
-
         // PHysiCs -> phYSIcS
 
         /*
@@ -681,16 +676,259 @@ public class Strings {
          */
 
 
+        /*
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+
+
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j <= str.length(); j++) {
+                if (isPlaindrome(str.substring(i, j)) == true) {
+                    System.out.println(str.substring(i,j)+" ");
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+
+
+
+      //   System.out.println(isPlaindrome(str));
+
+         */
+
+
+        // reverse a word in a sentence
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String ans = "";
+
+     String [] s = str.split(" ");
+     StringBuilder str1 = new StringBuilder();
+
+        for (String word:s)
+        {
+            str1.append(word);
+            str1.reverse();
+            ans+=str1;
+            ans += " ";
+            str1 = new StringBuilder();
+        }
+        System.out.println(ans);
+
+
+         */
+        /*
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        System.out.println(compresion1(str));
+        System.out.println(compression2(str));
+
+         */
+
+
+        /*
+        Scanner sc = new Scanner (System.in);
+        String s = sc.next().replaceAll("[^a-zA-Z0-9]", "");
+
+        s = s.toLowerCase();
+        StringBuilder str = new StringBuilder(s).reverse();
+
+
+        if (s.equals(str.toString())) System.out.println("true");
+        else System.out.println("false");
+
+
+         */
 
 
 
 
+        /*
+        for (int i = s.length()-1 ;i >= 0 ; i--) {
+            char chstart = s.charAt(i);
+            s1 +=chstart;
+        }
+        System.out.println(s1);
+
+        if (s.equals(s1)){
+            System.out.println("palindrome");
+        }else {
+            System.out.println("Not Palindrome");
+        }
+
+         */
 
 
+
+        /*
+
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        s=s.toLowerCase();
+        String s2 ="";
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch =s.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+                s2+=' ';
+            }
+            else {
+                s2+=ch;
+            }
+        }
+        s2=s2.replaceAll(" ","");
+        System.out.println(s2);
+
+         */
+
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+        sc.close();
+
+        int vowels = 0;
+        int consonants = 0;
+        int spaces = 0;
+
+        for (char ch : input.toCharArray()) {
+            if (Character.isLetter(ch)) {
+                char lowercaseCh = Character.toLowerCase(ch);
+                if (lowercaseCh == 'a' || lowercaseCh == 'e' || lowercaseCh == 'i' || lowercaseCh == 'o' || lowercaseCh == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            } else if (ch == ' ') {
+                spaces++;
+            }
+        }
+
+         */
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        s=s.toLowerCase();
+
+        s=s.replaceAll("[^a-zA-Z0-9]","");
+        System.out.println(s);
+
+         */
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.next();
+        String s2 = sc.next();
+
+
+        s1=s1.toLowerCase();
+        s2=s2.toLowerCase();
+
+        char ch1 [] = s1.toCharArray();
+        char ch2 [] = s2.toCharArray();
+
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
+
+        if (Arrays.equals(ch1, ch2)) {
+            System.out.println("The two strings are anagrams of each other.");
+        } else {
+            System.out.println("The two strings are not anagrams.");
+        }
+
+
+         */
 
 
 
     }
+
+    /*
+    public static String compresion1 (String str){
+        String s = str.charAt(0) +"";
+
+        for (int i = 1; i < str.length() ; i++) {
+            char curr = str.charAt(i);
+            char prev = str.charAt(i-1);
+
+            if (curr != prev){
+                s +=curr;
+            }
+        }
+        str=s.toString();
+        return s;
+    }
+
+    public static String compression2 (String str) {
+        String s = str.charAt(0) + "";
+        int count = 1;
+
+        for (int i = 1; i < str.length(); i++) {
+            char curr = str.charAt(i);
+            char prev = str.charAt(i - 1);
+
+            if (curr == prev) {
+                count++;
+            } else {
+                if (count > 1) {
+                    s += count;
+                    count = 1;
+                }
+                s += curr;
+            }
+
+        }
+
+        if (count >1){
+            s+=count;
+            count = 1;
+        }
+        str=s.toString();
+        return s;
+    }
+
+     */
+
+    /*
+
+        for (String word : words) {
+            StringBuilder reversedWord = new StringBuilder(word).reverse();
+            reversedSentence.append(reversedWord).append(" ");
+        }
+
+        System.out.println(reversedSentence.toString().trim());
+    }
+     */
+
+
+
+    /*
+    public static boolean isPlaindrome(String str) {
+        int i = 0;
+        int j = str.length() - 1;
+
+        while (i < j) {
+            if (str.charAt(i) == str.charAt(j)) {
+                i++;
+                j--;
+            } else{
+                return false;
+            }
+        }
+        return true;
+    }
+
+     */
+
+
 }
 
 
