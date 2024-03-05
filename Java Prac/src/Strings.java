@@ -848,9 +848,7 @@ public class Strings {
          */
 
 
-
-
- // convert number to string
+        // convert number to string
 //        int num = 42;
 //        String numAsString = Integer.toString(num);
 //        //System.out.println(numAsString.toLowerCase());
@@ -889,9 +887,9 @@ public class Strings {
         System.out.println(formattedString);
          */
 
-    //    String s = "ZAID";
+        //    String s = "ZAID";
 
-     //   String toString (char ch) ;
+        //   String toString (char ch) ;
 
         /*
 
@@ -918,8 +916,10 @@ public class Strings {
         System.out.println(sum);
 
 
+
          */
-      
+
+      /*
         String str = "12abc3";
         
         String tempsum ="0";
@@ -939,7 +939,72 @@ public class Strings {
         }
         sum+=Integer.parseInt(tempsum);
         System.out.println(sum);
+
+       */
+
+//        String s = "Take you forward";
+//       char ch [] =s.toCharArray();
+        /*
+       Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+        int arr [] = new int  [n];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]= sc.nextInt();
+        }
+
+        int data = 9;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]==data){
+                System.out.println(i);
+            }
+        }
+
+         */
+
+        /*
+
+        String input = "hello world,how are you!";
+        // Split the input string into words
+        String[] words = input.split(" ");
+
+        // Initialize a StringBuilder to store the result
+        StringBuilder result = new StringBuilder();
+
+        for (String word : words) {
+            if (!word.isEmpty())
+            // .isEmpty() function
+            {
+                // Capitalize the first character
+                char firstChar = Character.toUpperCase(word.charAt(0));
+
+                // Capitalize the last character
+                char lastChar = Character.toUpperCase(word.charAt(word.length() - 1));
+
+                // Append the modified word to the result
+                result.append(firstChar).append(word.substring(1, word.length() - 1)).append(lastChar).append(" ");
+            }
+        }
+
+
+
+        // Remove the trailing space
+        String capitalizedString = result.toString().trim();
+
+        System.out.println("Capitalized String: " + capitalizedString);
+
+         */
+//
+//        String input = "hello   world,   how   are   you?"; // Example input with extra spaces
+//
+//        // Split the input string into words
+//        String[] words = input.split("\\s+");
+        // Split by one or more spaces
+
     }
+
+
+
 
     /*
     public static String compresion1 (String str){
