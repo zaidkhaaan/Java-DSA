@@ -850,9 +850,95 @@ public class Strings {
 
 
 
+ // convert number to string
+//        int num = 42;
+//        String numAsString = Integer.toString(num);
+//        //System.out.println(numAsString.toLowerCase());
+//
+//        System.out.println("Number as string: " + numAsString +"  ");
 
 
+//        String strNum = "123";
+//        int parsedNum = Integer.parseInt(strNum);
+//
+//        int parsed1 = parsedNum+90;
+//        System.out.println("Parsed integer: " + parsed1);
 
+        /*
+        String str1 = "4";
+        String str2 = "04";
+      int n1 = Integer.parseInt(str1);
+     int n2 = Integer.parseInt(str2);
+    if (n1 == n2)
+    {
+            System.out.println("Both numeric strings are equal.");
+        }
+
+         */
+
+//       int apples = 5;
+//      String message = String.format("I have %d apples.", apples);
+//       System.out.println(message);
+
+
+        /*
+        String name = "Alice";
+        int age = 30;
+        double salary = 50000.75;
+        String formattedString = String.format("Name: %s, Age: %d, Salary: %.2f", name, salary , age);
+        System.out.println(formattedString);
+         */
+
+    //    String s = "ZAID";
+
+     //   String toString (char ch) ;
+
+        /*
+
+
+        Scanner sc = new Scanner(System.in);
+        String str = "1bc268"; // You can read the input string from the user if needed
+
+        String tempSum = "0";
+        int sum = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char s = str.charAt(i);
+
+            if (Character.isDigit(s)) {
+                tempSum += s;
+            } else {
+                sum += Integer.parseInt(tempSum);
+                tempSum = "0";
+            }
+        }
+
+        sum += Integer.parseInt(tempSum); // Add any remaining value in tempSum
+        System.out.print("Sum: ");
+        System.out.println(sum);
+
+
+         */
+      
+        String str = "12abc3";
+        
+        String tempsum ="0";
+        
+        int sum = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char s = str.charAt(i);
+
+            if (Character.isDigit(s)){
+                tempsum+=s;
+            }else{
+                sum+= Integer.parseInt(tempsum);
+                tempsum="0";
+            }
+
+        }
+        sum+=Integer.parseInt(tempsum);
+        System.out.println(sum);
     }
 
     /*
