@@ -994,11 +994,11 @@ public class Strings {
         System.out.println("Capitalized String: " + capitalizedString);
 
          */
-//
+
 //        String input = "hello   world,   how   are   you?"; // Example input with extra spaces
 //
 //        // Split the input string into words
-//        String[] words = input.split("\\s+");
+//         String[] words = input.split("\\s+");
         // Split by one or more spaces
 
     }
