@@ -962,16 +962,19 @@ public class Strings {
 
          */
 
-        /*
 
-        String input = "hello world,how are you!";
+
+        /*
+        String input = "hello   world,  how   are  you?"; // Example input with extra spaces
         // Split the input string into words
-        String[] words = input.split(" ");
+       // String[] words = input.split("\\s+");
+        String[] words = input.split("\\s+");
 
         // Initialize a StringBuilder to store the result
         StringBuilder result = new StringBuilder();
 
         for (String word : words) {
+
             if (!word.isEmpty())
             // .isEmpty() function
             {
@@ -984,22 +987,60 @@ public class Strings {
                 // Append the modified word to the result
                 result.append(firstChar).append(word.substring(1, word.length() - 1)).append(lastChar).append(" ");
             }
-        }
-
-
-
-        // Remove the trailing space
-        String capitalizedString = result.toString().trim();
-
-        System.out.println("Capitalized String: " + capitalizedString);
 
          */
+
+        String s ="ZAIDDIAZ";
+        s=s.toLowerCase();
+        int count=0;
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            for (int j = i + 1; j < s.length(); j++) {
+                if (ch == s.charAt(j)) {
+                    count++;
+
+                }
+            }
+
+
+        }
+        System.out.println(count);
+        /*
+      String s = "ZAIDDIAZ";
+       s = s.toLowerCase();
+      int count = 0;
+       for (int i = 0; i < s.length(); i++) {
+         char ch = s.charAt(i);
+         for (int j = i + 1; j < s.length(); j++) { // Use j < s.length() instead of j <= s.length()
+           if (ch == s.charAt(j)) { // Compare characters using s.charAt(j)
+            count++;
+        }
+    }
+}
+System.out.println("Total duplicate characters: " + count);
+
+         */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //        String input = "hello   world,   how   are   you?"; // Example input with extra spaces
 //
 //        // Split the input string into words
 //         String[] words = input.split("\\s+");
         // Split by one or more spaces
+
+
 
     }
 
