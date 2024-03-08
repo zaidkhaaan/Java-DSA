@@ -1029,6 +1029,14 @@ System.out.println("Total duplicate characters: " + count);
 
 
 
+        
+
+
+
+
+
+
+
 
 
 
