@@ -990,9 +990,10 @@ public class Strings {
 
          */
 
-        String s ="ZAIDDIAZ";
-        s=s.toLowerCase();
-        int count=0;
+/*
+        String s = "ZAIDDIAZ";
+        s = s.toLowerCase();
+        int count = 0;
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             for (int j = i + 1; j < s.length(); j++) {
@@ -1005,6 +1006,29 @@ public class Strings {
 
         }
         System.out.println(count);
+
+ */
+        String str = "zaiddiaz";
+        char c[] = str.toCharArray();
+        Arrays.sort(c);
+
+        char ch = c[0];
+        int count = 1;
+
+        for (int i = 1; i < c.length; i++) {
+            if (c[i] == ch) {
+                count++;
+            } else {
+                System.out.print(ch);
+                System.out.print(count + " ");
+                ch = c[i];
+                count = 1;
+            }
+        }
+
+        System.out.print(ch);
+        System.out.print(count + " ");
+    }
         /*
       String s = "ZAIDDIAZ";
        s = s.toLowerCase();
@@ -1029,7 +1053,7 @@ System.out.println("Total duplicate characters: " + count);
 
 
 
-        
+
 
 
 
@@ -1133,7 +1157,7 @@ System.out.println("Total duplicate characters: " + count);
      */
 
 
-}
+
 
 
 
