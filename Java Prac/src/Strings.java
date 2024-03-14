@@ -991,57 +991,51 @@ public class Strings {
          */
 
 /*
-        String s = "ZAIDDIAZ";
-        s = s.toLowerCase();
-        int count = 0;
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            for (int j = i + 1; j < s.length(); j++) {
-                if (ch == s.charAt(j)) {
-                    count++;
-
-                }
-            }
 
 
-        }
-        System.out.println(count);
 
  */
-        String str = "zaiddiaz";
+
+        /*
+        String str = "zaiddiazdiaz";
         char c[] = str.toCharArray();
         Arrays.sort(c);
 
-        char ch = c[0];
+        char ch = c[0]; // ??
         int count = 1;
 
         for (int i = 1; i < c.length; i++) {
             if (c[i] == ch) {
                 count++;
             } else {
-                System.out.print(ch);
-                System.out.print(count + " ");
-                ch = c[i];
+                System.out.print(ch); // ??
+                System.out.print(count + " "); // ??
+                ch = c[i]; // ??
                 count = 1;
             }
         }
+        System.out.print(ch); // After the loop, print the last character counted.
+        System.out.print(count + " "); // And print how many times it appeared.
 
-        System.out.print(ch);
-        System.out.print(count + " ");
+         */
+
+
+        String s = "ZAIDDIAZ";
+        s = s.toLowerCase();
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            for (int j = i + 1; j < s.length(); j++) { // Use j < s.length() instead of j <= s.length()
+                if (ch == s.charAt(j)) { // Compare characters using s.charAt(j)
+                    count++;
+                }
+            }
+        }
+        System.out.println("Total duplicate characters: " + count);
+    }
     }
         /*
-      String s = "ZAIDDIAZ";
-       s = s.toLowerCase();
-      int count = 0;
-       for (int i = 0; i < s.length(); i++) {
-         char ch = s.charAt(i);
-         for (int j = i + 1; j < s.length(); j++) { // Use j < s.length() instead of j <= s.length()
-           if (ch == s.charAt(j)) { // Compare characters using s.charAt(j)
-            count++;
-        }
-    }
-}
-System.out.println("Total duplicate characters: " + count);
+
 
          */
 
@@ -1074,7 +1068,7 @@ System.out.println("Total duplicate characters: " + count);
 
 
 
-    }
+
 
 
 
