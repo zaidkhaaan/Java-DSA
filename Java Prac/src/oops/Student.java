@@ -1,12 +1,13 @@
-public class Student {
+package oops;
 
+public class Student {
     String name;
     private int rno;
     double percent;
 
-   // creating constructor
+    // creating constructor
 
-//    public Student(){
+    //    public Student(){
 //
 //    }
     public Student (String naam , int roll , double per){
@@ -14,5 +15,4 @@ public class Student {
         rno=roll;
         percent =per;
     }
-
 }

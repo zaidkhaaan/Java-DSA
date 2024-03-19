@@ -1,3 +1,5 @@
+package arrays;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -103,7 +105,7 @@ public class ArraysPrac {
             arr[i]=sc.nextInt();
         }
 
-        Arrays.sort(arr);
+        arrays.Arrays.sort(arr);
         System.out.println(arr[arr.length-1]);
 
          */
@@ -146,7 +148,7 @@ public class ArraysPrac {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
-        Arrays.asList(arr);
+        arrays.Arrays.asList(arr);
          //int n1 = arr.asList();
         System.out.println(arr);
 
@@ -161,19 +163,19 @@ public class ArraysPrac {
         // To convert the elements as List
         /*
         System.out.println("Integer Array as List: "
-                + Arrays.asList(intArr));
+                + arrays.Arrays.asList(intArr));
          */
 
         /* EXP :- 2
         String[] array = new String[] {"A", "B", "C", "D"};
-        List<String> list = Arrays.asList(array);
+        List<String> list = arrays.Arrays.asList(array);
         System.out.println("The list is: " + list);
          */
 
         /*
         String arr [] = {"a","z","b","e","c"};
 
-        Arrays.sort(arr);
+        arrays.Arrays.sort(arr);
 
          */
 
@@ -183,28 +185,28 @@ public class ArraysPrac {
             System.out.println(arr[i]);
         }
          */
-       // System.out.println(Arrays.toString(arr));
+       // System.out.println(arrays.Arrays.toString(arr));
 
         /*
         int [] Intarr = { 10, 20, 15, 22, 35 };
 
-        Arrays.sort(Intarr);
+        arrays.Arrays.sort(Intarr);
 
         int intkey = 35;
 
         // Print the key and corresponding index
-        System.out.println(intkey + " found at index = "  + Arrays.binarySearch(Intarr ,intkey));
+        System.out.println(intkey + " found at index = "  + arrays.Arrays.binarySearch(Intarr ,intkey));
          */
 
 
         /*
         int  [] intArr1 = { 10, 20, 15, 22, 35 };
 
-        Arrays.sort(intArr1);
+        arrays.Arrays.sort(intArr1);
 
         int intKey = 22;
 
-        System.out.println(intKey + " found at index = " + Arrays.binarySearch(intArr1, 0, 4, intKey));
+        System.out.println(intKey + " found at index = " + arrays.Arrays.binarySearch(intArr1, 0, 4, intKey));
 
 
          */
@@ -218,8 +220,8 @@ public class ArraysPrac {
         int array2 [] = { 10, 15, 22 ,100,14,34,56,65,32};
 
         // To compare both arrays
-        System.out.println("Integer Arrays on comparison: "
-                + Arrays.compare(array1, array2));
+        System.out.println("Integer arrays.Arrays on comparison: "
+                + arrays.Arrays.compare(array1, array2));
 
          */
 
@@ -229,26 +231,26 @@ public class ArraysPrac {
 
         // To print the elements in one line
         System.out.println("Integer Array: "
-                + Arrays.toString(zaid));
+                + arrays.Arrays.toString(zaid));
 
-        System.out.println("\nNew Arrays by copyOf:\n");
+        System.out.println("\nNew arrays.Arrays by copyOf:\n");
 
         System.out.println("Integer Array: "
-                + Arrays.toString(
-                Arrays.copyOf(zaid, 10)));
+                + arrays.Arrays.toString(
+                arrays.Arrays.copyOf(zaid, 10)));
          */
 
-        // Get the Arrays
+        // Get the arrays.Arrays
 
         /*
         int zaid1[][] = { { 10, 20, 15, 22, 35 } };
 
-        // Get the second Arrays
+        // Get the second arrays.Arrays
         int zaid2[][] = { { 10, 20, 15,22,35 } };
 
         // To compare both arrays
-        System.out.println("Integer Arrays on comparison: "
-                + Arrays.deepEquals(zaid1, zaid2));
+        System.out.println("Integer arrays.Arrays on comparison: "
+                + arrays.Arrays.deepEquals(zaid1, zaid2));
          */
 
         /*
@@ -256,9 +258,9 @@ public class ArraysPrac {
         int[][] a2 = {{30, 20}, {10, 0}, {60, 80}};
         int[][] a3 = {{10, 20}, {40, 50}, {60, 70}};
 
-        System.out.println("Check if a1 is equal to a2: " + Arrays.deepEquals(a1, a2));
-        System.out.println("Check if a2 is equal to a3: " + Arrays.deepEquals(a2, a3));
-        System.out.println("Check if a1 is equal to a3: " + Arrays.deepEquals(a1, a3));
+        System.out.println("Check if a1 is equal to a2: " + arrays.Arrays.deepEquals(a1, a2));
+        System.out.println("Check if a2 is equal to a3: " + arrays.Arrays.deepEquals(a2, a3));
+        System.out.println("Check if a1 is equal to a3: " + arrays.Arrays.deepEquals(a1, a3));
 
          */
 
@@ -267,7 +269,7 @@ public class ArraysPrac {
 
         // To get the dep hashCode of the arrays
         System.out.println("Integer Array: "
-                + Arrays.deepHashCode(intArr));
+                + arrays.Arrays.deepHashCode(intArr));
 
          */
 
@@ -277,7 +279,7 @@ public class ArraysPrac {
 
         // To get the dep hashCode of the arrays
         System.out.println("Integer Array: "
-                + Arrays.deepHashCode(intArr1234));
+                + arrays.Arrays.deepHashCode(intArr1234));
          */
 
         /*
@@ -285,19 +287,19 @@ public class ArraysPrac {
         Object[] ob = { "tuts", "point" };
 
         // deepToString for object ob
-        System.out.println("Deep String version: " + Arrays.deepToString(ob));
+        System.out.println("Deep String version: " + arrays.Arrays.deepToString(ob));
          */
 
 
         /*
         int intArr123[] = { 10, 20, 15, 22, 35 };
 
-        // Get the second Arrays
+        // Get the second arrays.Arrays
         int intArr321[] = { 10, 20,15,22,35};
 
         // To compare both arrays
-        System.out.println("Integer Arrays on comparison: "
-                + Arrays.equals(intArr123, intArr321));
+        System.out.println("Integer arrays.Arrays on comparison: "
+                + arrays.Arrays.equals(intArr123, intArr321));
          */
 
 
@@ -306,11 +308,11 @@ public class ArraysPrac {
 
         int intKey = 22;
 
-        Arrays.fill(intArr, intKey);
+        arrays.Arrays.fill(intArr, intKey);
 
         // To fill the arrays
         System.out.println("Integer Array on filling: "
-                + Arrays.toString(intArr));
+                + arrays.Arrays.toString(intArr));
 
          */
 
@@ -319,19 +321,19 @@ public class ArraysPrac {
 
         int intArr[] = { 10, 20, 15, 22, 35 };
 
-        // Get the second Arrays
+        // Get the second arrays.Arrays
         int intArr1[] = { 10, 20, 22 };
 
         // To compare both arrays
         System.out.println("The element mismatched at index: "
-                + Arrays.mismatch(intArr, intArr1));
+                + arrays.Arrays.mismatch(intArr, intArr1));
 
          */
 
         /*
 
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        Spliterator.OfInt spliterator = Arrays.spliterator(array);
+        Spliterator.OfInt spliterator = arrays.Arrays.spliterator(array);
 
         // Use tryAdvance() to print elements
 
@@ -345,7 +347,7 @@ public class ArraysPrac {
         /*
         String[] array = {"apple", "banana", "cherry"};
 
-        Stream<String> stream = Arrays.stream(array);
+        Stream<String> stream = arrays.Arrays.stream(array);
         stream.forEach(System.out::println);
 
          */

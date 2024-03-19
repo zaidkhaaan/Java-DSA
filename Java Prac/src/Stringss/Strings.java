@@ -1,3 +1,5 @@
+package Stringss;
+
 import javax.swing.*;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -557,7 +559,7 @@ public class Strings {
         String str = sc.nextLine();
         str = str.toLowerCase();
         char c[] = str.toCharArray();
-        Arrays.sort(c);
+        arrays.Arrays.sort(c);
 
         char ch = c[0]; //
         int count = 1;
@@ -835,10 +837,10 @@ public class Strings {
         char ch1 [] = s1.toCharArray();
         char ch2 [] = s2.toCharArray();
 
-        Arrays.sort(ch1);
-        Arrays.sort(ch2);
+        arrays.Arrays.sort(ch1);
+        arrays.Arrays.sort(ch2);
 
-        if (Arrays.equals(ch1, ch2)) {
+        if (arrays.Arrays.equals(ch1, ch2)) {
             System.out.println("The two strings are anagrams of each other.");
         } else {
             System.out.println("The two strings are not anagrams.");
@@ -999,7 +1001,7 @@ public class Strings {
         /*
         String str = "zaiddiazdiaz";
         char c[] = str.toCharArray();
-        Arrays.sort(c);
+        arrays.Arrays.sort(c);
 
         char ch = c[0]; // ??
         int count = 1;

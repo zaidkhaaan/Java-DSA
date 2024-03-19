@@ -887,10 +887,10 @@ public static int getDigitFrequency(int n , int d){
         char[] charArray1 =s1.toCharArray();
         char[] charArray2 =s2.toCharArray();
 
-        Arrays.sort(charArray1);
-        Arrays.sort(charArray2);
+        arrays.Arrays.sort(charArray1);
+        arrays.Arrays.sort(charArray2);
 
-        return Arrays.equals(charArray1,charArray2);
+        return arrays.Arrays.equals(charArray1,charArray2);
     }
 }
 
