@@ -1,22 +1,39 @@
 public class oopsoneshot {
 
+    public static class Student {
 
-    public static void main(String[] args) {
-        class Student {
-            String Name ;
-            int rno;
-            double percent;
+        String name;
+        int rno;
+        double percent;
+        public Student (String naam , int roll , double per){
+            name =naam;
+            rno=roll;
+            percent =per;
+        }
+
+        public Student(){
+
         }
 
 
-        Student x = new Student();
+    }
+    public static void change (Student s){
+        s.name="Rohan";
+    }
+    public static void main(String[] args) {
+//        s.name ="Rohan";
 
-        x.Name="Zaid";
-        x.rno = 76;
-        x.percent=92.5;
-        System.out.println(x.Name);
+        Student s1 = new Student();
 
+        s1.percent= 88.6;
+        s1.name= "rag";
+        s1.rno=76;
 
+        System.out.println(s1.name);
+        System.out.println(s1.rno);
+        System.out.println(s1.percent);
+
+        Student s2 = new Student();
 
     }
 }
