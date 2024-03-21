@@ -156,7 +156,7 @@ public class ArraysPrac {
 
 
         // studying the methods in Array Class
-      //  int intArr[] = { 10, 20, 15, 22, 35 };
+        //  int intArr[] = { 10, 20, 15, 22, 35 };
 
 
         // exp:1
@@ -185,7 +185,7 @@ public class ArraysPrac {
             System.out.println(arr[i]);
         }
          */
-       // System.out.println(arrays.Arrays.toString(arr));
+        // System.out.println(arrays.Arrays.toString(arr));
 
         /*
         int [] Intarr = { 10, 20, 15, 22, 35 };
@@ -353,11 +353,10 @@ public class ArraysPrac {
          */
 
 
+        // System.out.println(str.length());
 
 
-       // System.out.println(str.length());
-
-
+        /*
 int [] arr = {10,12,10,14,15,10,17};
 int value = 10;
 int lastidx = -1;
@@ -370,13 +369,39 @@ int lastidx = -1;
         System.out.println(lastidx);
 
 
+         */
+
+        int arr[] = {1, 5, 3};
+        int idx = 0;
+        int ans = -1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == idx) {
+                ans = i;
+                break;
+            }
+        }
+        System.out.println(ans);
 
 
+        /*
+        int arr [] ={1,5,3};
+
+        int ans= 0;
+
+        for (int i = 0; i < arr.length; i++) {
+           if(arr[i]>ans){
+               ans = arr[i];
+           }
 
         }
+        System.out.println(ans);
+        }
+
+         */
 
 
     }
+}
 
 
 
