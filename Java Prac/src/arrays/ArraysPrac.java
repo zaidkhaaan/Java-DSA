@@ -371,16 +371,19 @@ int lastidx = -1;
 
          */
 
-        int arr[] = {1, 5, 3};
-        int idx = 0;
+        /*
+        int arr[] = {1, 5, 3,4};
+        int idx = 4;
         int ans = -1;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == idx) {
-                ans = i;
+                ans = i; // main logic which i missed
                 break;
             }
         }
         System.out.println(ans);
+
+         */
 
 
         /*
@@ -399,6 +402,19 @@ int lastidx = -1;
 
          */
 
+        /*
+        int arr [] ={5,6,5,3,5,4};
+        int value = 7;
+        int count = -1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]==value){
+                count=i;
+            }
+        }
+
+        System.out.println(count);
+
+         */
 
     }
 }
