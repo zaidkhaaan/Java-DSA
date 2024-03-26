@@ -416,6 +416,75 @@ int lastidx = -1;
 
          */
 
+
+        /*
+
+        // count the number of elemnts strictly greater than x
+
+        double arr [] = {5.6,6.2,6.1,7,6.0,5.8,5.9,6};
+        int x = 6;
+        int count =0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= x){
+                count++;
+                //System.out.println(arr[i]);
+            }
+        }
+        System.out.println(count);
+
+         */
+
+
+        /*
+        int arr [] = {1,2,2,6,8};
+        int first =arr[0];
+        int second = arr[1];
+        boolean check = true;
+
+
+        for (int i = 0; i < arr.length; i++) {
+            if (first<second){
+                first++;
+                second++;
+                check=true;
+
+            }else{
+               check=false;
+                break;
+            }
+        }
+        System.out.println(check);
+
+
+        // current element should be less than previous element
+
+         */
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        int arsiz = sc.nextInt();
+
+        int [] arr = new int[arsiz];
+        boolean check = true;
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]= sc.nextInt();
+        }
+
+        for (int i = 1; i <arr.length ; i++) {
+            if (arr[i] < arr[i-1]){
+                // current element less than the previous element
+                check = false;
+                break;
+            }
+        }
+        System.out.println(check);
+
+         */
+
+
+
+
     }
 }
 
