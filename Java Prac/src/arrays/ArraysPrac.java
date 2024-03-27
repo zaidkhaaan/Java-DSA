@@ -1,5 +1,6 @@
 package arrays;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -483,11 +484,160 @@ int lastidx = -1;
          */
 
 
+        // BING AI CODE two sum
 
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Array size");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter " + n + " Elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter Target Sum");
+        int target = sc.nextInt();
+
+        int[] result = pairSum(arr, target);
+
+        if (result != null) {
+            System.out.println("Pair found at index " + result[0] + " and " + result[1]);
+        } else {
+            System.out.println("No pair found");
+        }
+
+        its function
+
+
+        //    static int[] pairSum(int[] arr, int target) {
+//        int n = arr.length;
+//
+//        for (int i = 0; i < n; i++) {
+//            for (int j = i + 1; j < n; j++) {
+//                if (arr[i] + arr[j] == target) {
+//                    return new int[]{i, j};
+//                }
+//            }
+//        }
+//        return null;
+//    }
+
+         */
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Array size");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter " + n + " Elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter Target Sum");
+        int target = sc.nextInt();
+
+        System.out.println((pairSum(arr, target)));
 
 
     }
+
+
+    static int pairSum(int arr[], int target) {
+        int n = arr.length;
+        int ans = 0;
+
+        for (int i = 0; i < n; i++)
+        // To pick the first element
+        {
+            for (int j = i + 1; j < n; j++)
+                // Traverses the second number
+
+                for (int k = i + 2; k < n; k++) {
+                    {
+                        if (arr[i] + arr[j] + arr[k] == target) {
+                            ans++;
+                         // return new int[]{i, j, k};
+                        }
+                    }
+                }
+
+
+
+        }
+        return ans ;
+    }
 }
+
+
+/*
+to count the number of triplets in an array that sum up to a given target.
+BING AI CODE TO RETURN MORE THAN 1 INDEX
+
+     Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Array size");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter " + n + " Elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter Target Sum");
+        int target = sc.nextInt();
+
+        System.out.println(Arrays.toString(pairSum(arr, target)));
+
+
+    }
+
+
+    static int[] pairSum(int arr[], int target) {
+        int n = arr.length;
+        int ans = 0;
+
+        for (int i = 0; i < n; i++)
+        // To pick the first element
+        {
+            for (int j = i + 1; j < n; j++)
+                // Traverses the second number
+
+                for (int k = i + 2; k < n; k++) {
+                    {
+                        if (arr[i] + arr[j] + arr[k] == target) {
+                          //  ans++;
+                          return new int[]{i, j, k};
+                        }
+                    }
+                }
+
+
+
+        }
+        return null;
+    }
+ */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
