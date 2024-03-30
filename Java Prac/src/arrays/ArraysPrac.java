@@ -1,12 +1,5 @@
 package arrays;
 
-import java.sql.SQLOutput;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Spliterator;
-import java.util.function.IntConsumer;
-
 public class ArraysPrac {
     public static void main(String[] args) {
 //        // Initialize an array
@@ -529,6 +522,8 @@ int lastidx = -1;
          */
 
 
+
+        /*
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Array size");
         int n = sc.nextInt();
@@ -546,11 +541,8 @@ int lastidx = -1;
 
         System.out.println((pairSum(arr, target)));
 
-
-    }
-
-
-    static int pairSum(int arr[], int target) {
+IT's Function
+ static int pairSum(int arr[], int target) {
         int n = arr.length;
         int ans = 0;
 
@@ -574,14 +566,16 @@ int lastidx = -1;
         }
         return ans ;
     }
-}
+         */
 
 
-/*
+
+
+
+        /*
 to count the number of triplets in an array that sum up to a given target.
 BING AI CODE TO RETURN MORE THAN 1 INDEX
-
-     Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter Array size");
         int n = sc.nextInt();
 
@@ -596,13 +590,66 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
         System.out.println("Enter Target Sum");
         int target = sc.nextInt();
 
-        System.out.println(Arrays.toString(pairSum(arr, target)));
+
+        ArrayList<int[]> results = pairSum(arr, target);
 
 
+     // ArrayList<Type> arrayList = new ArrayList<>();
+
+
+
+
+        if (results.size() > 0) {
+            for (int[] result : results) {
+                System.out.println(Arrays.toString(result));
+            }
+        } else {
+            System.out.println("No triplets found");
+        }
+
+         */
+
+
+        /*
+         static ArrayList<int[]> pairSum(int[] arr, int target) {
+        int n = arr.length;
+        ArrayList<int[]> results = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                for (int k = j + 1; k < n; k++) {
+                    if (arr[i] + arr[j] + arr[k] == target) {
+                        results.add(new int[]{i, j, k});
+                    }
+                }
+            }
+        }
+        return results;
     }
+         */
 
 
-    static int[] pairSum(int arr[], int target) {
+        // ARRAY MANIPULATION
+
+        // Find the unique number in a given array where all the element are being repeated twice
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Array size");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter " + n + " Elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println((findUniq(arr)));
+
+        Function of the code
+        static int findUniq(int arr[]) {
         int n = arr.length;
         int ans = 0;
 
@@ -611,22 +658,252 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
         {
             for (int j = i + 1; j < n; j++)
                 // Traverses the second number
-
-                for (int k = i + 2; k < n; k++) {
-                    {
-                        if (arr[i] + arr[j] + arr[k] == target) {
-                          //  ans++;
-                          return new int[]{i, j, k};
-                        }
-                    }
+                if (arr[i] == arr[j]) {
+                    arr[i]=-1;
+                    arr[j] = -1;
                 }
 
 
 
         }
-        return null;
+
+        for (int i = 0; i < n; i++) {
+            if(arr[i] > 0){
+                ans = arr[i];
+            }
+        }
+        return ans;
     }
- */
+
+         */
+
+
+//        int arr [] = {5,4,1,6,2,9};
+//        int max = arr[0];
+//        int min = arr[0];
+//
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if (max < arr[i]){
+//                max=arr[i];
+//            }
+//        }
+//        System.out.println(max);
+
+
+//        int arr1 [] = {10,9,23,43,59,8,-1,-2};
+//        int min = arr1[0];
+//
+//        for (int i = 0; i < arr1.length; i++) {
+//            if (min > arr1[i]){
+//                min=arr1[i];
+//
+//            }
+//        }
+//        System.out.println(min);
+
+
+        // Find the second largest element in the given array
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Array size");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter " + n + " Elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println(findSecondMax(arr));
+
+
+        IT'S FUNCTION
+
+         static int findMax(int[] arr) {
+        int max = arr[0];
+       // int min = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    static int findSecondMax (int [] arr){
+
+        int max = findMax(arr);
+
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] == max){
+                arr[i] = Integer.MIN_VALUE;
+            }
+        }
+        int secondmax = findMax(arr);
+        return secondmax;
+
+         */
+
+
+        // Finfd the first repeating element in the array
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Array size");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter " + n + " Elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+
+        }
+        System.out.println(find1stelem(arr));
+
+
+
+    // It's Function
+    static int find1stelem(int[] arr){
+        int n1 = arr.length;
+       // int store =0;
+        for (int i = 0; i < n1; i++) {
+            for (int j = i+1; j < n1; j++)
+            {
+                if (arr[i]==arr[j]){
+                  //  store=arr[i];
+                   // break;
+                    return arr[i];
+                }
+            }
+        }
+        return -1;
+
+         */
+
+
+        // Reverse two number
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+
+        // Using temp function
+  //  int a = 10;
+ //   int b = 20;
+//    int temp;
+//
+//    temp = a;
+//    a=b;
+//    b=temp;
+
+// using sum & diffrence method
+
+        a= a+b;
+        b = a-b;
+        a=a-b;
+
+        System.out.println(a);
+        System.out.println(b);
+
+
+         */
+
+        // Reverse an array using another array
+
+
+//        int [] arr = {1,2,3,4,5};
+//        int [] ans = reverseArray(arr);
+//        printArray(ans);
+
+        //Its's Function
+
+          /*
+    static int [] reverseArray(int [] arr){
+        int n = arr.length;
+        int [] ans = new int[n];
+        int j = 0;
+
+        // using for loop
+        for (int i = n-1; i >= 0 ; i--) {
+            ans[j]= arr[i];
+            j++;
+        }
+
+
+//        Using while loop
+//        int i = n-1; j=0;
+//        while (i>=0){
+//        ans[j++] = arr[i--];
+//
+
+        return ans;
+    }
+
+
+
+
+    static void printArray (int [] arr){
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] +" ");
+        }
+        System.out.println();
+    }
+
+    }
+
+     */
+
+        // reversing array using two pointer method
+
+        int arr [] ={1,2,3,4,5};
+
+        reverseArray(arr);
+        printArray(arr);
+
+    }
+    static void reverseArray(int [] arr){
+        int i = 0;
+        int j = arr.length-1;
+
+        while (i < j){
+            swapinArray(arr,i,j);
+            i++;
+            j--;
+
+        }
+
+    }
+
+    static void swapinArray(int [] arr , int i , int j){
+
+        int temp = arr[i];
+        arr[i]= arr[j];
+        arr[j]= temp;
+
+    }
+
+    static void printArray (int [] arr){
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] +" ");
+        }
+        System.out.println();
+    }
+}
+
+
+
+
 
 
 
