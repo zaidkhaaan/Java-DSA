@@ -1,5 +1,5 @@
 package arrays;
-
+import java.util.*;
 public class ArraysPrac {
     public static void main(String[] args) {
 //        // Initialize an array
@@ -863,14 +863,17 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
 
      */
 
-        // reversing array using two pointer method
+        // reversing array using two pointer method in inplace
 
+        /*
         int arr [] ={1,2,3,4,5};
 
         reverseArray(arr);
         printArray(arr);
 
-    }
+     // its function to reverse
+
+
     static void reverseArray(int [] arr){
         int i = 0;
         int j = arr.length-1;
@@ -883,6 +886,8 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
         }
 
     }
+
+   // its function to print
 
     static void swapinArray(int [] arr , int i , int j){
 
@@ -898,8 +903,245 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
             System.out.print(arr[i] +" ");
         }
         System.out.println();
+
+         */
+
+
+        // After Rotation with kth element using another array with new space
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Array size");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter " + n + " Elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter K:");
+
+        int k = sc.nextInt();
+
+        int ans [] = rotate(arr,k);
+
+        System.out.println("AFter ROtation");
+        printArray(ans);
+
     }
+
+         It's Function
+
+
+    static int [] rotate (int [] arr , int k){
+        int n = arr.length;
+        k = k%n;
+
+        int [] ans = new int [n];
+        int j = 0;
+
+        for (int i = n-k; i <n ; i++) {
+            ans[j]=arr[i];
+            j++;
+        }
+
+        for (int i = 0; i < n-k ; i++) {
+            ans[j] = arr[i];
+            j++;
+        }
+        return ans;
+    }
+    print function
+    static void printArray (int [] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+
+
+         */
+
+
+        // Rotation of array by Kth steps usinf the same array (In-place)
+
+
+        /*
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Array size");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter " + n + " Elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter K:");
+
+        int k = sc.nextInt();
+
+        rotateInPlace(arr,k);
+
+        System.out.println("AFter ROtation");
+        printArray(arr);
+
+    }
+
+    static void rotateInPlace(int [] arr , int k){
+        int n = arr.length;
+        k=k%n;
+        reverse(arr,0,n-k-1);
+        reverse(arr,n-k,n-1);
+        reverse(arr,0,n-1);
+
+    }
+    static void reverse(int [] arr , int i , int j){
+//        int i = 0;
+//        int j = arr.length-1;
+
+        while (i < j){
+            swap(arr,i,j);
+            i++;
+            j--;
+
+        }
+
+    }
+
+    static void swap(int [] arr , int i , int j){
+
+        int temp = arr[i];
+        arr[i]= arr[j];
+        arr[j]= temp;
+
+    }
+
+    static void printArray (int [] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+         */
+
+
+        // check the number is present in array or not
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Array Size ");
+        int n = sc.nextInt();
+
+        int [] arr = new int[n];
+
+
+        System.out.println("Enter" +n+ "elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i]= sc.nextInt();
+        }
+
+
+        int[] freq = makeFrequency(arr);
+
+        System.out.println("Enter the number of queries");
+        int q = sc.nextInt();
+
+        while (q > 0) {
+            System.out.println("Enter number to be searched");
+            int x = sc.nextInt();
+
+            if (freq[x] > 0){
+                System.out.println("YES");
+            }else {
+                System.out.println("NO");
+            }
+            q--;
+        }
+    }
+
+    static int[] makeFrequency(int[] arr){
+        int [] freq = new int[100005];
+
+        for (int i = 0; i < arr.length; i++) {
+            freq[arr[i]]++;
+
+        }
+        return freq;
+
+
+         */
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Array Size ");
+        int n = sc.nextInt();
+
+        int [] arr = new int[n];
+
+
+        System.out.println("Enter" +n+ "elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i]= sc.nextInt();
+        }
+
+        System.out.println("Original Array");
+        printArray(arr);
+        zerosandones(arr);
+        System.out.println("sorted array");
+        printArray(arr);
+    }
+
+    static void zerosandones(int arr [] ){
+        int n = arr.length;
+        int zeros = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i]==0){
+                zeros++;
+
+            }
+        }
+        // 0 to zeroes -1 : zeros to n-1 : 1
+        for (int i = 0; i < n; i++) {
+            if ( i < zeros){
+                arr[i]=0;
+            }else {
+                arr[i]=1;
+            }
+        }
+    }
+    static void swap(int [] arr , int i , int j){
+
+        int temp = arr[i];
+        arr[i]= arr[j];
+        arr[j]= temp;
+
+    }
+
+    static void printArray (int [] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+
+
+
 }
+
 
 
 
