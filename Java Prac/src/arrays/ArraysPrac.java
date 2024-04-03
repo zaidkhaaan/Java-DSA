@@ -1,4 +1,5 @@
 package arrays;
+import java.sql.SQLOutput;
 import java.util.*;
 public class ArraysPrac {
     public static void main(String[] args) {
@@ -1082,25 +1083,31 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
 
          */
 
+
+        // sort the array consisting of 0's and 1's done using 2 traversal
+
+
+        /*
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Array Size ");
         int n = sc.nextInt();
 
-        int [] arr = new int[n];
+        int[] arr = new int[n];
 
 
-        System.out.println("Enter" +n+ "elements");
+        System.out.println("Enter " + n + " elements");
 
         for (int i = 0; i < n; i++) {
-            arr[i]= sc.nextInt();
+            arr[i] = sc.nextInt();
         }
 
         System.out.println("Original Array");
         printArray(arr);
-        zerosandones(arr);
-        System.out.println("sorted array");
+        zerosandones2(arr);
+        System.out.println("Sorted Array");
         printArray(arr);
-    }
+
+
 
     static void zerosandones(int arr [] ){
         int n = arr.length;
@@ -1121,6 +1128,41 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
             }
         }
     }
+
+     */
+
+
+        // sort an array by parity
+
+
+    /*
+    static void zerosandones2(int arr []){
+        int n = arr.length;
+        int  left = 0; // first pointer
+        int right = n-1; // second pointer
+
+        while (left < right) {
+
+            if (arr[left] % 2 != 0 && arr[right] % 2 ==  0)
+                // left checks if the number is odd
+                // right checks if the number is even
+                // if both condition true we swap it
+            {
+                swap(arr, left, right);
+                left++;
+                right--;
+            }
+            if (arr[left] % 2== 0){
+                left++;
+                // if the left has already an even number just increase the left counter
+            }
+
+            if (arr[right] %2 != 0 ){
+                right--;
+                // if the right has the odd counter just decrease the counter
+            }
+        }
+    }
     static void swap(int [] arr , int i , int j){
 
         int temp = arr[i];
@@ -1137,10 +1179,244 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
         System.out.println();
     }
 
+     */
+
+        // sorting the element with squares
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Array Size ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+
+        System.out.println("Enter " + n + " elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Original Array");
+        printArray(arr);
+      int ans [] =  sortsquares(arr);
+        // reverse(arr);
+  //      reverse(ans,0, arr.length-1);
+        System.out.println("Sorted Array");
+        printArray(ans);
+
+    }
+
+    static int [] sortsquares(int [] arr ){
+        int n = arr.length;
+        int left = 0 , right =n-1;
+        int ans [] = new int[n];
+        int k =n-1;
+
+        while (left <= right){
+            if (Math.abs(arr[left]) > Math.abs(arr[right])){
+                ans[k]=arr[left] * arr [left];
+                left++;
+                k--;
+            } else {
+                ans[k] = arr[right]*arr[right];
+                right--;
+                k--;
+
+            }
+        }
+        return ans;
+
+    }
+
+
+    static void reverse(int [] arr , int i , int j){
+//        int i = 0;
+//        int j = arr.length-1;
+
+        while (i < j){
+            swap(arr,i,j);
+            i++;
+            j--;
+
+        }
+
+    }
+
+    static void swap(int [] arr , int i , int j){
+
+        int temp = arr[i];
+        arr[i]= arr[j];
+        arr[j]= temp;
+
+    }
+    static void printArray (int [] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+
+         */
+
+
+        // prefix sum & running sum array using another array
+        // doubt
 
 
 
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Array Size ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+
+        System.out.println("Enter " + n + " elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Original Array");
+        int[] pref = makePrefixSumArray(arr);
+        printArray(pref);
+    }
+
+    static void printArray (int [] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    static  int [] makePrefixSumArray(int[] arr){
+        int n = arr.length;
+        int [] pref = new int [n];
+        pref[0] = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            pref[i]=pref[i-1]+arr[i];
+        }
+
+        return pref;
+    }
+
+         */
+
+        // prefix array or running sum array using inplace
+
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Array Size ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+
+        System.out.println("Enter " + n + " elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Original Array");
+        int[] pref = makePrefixSumArray(arr);
+        printArray(pref);
+    }
+
+    static void printArray (int [] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    static  int [] makePrefixSumArray(int[] arr){
+        int n = arr.length;
+
+        // done using prefix another array
+//        int [] pref = new int [n];
+//        pref[0] = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            arr[i]=arr[i-1]+arr[i];
+            // done using same array
+        }
+
+        return arr;
+
+         */
+
+        // for an given array of interger size n , answwer q queries to print
+        // the sum of values in a given range of indices from L to R
+
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the array size");
+        int n = sc.nextInt();
+        int arr[] = new int[n+1];
+
+        System.out.println("Enter the " + n + "  elements of the array");
+        for (int i = 1; i <= n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter the number of queries");
+        int q = sc.nextInt();
+
+
+        int[] pref = makePrefixSumArray(arr);
+
+        while (q-- > 0){
+            System.out.println("Enter Range");
+            int l = sc.nextInt();
+            int r = sc.nextInt();
+
+            int ans = pref[r]-pref[l-1];
+            System.out.println("Sum " + ans);
+        }
+
+    }
+        static void printArray (int [] arr) {
+
+            for (int i = 0; i < arr.length; i++) {
+                System.out.print(arr[i] + " ");
+            }
+            System.out.println();
+        }
+
+    static  int [] makePrefixSumArray(int[] arr){
+        int n = arr.length;
+
+        // done using prefix another array
+        int [] pref = new int [n];
+        pref[0] = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+          //  pref[i]=pref[i-1]+arr[i];
+            arr[i] +=arr[i-1];
+            // done using another array pref
+            // done using same array arr
+        }
+
+        return arr;
+
+         */
+
+        
+    }
 }
+
+
+
 
 
 
