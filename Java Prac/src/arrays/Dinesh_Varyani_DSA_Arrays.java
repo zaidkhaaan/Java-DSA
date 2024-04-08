@@ -6,8 +6,9 @@ public class Dinesh_Varyani_DSA_Arrays {
     public static void main(String[] args) {
 
 
+        //  System.out.println("zaid");
 
-      //  System.out.println("zaid");
+        /*
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Array size");
         int n = sc.nextInt();
@@ -21,18 +22,24 @@ public class Dinesh_Varyani_DSA_Arrays {
 
         }
 
-    //    System.out.println( FindSecondMAx(arr));
+
+         */
+        //   int capacity = arr.length;
+
+        //   System.out.println("size of og arrray  " + arr.length);
+
+        // arr = resize(arr,10);
+
+        // System.out.println("size after resizing "+arr.length);
+
+        //    System.out.println( FindSecondMAx(arr));
 
 
-       moveZeros(arr);
-        printArray(arr);
-    }
+        //  moveZeros(arr);
+        //    printArray(arr);
 
 
-
-
-
-   // function to find second largest element
+        // function to find second largest element
 
    /*
     static int FindSecondMAx(int [] arr){
@@ -53,6 +60,7 @@ public class Dinesh_Varyani_DSA_Arrays {
     */
 
 
+    /*
      static  void moveZeros(int [] arr){
 
         int n =arr.length;
@@ -65,9 +73,65 @@ public class Dinesh_Varyani_DSA_Arrays {
 
             }
             if (arr[j] != 0){
-                j++;
+                j++;  // to keep the counter at last
             }
         }
+    }
+     */
+
+
+
+    /*
+
+    static int [] resize (int [] arr , int capacity){
+        int [] temp = new int[capacity];
+
+        for (int i = 0; i < arr.length; i++) {
+            temp[i] = arr[i];
+        }
+        arr = temp;
+        return arr;
+
+    }
+
+
+
+ // to find out the missing number in linear acending order array
+
+     */
+//        int arr[] = {1, 2, 3, 4, 6};
+//        int totalsum = findsum(arr) - sum(arr);
+//        System.out.println(totalsum);
+
+          /*
+    static int sum (int arr [] ){
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+
+        return sum;
+    }
+
+
+    // approach 2 to find out the maximum straight by putting +t to arr.lenght
+    static int findmax ( int arr [] ){
+        int max = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] > max){
+                max=arr[i];
+            }
+        }
+        return max;
+    }
+
+    static int findsum (int arr []){
+        int n = arr.length+1;
+        int totalsum = n* (n+1)/2;
+        return totalsum;
     }
 
     static void printArray ( int [] arr){
@@ -77,10 +141,44 @@ public class Dinesh_Varyani_DSA_Arrays {
             System.out.print(arr[i]+" ");
         }
     }
+//    https://pillai-edu-in.zoom.us/j/89605395066?pwd=dVhzN3g4K01ac2E2OTZHU0NCZXd1Zz09
 
 
 
 
+    }
 
+
+
+
+     */
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        if (isPalindrome(s)){
+            System.out.println("Palindrome");
+        }else {
+            System.out.println("Not Palindrome");
+        }
+
+
+    }
+
+    static boolean isPalindrome (String word){
+        char [] charArray = word.toCharArray();
+
+        int start = 0;
+        int end =word.length()-1;
+
+        while (start < end){
+            if (charArray[start] != charArray[end]){
+                return false;
+            }
+            start++;
+            end--;
+
+        }
+        return true;
+
+    }
 
 }

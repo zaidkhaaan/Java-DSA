@@ -1411,6 +1411,7 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
 
          */
 
+        /*
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Number of elements");
         int n = sc.nextInt();
@@ -1426,7 +1427,7 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
 
         //printarray(arr);
         System.out.println(equalSumParition(arr));
-    }
+
     static  void printarray( int arr[]){
         for (int i = 0; i < arr.length; i++) {
                 System.out.print(arr[i]+" ");
@@ -1463,9 +1464,55 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
 
 
 
+         */
+
+        // find span of an array
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int arr [] = new int [n];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int span = findmax(arr)-findmin(arr);
+        System.out.println("span pf array  "+span );
 
 
 
+    static int findmax(int arr[]){
+        int max = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]>max){
+                max=arr[i];
+            }
+        }
+        return max ;
+    }
+
+    static int findmin(int arr[]){
+        int min = arr[1];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min){
+                min=arr[i];
+            }
+        }
+        return min ;
+    }
+}
+
+
+
+         */
+    }
+    
+
+}
 
 
 
