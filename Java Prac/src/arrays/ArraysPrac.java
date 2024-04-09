@@ -1,6 +1,5 @@
 package arrays;
-import java.sql.SQLOutput;
-import java.util.*;
+
 public class ArraysPrac {
     public static void main(String[] args) {
 //        // Initialize an array
@@ -1509,10 +1508,353 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
 
 
          */
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int arr [] = new int [n];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int max = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]>max){
+                max=arr[i];
+            }
+        }
+
+        for (int floor = max; floor >= 1 ; floor--) {
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] >= floor){
+                    System.out.print("*\t");
+                }else {
+                    System.out.print("\t");
+                }
+            }
+            System.out.println();
+        }
+
+
+         */
+
+
+        // addition of two arrays
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int a1 [] = new int [n];
+
+        for (int i = 0; i < a1.length; i++) {
+            a1[i] = sc.nextInt();
+        }
+
+        int n2 = sc.nextInt();
+
+        int a2 [] = new int[n2];
+
+        for (int i = 0; i < a2.length; i++) {
+            a2[i]= sc.nextInt();
+        }
+
+        int sum [] = new int[n > n2 ? n :n2];
+
+        int c = 0;
+
+        int i = a1.length-1;
+        int j =a2.length-1;
+        int k =sum.length-1;
+
+        while (k>=0){
+            int d = c;
+
+            if (i >= 0){
+                d +=a1[i];
+            }
+            if (j >= 0){
+                d+= a2[j];
+            }
+            c = d/10;
+            d=d%10;
+
+            sum[k] = d;
+            i--;
+            j--;
+            k--;
+
+        }
+        if (c !=0){
+            System.out.print(c);
+        }
+        for (int val : sum){
+            System.out.print(val);
+        }
+
+
+         */
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int a1 [] = new int [n];
+
+        for (int i = 0; i < a1.length; i++) {
+            a1[i] = sc.nextInt();
+        }
+
+        int counter = 1;
+
+        for (int i = 0; i < a1.length; i++) {
+            for (int j = i+1; j < a1.length ; j++) {
+                if (a1[i]==a1[j]) {
+                    counter++;
+                }
+            }
+            counter=1;
+            System.out.println(a1[i]+"  " +counter);
+
+        }
+
+
+         */
+
+
+        /*
+        int arr[] = {1, 2, 3, 4};
+
+        /*
+        for (int i = arr.length-1; i >=0 ; i--) {
+            System.out.print(arr[i]+" ");
+        }
+
+         */
+
+        /*
+        int i = 0;
+        int j = arr.length - 1;
+
+        while (i < j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
+            i++;
+            j--;
+        }
+
+        for (int k = 0; k < arr.length; k++) {
+            System.out.print(arr[k] + " ");
+        }
+        System.out.println();
+
+
+
+         */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Number of elements");
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+        System.out.println("Enter " + n + " elements");
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+// Create a frequency array to store counts
+        int[] freq = new int[1001]; // Assuming the elements are <= 1000
+
+        for (int i = 0; i < n; i++) {
+            freq[arr[i]]++;
+        }
+
+// Print the counts
+        for (int i = 0; i < n; i++) {
+            if (freq[arr[i]] != 0) {
+                System.out.println(arr[i] + " occurs " + freq[arr[i]] + " times");
+                freq[arr[i]] = 0; // To avoid printing duplicate counts
+            }
+        }
+
+
+
+         */
+
+
+        // sum of two array using own method
+
+        /*
+        int arr [] = {1,2,3,4,5};
+        int arr1[] = {5,6,7,8};
+        int n1 = arr.length;
+        int n2 = arr1.length;
+        int [] result = new int [n1>n2 ? n1 :n2];
+
+        for (int i = 0; i < arr.length ; i++) {
+         //   result[i]=arr[i]+arr1[i];
+            if (i < n1) {
+                result[i] += arr[i];
+            }
+            if (i < n2) {
+                result[i] += arr1[i];
+            }
+        }
+
+        System.out.println("Sum Arrays");
+
+
+         */
+
+        // rotate an array using extra space
+        /*
+        int arr [] ={1,2,3,4,5};
+        int k = 1;
+
+        int ans [] = rotate(arr,k);
+
+        for (int i = 0; i < ans.length; i++) {
+            System.out.print(ans[i]+" ");
+        }
+
+
+        static  int [] rotate ( int [] arr , int k){
+        int n = arr.length;
+        k =k %n;
+        int [] ans = new int [n];
+        int j = 0;
+            for (int i = n-k; i < n ; i++) {
+                ans[j]=arr[i];
+                j++;
+            }
+            for (int i = 0; i < n-k; i++) {
+                ans[j] = arr[i];
+                j++;
+            }
+            return ans;
+        }
+
+         */
+        int arr [] ={1,2,3,4,5};
+        int k = 1;
+
+        rotate(arr,k);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+
     }
-    
+
+
+    static void swap (int [] arr, int i , int j ) {
+
+        while (i<j){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
+            i++;
+            j--;
+        }
+
+    }
+
+    static void reverse (int [] arr , int st , int end){
+        int i = st;
+        int j = end;
+
+        while (i < j){
+            swap(arr,i,j);
+            i++;
+            j--;
+        }
+    }
+
+    static void rotate(int arr[] , int k){
+        int n = arr.length;
+        k = k%n;
+        if (k < 0){
+            k = k+ arr.length;
+        }
+        reverse(arr,0,n-k-1);
+        reverse(arr,n-k,n-1);
+        reverse(arr,0,n-1);
+    }
+
+    /*
+    int arr [] ={1,2,3,4,5};
+int k = 1;
+
+rotate(arr,k);
+for (int i = 0; i < arr.length; i++) {
+    System.out.print(arr[i]+" ");
+}
+
+static void swap (int [] arr, int i , int j ) {
+    while (i<j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+
+        i++;
+        j--;
+    }
+}
+
+static void reverse (int [] arr , int st , int end){
+    int i = st;
+    int j = end;
+
+    while (i < j){
+        swap(arr,i,j);
+        i++;
+        j--;
+    }
+}
+
+static void rotate(int arr[] , int k){
+    int n = arr.length;
+    k = k%n;
+    if (k < 0){
+        k = k+ arr.length;
+    }
+    reverse(arr,0,n-k-1);
+    reverse(arr,n-k,n-1);
+    reverse(arr,0,n-1);
+}
+
+     */
+
 
 }
+
+
 
 
 
