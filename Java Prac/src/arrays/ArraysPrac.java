@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Scanner;
+
 public class ArraysPrac {
     public static void main(String[] args) {
 //        // Initialize an array
@@ -1761,6 +1763,11 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
         }
 
          */
+
+        // program to rotate an array by K elements (BLOCK SWAP ) algorithm
+
+
+        /*
         int arr [] ={1,2,3,4,5};
         int k = 1;
 
@@ -1769,7 +1776,7 @@ BING AI CODE TO RETURN MORE THAN 1 INDEX
             System.out.print(arr[i]+" ");
         }
 
-    }
+
 
 
     static void swap (int [] arr, int i , int j ) {
@@ -1851,6 +1858,90 @@ static void rotate(int arr[] , int k){
 
      */
 
+
+
+        // Inverse of an array
+
+        /*
+        int [] arr = {3,4,1,2,0};
+        int [] arr2 = new int[arr.length];
+
+     //   int a =0;
+        for (int i = 0; i < arr.length; i++) {
+            int v =arr[i];
+            // used to store the value of arr in v
+            arr2[v]=i;
+            //
+        }
+
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print(arr2[i]+"  ");
+        }
+
+
+         */
+
+
+        // sub arrays of arrays
+
+        /*
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int [] arr = new int[n];
+
+        for (int i = 0; i < arr.length ; i++) {
+            arr[i]= sc.nextInt();
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i ; j <arr.length ; j++) {
+                for (int k = i; k <=j ; k++) {
+                    System.out.print(arr[k]+"  ");
+                }
+                System.out.println();
+            }
+        }
+
+
+         */
+
+        // subsets of an array
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int [] arr = new int[n];
+
+        for (int i = 0; i < arr.length ; i++) {
+            arr[i]= sc.nextInt();
+        }
+
+        int limit = (int)Math.pow(2, arr.length);
+
+        for (int i = 0; i < limit; i++) {
+
+            String   set = "";
+            int temp =i;
+            // convert i to binary and use 1's and 0's
+            for (int j = arr.length -1; j >= 0 ; j--) {
+                int r = temp % 2;
+                temp= temp/2;
+
+                if (r == 0){
+                    set ="-\t" +set;
+                }else {
+                    set = arr[j] + "\t" +set;
+                }
+            }
+            System.out.println(set);
+
+        }
+
+
+    }
 
 }
 
