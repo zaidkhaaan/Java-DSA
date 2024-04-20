@@ -56,7 +56,7 @@ public class ALLINONE {
 //        System.out.println(sum);
 
 
-  //      int a = sc.nextInt();
+        //      int a = sc.nextInt();
 //        int b = sc.nextInt();
 //        int c =sc.nextInt();
 
@@ -119,16 +119,15 @@ public class ALLINONE {
 //        }
 
 
-
         //  int sum;
 //
 
 
 //        Scanner sc = new Scanner (System.in);
- //       String num = sc.nextLine();
+        //       String num = sc.nextLine();
 //        String num ="9876543219876543219876";
 
-     //   System.out.println("Sum of digits :"+getSum(num) );
+        //   System.out.println("Sum of digits :"+getSum(num) );
 
 //
 
@@ -141,6 +140,9 @@ public class ALLINONE {
 
 
 
+        /*
+
+        ARMSTRONG NUMBER
         int a = sc.nextInt();
         int b = a ;
         int c = a;
@@ -161,7 +163,177 @@ public class ALLINONE {
         }else{
             System.out.println("Not armstrong");
         }
+
+         */
+
+//
+//        int n = sc.nextInt();
+//        int a = 0;
+//        int b = 1;
+//
+//        System.out.print(a+","+ b);
+//
+//        for (int i = 2; i <n ; i++) {
+//
+//            int nextterm = a+b;
+//            a=b;
+//            b=nextterm;
+//
+//            System.out.print(","+nextterm+"");
+//
+//        }
+
+//        int n = sc.nextInt();
+//
+//        int fact=1;
+//        for (int i = 1; i <= n ; i++) {
+//            fact *= i;
+//        }
+//        System.out.println(fact);
+
+//        int n = sc.nextInt();
+//        int n1 = sc.nextInt();
+
+//        int temp = 1;
+//
+//        for (int i = 1; i <=n1 ; i++) {
+//            temp= temp*2;
+//        }
+//
+//        System.out.println(temp);
+
+
+//        int n2 =(int) Math.pow(n,n1);
+//        System.out.println(n2);
+
+//        double base1 = 1.5;
+//        double expo1 = 2.5;
+//
+//        double expo2 = -2.5;
+//
+//        double res= Math.pow(base1,expo1);
+//        double res1 =Math.pow(base1,expo2);
+//        System.out.print(res +"  "+ res1);
+
+
+        //       int n = 10;
+
+//        for (int i = 1; i <=10 ; i++) {
+//            if (n% i ==0){
+//                System.out.println(i);
+//            }
+//        }
+
+
+
+
+        /*
+
+        STRONG NUMBER
+        int n = 145;
+        int sum = 0;
+
+        while (n != 0) {
+            int digit = n % 10;
+            sum += getFact(digit);
+            n /= 10;
+        }
+
+        System.out.println("Sum of factorials of digits: " + sum);
     }
+
+    static int getFact(int n) {
+        int fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
+    }
+
+         */
+
+//        int n = 6;
+//        int sum = 0;
+//        for (int i = 1; i < n; i++) {
+//            if (n % i == 0) {
+//                sum += i;
+//            }
+//        }
+//        System.out.println(sum);
+
+
+//
+
+//        int n = 4991;
+//
+//        int temp =n;
+//
+//        int sum =0;
+//        while (temp > 0){
+//             temp= temp%10;
+//             sum += temp;
+//             temp=temp/10;
+//        }
+//
+//        if (n %  sum==0){
+//            System.out.println("Harshad Number");
+//        }else {
+//            System.out.println("NOT");
+//        }
+
+
+//        int n = sc.nextInt();
+//        int sum = 0;
+//        for (int i = 1; i <n ; i++) {
+//            if (n % 1 == 0){
+//                sum+=i;
+//            }
+//        }
+//
+//        if (sum>n){
+//            System.out.println("abundant number");
+//            System.out.println("The abundace is "+(sum-n));
+//        }
+
+        int n1= sc.nextInt();
+        int n2 = sc.nextInt();
+
+        int on1 = n1;
+        int on2 = n2;
+
+        while (n1 %  n2 != 0){
+            int rem = n1%n2;
+            n1=n2;
+            n2 = rem;
+
+        }
+        int gcd = n2;
+        int lcm = (on1 * on2) / gcd ;
+        System.out.println(gcd +"  "+lcm);
+
+
+    }
+}
+
+//    static int getdigit (int n ){
+//        int temp = n;
+//
+//        while (temp > 0 ){
+//            temp %=10;
+//            getfact(temp);
+//        }
+//        return  0 ;
+//    }
+//
+//    static int getfact(int n ){
+//        int temp = getdigit(n);
+//
+//        for (int i = 1; i <temp ; i++) {
+//            temp *=i;
+//        }
+//        return temp;
+//
+//    }
 
 
     /*
@@ -178,7 +350,7 @@ public class ALLINONE {
 
      */
 
-    }
+
 
 
         /*
