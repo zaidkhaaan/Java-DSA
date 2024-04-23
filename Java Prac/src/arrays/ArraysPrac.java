@@ -1908,38 +1908,54 @@ static void rotate(int arr[] , int k){
          */
 
         // subsets of an array
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        int n = sc.nextInt();
+//
+//        int [] arr = new int[n];
+//
+//        for (int i = 0; i < arr.length ; i++) {
+//            arr[i]= sc.nextInt();
+//        }
+//
+//        int limit = (int)Math.pow(2, arr.length);
+//
+//        for (int i = 0; i < limit; i++) {
+//
+//            String   set = "";
+//            int temp =i;
+//            // convert i to binary and use 1's and 0's
+//            for (int j = arr.length -1; j >= 0 ; j--) {
+//                int r = temp % 2;
+//                temp= temp/2;
+//
+//                if (r == 0){
+//                    set ="-\t" +set;
+//                }else {
+//                    set = arr[j] + "\t" +set;
+//                }
+//            }
+//            System.out.println(set);
+//
+//        }
+//
 
-        Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
+        int [] arr ={2,7,11,15};
+        System.out.println(twoSum(arr,9));
+    }
 
-        int [] arr = new int[n];
+    static int[] twoSum(int[] nums, int target) {
 
-        for (int i = 0; i < arr.length ; i++) {
-            arr[i]= sc.nextInt();
-        }
-
-        int limit = (int)Math.pow(2, arr.length);
-
-        for (int i = 0; i < limit; i++) {
-
-            String   set = "";
-            int temp =i;
-            // convert i to binary and use 1's and 0's
-            for (int j = arr.length -1; j >= 0 ; j--) {
-                int r = temp % 2;
-                temp= temp/2;
-
-                if (r == 0){
-                    set ="-\t" +set;
-                }else {
-                    set = arr[j] + "\t" +set;
+        for(int i = 0; i <  nums.length;  i++){
+            for (int j = 1 ; j <nums.length ; j++){
+                if (nums[i] + nums[j] == target){
+                    return new int [] {i,j};
                 }
             }
-            System.out.println(set);
-
         }
-
+        return null;
 
     }
 

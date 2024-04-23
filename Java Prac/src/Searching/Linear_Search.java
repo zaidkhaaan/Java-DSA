@@ -1,6 +1,7 @@
 package Searching;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Linear_Search {
 
@@ -58,11 +59,64 @@ public class Linear_Search {
     }
 
          */
-        int nums [] ={12,345,2,6,7896,13,14,15};
-        System.out.println(findNum(nums));
+//        int nums [] ={12,345,2,6,7896,13,14,15};
+//        System.out.println(findNum(nums));
 
+//
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        int n1 = sc.nextInt();
+        int m1 = sc.nextInt();
+
+
+        int [] [] arr = new int[n][m]; // syntax of 2-D array
+        int [] [] arr1 = new int[n1][m1];
+
+        // to take the input from user for 2-D array
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < n1; i++) {
+            for (int j = 0; j < m1; j++) {
+                arr1[i][j] = sc.nextInt();
+            }
+        }
+
+
+
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                sum += arr[i][j];
+            }
+            System.out.println(sum);
+            sum=0;
+        }
+
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr1[i].length; j++) {
+                sum += arr1[i][j];
+            }
+            System.out.println(sum);
+        }
+                // used to display the array
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = 0; j < arr[i].length; j++) {
+//                System.out.print(arr[i][j]+"\t");
+//            }
+//            System.out.println();
+//        }
 
     }
+
+    /*
 
     static int findNum(int [] nums ){
         int count = 0;
@@ -77,16 +131,17 @@ public class Linear_Search {
     }
     static boolean even (int num){
         int noofdigits = digits(num);
-        if (noofdigits % 2 ==0){
-            return true;
-        }
-        return false;
+//        if (noofdigits % 2 ==0){
+//            return true;
+//        }
+        return noofdigits % 2 ==0;
     }
 
     static int digits (int num){
 
         if (num < 0 ){
             num = num *-1;
+            // if number is negative make it positive
         }
         int count = 0;
 
@@ -100,6 +155,18 @@ public class Linear_Search {
         }
         return count;
     }
+
+     */
+
+//    static int digits2(int  num ) {
+//
+//        if (num < 0 ){
+//            num = num *-1;
+//            // if number is negative make it positive
+//        }
+//
+//        return (int)(Math.log10(num)) + 1;
+//    }
     /*
 
     function to search the array
