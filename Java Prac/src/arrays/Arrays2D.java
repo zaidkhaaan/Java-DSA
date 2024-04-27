@@ -79,7 +79,7 @@ public class Arrays2D {
 
 
         System.out.println("Matrix 1");
-        printMatrix(a);
+        printMatrix1(a);
 //        System.out.println("Matrix 2");
 //        printMatrix(a1);
 
@@ -89,9 +89,13 @@ public class Arrays2D {
        // matMUL(a,r1,c1,a1,r2,c2);
 
 
-        System.out.println("Transpose Matrix");
+//        System.out.println("Transpose Matrix");
 
         //Transpose(a,r1,c1);
+     //   TransinPlace(a,r1,c1);
+
+        System.out.println("Roatated Matrix");
+    //    rotate(a,r1);
         TransinPlace(a,r1,c1);
 
 
@@ -99,25 +103,50 @@ public class Arrays2D {
     }
 
 
-    static void Transpose ( int [] [] a , int r1 , int c1 ) {
+    static void reverseArray (int[] arr) {
+        int i = 0;
+        int j = arr.length -1;
 
+        while (i < j){
+            int temp = arr[i];
+            arr[i]= arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
 
-        // Transpose of a matrix where a row is converted into col
-
-//        if (c1 != r1){
-//            System.out.println("Wrong Matrix Input");
-//        }
-
-        int arr [] [] = new int[c1][r1];
-        for (int i = 0; i < c1; i++) {
-            for (int j = 0; j < r1; j++) {
-                arr[i][j] = a[j][i];
-            }
         }
-        printMatrix(arr);
+    }
+    static void rotate ( int[][] matrix , int n)
+    {
+        TransinPlace(matrix,n,n);
 
+        for (int i = 0; i < n; i++) {
+            reverseArray(matrix[i]);
+        }
+        printMatrix(matrix);
 
     }
+
+
+//    static void Transpose ( int [] [] a , int r1 , int c1 ) {
+//
+//
+//        // Transpose of a matrix where a row is converted into col
+//
+////        if (c1 != r1){
+////            System.out.println("Wrong Matrix Input");
+////        }
+//
+//        int arr [] [] = new int[c1][r1];
+//        for (int i = 0; i < c1; i++) {
+//            for (int j = 0; j < r1; j++) {
+//                arr[i][j] = a[j][i];
+//            }
+//        }
+//        printMatrix(arr);
+//
+//
+//    }
 
     static void TransinPlace (int [] [] matrix , int r , int c){
 
@@ -128,7 +157,7 @@ public class Arrays2D {
                 matrix [j][i] =temp;
             }
         }
-        printMatrix(matrix);
+      printMatrix(matrix);
     }
 
 
@@ -180,12 +209,27 @@ public class Arrays2D {
 //        printMatrix(sum);
 //    }
 
-    static void printMatrix (int [] [] matrix){
+    static void printMatrix1 (int [] [] matrix){
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
+            for (int j = 0; j < matrix[i].length; j++){
                 System.out.print(matrix[i][j] +"  ");
             }
             System.out.println();
+
+            // for(int j=matrix[i].length-1 ; j>=0 ; j--)
+            // for (int j = 0; j < matrix[i].length; j++)
+        }
+    }
+
+    static void printMatrix (int [] [] matrix){
+        for (int i = 0; i < matrix.length; i++) {
+            for(int j=matrix[i].length-1 ; j>=0 ; j--){
+                System.out.print(matrix[i][j] +"  ");
+            }
+            System.out.println();
+
+            // for(int j=matrix[i].length-1 ; j>=0 ; j--)
+            // for (int j = 0; j < matrix[i].length; j++)
         }
     }
 
