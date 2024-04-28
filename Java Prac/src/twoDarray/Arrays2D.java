@@ -1,4 +1,4 @@
-package arrays;
+package twoDarray;
 
 import java.util.Scanner;
 
