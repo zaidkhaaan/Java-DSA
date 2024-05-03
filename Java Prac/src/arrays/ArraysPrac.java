@@ -1,5 +1,8 @@
 package arrays;
 
+import java.util.*;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraysPrac {
@@ -1859,7 +1862,6 @@ static void rotate(int arr[] , int k){
      */
 
 
-
         // Inverse of an array
 
         /*
@@ -1941,23 +1943,314 @@ static void rotate(int arr[] , int k){
 //        }
 //
 
+//
+//        int [] arr ={2,7,11,15};
+//        System.out.println(twoSum(arr,9));
 
-        int [] arr ={2,7,11,15};
-        System.out.println(twoSum(arr,9));
-    }
+//        int arr [] ={1,2,2,4,5};
+//        int count = arr.length-1;
+//        int sum = 0;
+//
+//        if (count == sorted(arr,count,sum)){
+//            System.out.println("Array sorted");
+//        }else{
+//            System.out.println("Not sorted");
+//        }
 
-    static int[] twoSum(int[] nums, int target) {
+//        int arr [] ={4,6,3,5,8,2};
+//
+////        System.out.println(isSorted(arr));
+//        int target = 7;
+        //       System.out.println(Arrays.toString(TargetSum(arr,target)));
 
-        for(int i = 0; i <  nums.length;  i++){
-            for (int j = 1 ; j <nums.length ; j++){
-                if (nums[i] + nums[j] == target){
-                    return new int [] {i,j};
-                }
+
+        // using arraylist
+//
+//        int[] arr = {4, 6, 3, 5, 8, 2};
+//        int target = 7;
+//        ArrayList<int[]> result = targetSum(arr, target);
+//        for (int[] pair : result) {
+//            System.out.println(Arrays.toString(pair));
+//        }
+
+//        int[] arr = {4, 6, 3, 5, 8, 2};
+//        int target = 7;
+//        int[][] result = targetSum(arr, target);
+//        for (int[] pair : result) {
+//            if (pair[0] != -1 && pair[1] != -1) {
+//                System.out.println("["+pair[0]+  "," + pair[1]+"]");
+//            }
+//        }
+
+//        int arr[] = {1,2,3,4,2,1,3};
+//
+//
+//        for ( int i = 0; i < arr.length ; i++){
+//            for ( int j = i+1 ; j <arr.length; j++){
+//                if (arr[i] == arr[j]){
+//                   arr[i] = -1;
+//                   arr[j] = -1;
+//                }
+//
+//            }
+//        }
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i]+" ");
+//        }
+//
+//        int ans = 0;
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i]>0){
+//                ans= arr[i];
+//            }
+//        }
+//        System.out.println("Your Unique ans");
+//        System.out.println(ans);
+
+        /*
+        import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read the number of elements in the array
+        int N = sc.nextInt();
+
+        // Read the elements of the array
+        int[] arr = new int[N];
+        for (int i = 0; i < N; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Find the maximum and second maximum elements in the array
+        int max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE;
+        for (int num : arr) {
+            if (num > max1) {
+                max2 = max1;
+                max1 = num;
+            } else if (num > max2) {
+                max2 = num;
             }
         }
-        return null;
+
+        // The maximum possible sum of a "fair" subsequence is the sum of the maximum and second maximum elements
+        int maxSum = max1 + max2;
+
+        System.out.println(maxSum);
+    }
+}
+
+         */
+
+
+//        int arr [] = {1, 2,3 ,4};
+//        int max = arr[0];
+//
+//        for (int i = 0 ; i < arr.length;i++){
+//
+//            while (arr[i]>max){
+//                max=arr[i];
+//            }
+//        }
+//        System.out.println(max);
+//
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i]==max){
+//                arr[i]=-1;
+//            }
+//        }
+//
+//        max = arr[0];
+//        for (int i = 0 ; i < arr.length;i++){
+//
+//            while (arr[i]>max){
+//                max=arr[i];
+//            }
+//        }
+//        System.out.println(max);
+
+
+
+//        int [] arr1 ={1,2,3,4};
+//
+//        findMax(arr1);
+//        System.out.println( secondMax(arr1));
+//
+//        int arr []= {1,5,3,4,6,3,4};
+//
+//        System.out.println(findreap(arr));
+
+
+//        int a = 9;
+//        int b = 3;
+//
+//        a=a+b;
+//        b=a-b;
+//        a=a-b;
+//
+//        System.out.println(a+ "  "+ b    );
+
+//
+//        int arr[] = {1,2,3,4,5};
+//
+////        for ( int i = arr.length-1 ; i >= 0 ; i--){
+////            System.out.print(arr[i]+" ");
+////        }
+//
+//        int n = arr.length;
+//        int [] ans =new int [n];
+//
+//        int j = 0;
+//
+//        for ( int i = n-1 ; i >= 0 ; i --){
+//            ans[j++]=arr[i];
+//        }
+
+//        int arr[] ={1,2,3,4,5};
+//      int  i= 0 ,j = arr.length-1;
+//        Swap(arr, i,j);
+
+//        int nums [] ={1,2,3,1,1,3};
+//        int count = 0;
+//        for ( int i = 1 ; i < nums.length ; i++){
+//            if (nums[i]==nums[i-1]){
+//                count++;
+//            }
+//        }
+
+        int arr[] ={3,2,4,7,10,6,5};
+        int [] result = new int[removeEven(arr)];
+
+        int idx =0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] %2 !=0){
+                result[idx++]=arr[i];
+            }
+        }
+
+        System.out.println(Arrays.toString(result));
+
 
     }
+
+    static  int removeEven ( int [] arr){
+        int oddcount=0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 !=0){
+                oddcount++;
+            }
+        }
+        return oddcount;
+    }
+
+
+
+//    static int findreap (int arr[]) {
+//        int count = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = i + 1; j < arr.length; j++) {
+//                if (arr[i] == arr[j]) {
+//                    return arr[i];
+//                }
+//            }
+//        }
+//        return -1;
+//
+//    }
+//    static int[][] targetSum(int[] arr, int target) {
+//        int[][] pairs = new int[arr.length][2];
+//        for (int i = 0; i < pairs.length; i++) {
+//            pairs[i][0] = -1;
+//            pairs[i][1] = -1;
+//        }
+//        int index = 0;
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = i + 1; j < arr.length; j++) {
+//                if (arr[i] + arr[j] == target) {
+//                    pairs[index][0] = i;
+//                    pairs[index][1] = j;
+//                    index++;
+//                }
+//            }
+//        }
+//        return pairs;
+//    }
+
+//    static ArrayList<int[]> targetSum(int[] arr, int target) {
+//        ArrayList<int[]> pairs = new ArrayList<>();
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = i + 1; j < arr.length; j++) {
+//                if (arr[i] + arr[j] == target) {
+//                    pairs.add(new int[]{i, j});
+//                }
+//            }
+//        }
+//        return pairs;
+//    }
+
+
+//    static int [] TargetSum ( int arr [] , int target){
+//
+//        for ( int i = 0; i < arr.length ; i ++){
+//            for ( int j = i +1 ; j< arr.length;j ++) {
+//                if (arr[i] + arr[j] == target){
+//                    return new int[]{i , j};
+//
+//                }
+//            }
+//        }
+//        return null;
+//
+//    }
+
+//    static boolean isSorted (int [] arr){
+//        boolean check = true;
+//
+//        for (int i = 1; i < arr.length ; i++) {
+//            if (arr[i] < arr[i-1] ){
+//                check = false;
+//
+//            }
+//
+//        }
+//        return check;
+//    }
+
+//    static int sorted (int arr[] , int count , int sum){
+//
+//
+//        for (int i = 1; i < arr.length ; i++){
+//            for ( int j = i-1 ; i < arr.length ; i++){
+//                if (arr[j] <= arr[i])
+//                {
+//                    sum++;
+//
+//                }
+//                else {
+//                    return -1;
+//                }
+//            }
+//        }
+//        return sum;
+//    }
+
+//    static int[] twoSum(int[] nums, int target) {
+//
+//        for(int i = 0; i <  nums.length;  i++){
+//            for (int j = 1 ; j <nums.length ; j++){
+//                if (nums[i] + nums[j] == target){
+//                    return new int [] {i,j};
+//                }
+//            }
+//        }
+//        return null;
+//
+//    }
 
 }
 

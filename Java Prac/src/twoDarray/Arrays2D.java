@@ -39,15 +39,15 @@ public class Arrays2D {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of rows & cols");
 
-        int r1 = sc.nextInt();
-        int c1 = sc.nextInt();
+        int r = sc.nextInt();
+        int c = sc.nextInt();
 
-        int[][] a = new int[r1][c1];
+        int[][] a = new int[r][c];
 
         System.out.println("Enter the matrix value");
 
-        for (int i = 0; i < r1; i++) {
-            for (int j = 0; j < c1; j++) {
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
                 a[i][j] = sc.nextInt();
 
                 /*
@@ -84,48 +84,96 @@ public class Arrays2D {
 //        printMatrix(a1);
 
 
+        System.out.println("Enter rectangle boundaries l1,r1,l2,r2");
+        int l1 =sc.nextInt();
+        int r1 =sc.nextInt();
+        int l2 =sc.nextInt();
+        int r2 =sc.nextInt();
 
 
-       // matMUL(a,r1,c1,a1,r2,c2);
+        System.out.println("Rectangle sum "+findsum2(a,l1,r1,l2,r2));
+
+        // matMUL(a,r1,c1,a1,r2,c2);
 
 
 //        System.out.println("Transpose Matrix");
 
         //Transpose(a,r1,c1);
-     //   TransinPlace(a,r1,c1);
+        //   TransinPlace(a,r1,c1);
 
-        System.out.println("Roatated Matrix");
-    //    rotate(a,r1);
-        TransinPlace(a,r1,c1);
+//        System.out.println("Roatated Matrix");
+//    //    rotate(a,r1);
+//        TransinPlace(a,r1,c1);
 
 
-
+//        int sum= 0;
+//        int l1 = 3, l2 = 5;
+//        int r = 1 ,r3=4;
+//
+//        for ( int i = l1 ; i <= l2 ;i++) {
+//            for (int j = r; j <= r3 ; j++) {
+//                sum += a[i][j];
+//            }
+//        }
+//        System.out.println(sum);
+//
+//    }
     }
 
+    static void findPrefixSumMatrix(int matrix [] []){
+        int r = matrix.length;
+        int c = matrix[0].length;
 
-    static void reverseArray (int[] arr) {
-        int i = 0;
-        int j = arr.length -1;
+        // traverse horizontally
 
-        while (i < j){
-            int temp = arr[i];
-            arr[i]= arr[j];
-            arr[j] = temp;
-            i++;
-            j--;
+        // calculate row wise prefix sum
 
+        for ( int i = 0; i< r; i++){
+            for (int j = 1; j < c;j++){
+                matrix[i][j] += matrix[i][j-1];
+            }
         }
     }
-    static void rotate ( int[][] matrix , int n)
-    {
-        TransinPlace(matrix,n,n);
 
-        for (int i = 0; i < n; i++) {
-            reverseArray(matrix[i]);
+    static int findsum2 ( int[][] matrix , int l1 , int r1,int l2 , int r2 ){
+        int sum = 0;
+        findPrefixSumMatrix(matrix);
+
+        for (int i = l1 ; i<= l2;i++ ){
+            // r1 to r2 sum for row i
+            if (r1 >= 1){
+                sum += matrix[i][r2]-matrix[i][r1-1];
+            }else {
+                sum += matrix[i][r2];
+            }
+
         }
-        printMatrix(matrix);
-
+        return sum;
     }
+
+//    static void reverseArray (int[] arr) {
+//        int i = 0;
+//        int j = arr.length -1;
+//
+//        while (i < j){
+//            int temp = arr[i];
+//            arr[i]= arr[j];
+//            arr[j] = temp;
+//            i++;
+//            j--;
+//
+//        }
+//    }
+//    static void rotate ( int[][] matrix , int n)
+//    {
+//        TransinPlace(matrix,n,n);
+//
+//        for (int i = 0; i < n; i++) {
+//            reverseArray(matrix[i]);
+//        }
+//        printMatrix(matrix);
+//
+//    }
 
 
 //    static void Transpose ( int [] [] a , int r1 , int c1 ) {
@@ -148,17 +196,17 @@ public class Arrays2D {
 //
 //    }
 
-    static void TransinPlace (int [] [] matrix , int r , int c){
-
-        for (int i = 0; i < c; i++) {
-            for (int j = i; j < r; j++) {
-                int temp = matrix[i][j];
-                matrix [i][j] = matrix[j][i];
-                matrix [j][i] =temp;
-            }
-        }
-      printMatrix(matrix);
-    }
+//    static void TransinPlace (int [] [] matrix , int r , int c){
+//
+//        for (int i = 0; i < c; i++) {
+//            for (int j = i; j < r; j++) {
+//                int temp = matrix[i][j];
+//                matrix [i][j] = matrix[j][i];
+//                matrix [j][i] =temp;
+//            }
+//        }
+//      printMatrix(matrix);
+//    }
 
 
 

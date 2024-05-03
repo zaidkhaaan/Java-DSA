@@ -1,4 +1,4 @@
-package arrays;
+package DineshVaryani;
 
 import java.util.Scanner;
 
@@ -144,41 +144,116 @@ public class Dinesh_Varyani_DSA_Arrays {
 //    https://pillai-edu-in.zoom.us/j/89605395066?pwd=dVhzN3g4K01ac2E2OTZHU0NCZXd1Zz09
 
 
+          Scanner sc = new Scanner(System.in);
 
+        // Read the number of elements in the array
+        int N = sc.nextInt();
+
+        // Read the elements of the array
+        int[] arr = new int[N];
+        for (int i = 0; i < N; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Find the maximum and second maximum elements in the array
+        int max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE;
+        for (int num : arr) {
+            if (num > max1) {
+                max2 = max1;
+                max1 = num;
+            } else if (num > max2) {
+                max2 = num;
+            }
+        }
+
+        // The maximum possible sum of a "fair" subsequence is the sum of the maximum and second maximum elements
+        int maxSum = max1 + max2;
+
+        System.out.println(maxSum);
 
     }
-
+}
 
 
 
      */
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        if (isPalindrome(s)){
-            System.out.println("Palindrome");
-        }else {
-            System.out.println("Not Palindrome");
-        }
 
+        /*
+        static int FindSecondMAx(int [] arr){
+        int max = Integer.MIN_VALUE;
+        int secondmax=Integer.MIN_VALUE;
 
-    }
-
-    static boolean isPalindrome (String word){
-        char [] charArray = word.toCharArray();
-
-        int start = 0;
-        int end =word.length()-1;
-
-        while (start < end){
-            if (charArray[start] != charArray[end]){
-                return false;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max){
+                secondmax = max; // storing previous max beforre adding any new max
+                max = arr[i];
+            } else if (arr[i] > secondmax && arr[i] != max) {
+                secondmax =arr [i];
             }
-            start++;
-            end--;
-
         }
-        return true;
+        return secondmax;
+    }
+         */
+
+        // The maximum possible sum of a "fair" subsequence is the sum of the maximum and second maximum elements
+        int arr [] = {8,1,0,2,1,0,3};
+        moveZeros(arr, arr.length);
+    }
+
+    static void moveZeros (int arr[] , int n){
+        int n1 =arr.length;
+        int j =0;
+        for (int i = 0; i < n1; i++) {
+            if (arr[i] != 0 && arr[j] == 0){
+                int temp = arr[i];
+                arr[i]=arr[j];
+                arr[j] = temp;
+
+            }
+            if (arr[j] != 0){
+                j++;  // to keep the counter at last
+            }
+        }
+        printarray(arr);
 
     }
 
-}
+    static void printarray(int arr[]){
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+    }
+
+//        Scanner sc = new Scanner(System.in);
+//        String s = sc.nextLine();
+//        if (isPalindrome(s)){
+//            System.out.println("Palindrome");
+//        }else {
+//            System.out.println("Not Palindrome");
+//        }
+
+
+    }
+
+
+
+//    static boolean isPalindrome (String word){
+//        char [] charArray = word.toCharArray();
+//
+//        int start = 0;
+//        int end =word.length()-1;
+//
+//        while (start < end){
+//            if (charArray[start] != charArray[end]){
+//                return false;
+//            }
+//            start++;
+//            end--;
+//
+//        }
+//        return true;
+//
+//    }
+
+
+
