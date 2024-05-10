@@ -150,6 +150,10 @@ public class Arrays2D {
         }
         return sum;
     }
+// just for commit
+    
+
+
 
 //    static void reverseArray (int[] arr) {
 //        int i = 0;
