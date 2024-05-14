@@ -61,29 +61,31 @@ public class Arrays2D {
                  */
             }
         }
-        System.out.println("Enter the number of rows & cols for matrix 2 ");
-        int r1 = sc.nextInt();
-        int c1 = sc.nextInt();
-
-        int[][] a1 = new int[r1][c1];
-
-        System.out.println("Enter the matrix value for matrix 2");
-
-        for (int i = 0; i < r1; i++) {
-            for (int j = 0; j < c1; j++) {
-                a1[i][j] = sc.nextInt();
-
-                /*
-                 (Row , Col)
-
-               Col(row, 0),  Col (row , 1) , Col (Row ,2)
- Row(0,Col)         0 0  ,        0 1      ,     0 2
- Row(1,Col)         1 0 ,         1 1      ,     1 2
- Row(2,Col)         2 0 ,         2 1      ,     2 2
-
-                 */
-            }
-        }
+        System.out.println("transpose");
+        transposeinplace(a,r,c);
+//        System.out.println("Enter the number of rows & cols for matrix 2 ");
+//        int r1 = sc.nextInt();
+//        int c1 = sc.nextInt();
+//
+//        int[][] a1 = new int[r1][c1];
+//
+//        System.out.println("Enter the matrix value for matrix 2");
+//
+//        for (int i = 0; i < r1; i++) {
+//            for (int j = 0; j < c1; j++) {
+//                a1[i][j] = sc.nextInt();
+//
+//                /*
+//                 (Row , Col)
+//
+//               Col(row, 0),  Col (row , 1) , Col (Row ,2)
+// Row(0,Col)         0 0  ,        0 1      ,     0 2
+// Row(1,Col)         1 0 ,         1 1      ,     1 2
+// Row(2,Col)         2 0 ,         2 1      ,     2 2
+//
+//                 */
+//            }
+//        }
 //
 //        if (r!=r1 || c!=c1){
 //            System.out.println("Incorrect Matrix");
@@ -93,8 +95,7 @@ public class Arrays2D {
 //
 //        }
 //        findsum(a,a1,r,c,r1,c1);
-        matrixmul(a,a1,r,c,r1,c1);
-
+//        matrixmul(a,a1,r,c,r1,c1);
 
 
 //
@@ -111,7 +112,6 @@ public class Arrays2D {
 //                a1[i][j] = sc.nextInt();
 //            }
 //        }
-
 
 
 //        System.out.println("Matrix 2");
@@ -154,39 +154,62 @@ public class Arrays2D {
 //    }
 
 
-
     }
 
-
-
-
-
-
-
-
-
-
-
-    static void matrixmul (int a[][] ,int a1 [][], int r1, int c1, int r2,int c2){
-        if (c1 != r2 ){
-            System.out.println("Incorrect Matrix for multiplication");
-            return;
+//    static void transpose(int arr[][], int r, int c) {
+//        if (r != c) {
+//            System.out.println("WRONG MATRIX");
+//            return;
+//        }
+//
+//        int trans[][] = new int[r][c];
+//        for (int i = 0; i < r; i++) {
+//            for (int j = 0; j < c; j++) {
+//                trans[i][j] = arr[j][i];
+//            }
+//        }
+//        printMatrix1(trans);
+//    }
+static void transposeinplace(int arr[][], int r, int c) {
+    if (r != c) {
+        System.out.println("WRONG MATRIX");
+        return;
+    }
+    for ( int i = 0; i < r;i++){
+        for ( int j = 0 ; j < c ;j++){
+            int temp = arr[i][j];
+            arr[i][j]=arr[j][i];
+            arr[j][i]= temp;
         }
+    }
+    printMatrix1(arr);
 
-        int ans[][] = new int [r1][c2];
+}
 
-        for ( int i = 0 ; i < r1;i++){
-            for ( int j = 0; j< c2;j++){
-                for (int k = 0 ; k < c1 ;k++){
-                    /*
-                    mul [] [] = ith row of a *  jth col b
-                    */
 
-                    ans[i][j] +=(a[i][k] * a1[k][j]);
-                }
-            }
-        }
-        printMatrix1(ans);
+
+
+
+//    static void matrixmul (int a[][] ,int a1 [][], int r1, int c1, int r2,int c2){
+//        if (c1 != r2 ){
+//            System.out.println("Incorrect Matrix for multiplication");
+//            return;
+//        }
+//
+//        int ans[][] = new int [r1][c2];
+//
+//        for ( int i = 0 ; i < r1;i++){
+//            for ( int j = 0; j< c2;j++){
+//                for (int k = 0 ; k < c1 ;k++){
+//                    /*
+//                    mul [] [] = ith row of a *  jth col b
+//                    */
+//
+//                    ans[i][j] +=(a[i][k] * a1[k][j]);
+//                }
+//            }
+//        }
+    //       printMatrix1(ans);
 //            int ans [][] = new int[r1][c2];
 //            for (int i = 0; i < r1; i++) {
 //            for ( int j = 0;  j < c1;j++ ){
@@ -194,12 +217,11 @@ public class Arrays2D {
 //            }
 //        }
 //            printMatrix1(ans);
-    }
 
 
 
 
-    s
+
 
 
 
