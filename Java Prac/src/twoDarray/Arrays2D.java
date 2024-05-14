@@ -36,33 +36,33 @@ public class Arrays2D {
 
 
          */
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of rows & cols for matrix 1 ");
-
-        int r = sc.nextInt();
-        int c = sc.nextInt();
-
-        int[][] a = new int[r][c];
-
-        System.out.println("Enter the matrix value for matrix 1");
-
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++) {
-                a[i][j] = sc.nextInt();
-
-                /*
-                 (Row , Col)
-
-               Col(row, 0),  Col (row , 1) , Col (Row ,2)
- Row(0,Col)         0 0  ,        0 1      ,     0 2
- Row(1,Col)         1 0 ,         1 1      ,     1 2
- Row(2,Col)         2 0 ,         2 1      ,     2 2
-
-                 */
-            }
-        }
-        System.out.println("transpose");
-        transposeinplace(a,r,c);
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the number of rows & cols for matrix 1 ");
+//
+//        int r = sc.nextInt();
+//        int c = sc.nextInt();
+//
+//        int[][] a = new int[r][c];
+//
+//        System.out.println("Enter the matrix value for matrix 1");
+//
+//        for (int i = 0; i < r; i++) {
+//            for (int j = 0; j < c; j++) {
+//                a[i][j] = sc.nextInt();
+//
+//                /*
+//                 (Row , Col)
+//
+//               Col(row, 0),  Col (row , 1) , Col (Row ,2)
+// Row(0,Col)         0 0  ,        0 1      ,     0 2
+// Row(1,Col)         1 0 ,         1 1      ,     1 2
+// Row(2,Col)         2 0 ,         2 1      ,     2 2
+//
+//                 */
+//            }
+//        }
+//        System.out.println("transpose");
+//        transposeinplace(a,r,c);
 //        System.out.println("Enter the number of rows & cols for matrix 2 ");
 //        int r1 = sc.nextInt();
 //        int c1 = sc.nextInt();
@@ -153,6 +153,44 @@ public class Arrays2D {
 //
 //    }
 
+//        rotate(a,r);
+
+
+
+
+
+
+
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+int ans [][] = pascal(n);
+        printMatrix(ans);
+
+
+
+
+
+
+    }
+    static int  [] [] pascal ( int n ){
+        int [] [] ans = new int[n][];
+
+
+        for (int i = 0; i < n; i++) {
+
+            // dynamically assign the colmun which jagged
+            ans[i] = new int [i+1];
+            // 1st and last element of every row is 1
+            ans[i][0] = ans [i][i] = 1;
+
+            for (int j = 1; j < i ; j++) {
+                ans[i][j]=ans[i-1][j]+ans[i-1][j-1];
+
+            }
+
+        }
+        return ans;
 
     }
 
@@ -170,21 +208,25 @@ public class Arrays2D {
 //        }
 //        printMatrix1(trans);
 //    }
-static void transposeinplace(int arr[][], int r, int c) {
-    if (r != c) {
-        System.out.println("WRONG MATRIX");
-        return;
-    }
-    for ( int i = 0; i < r;i++){
-        for ( int j = 0 ; j < c ;j++){
-            int temp = arr[i][j];
-            arr[i][j]=arr[j][i];
-            arr[j][i]= temp;
-        }
-    }
-    printMatrix1(arr);
-
-}
+//static void transposeinplace(int arr[][], int r, int c) {
+//    if (r != c) {
+//        System.out.println("WRONG MATRIX");
+//        return;
+//    }
+//    for ( int i = 0; i < r;i++){
+//        for ( int j = i ; j < c ;j++){
+//            int temp = arr[i][j];
+//            arr[i][j]=arr[j][i];
+//            arr[j][i]= temp;
+//        }
+//    }
+//
+//
+//}
+//static void rotate ( int [] [] matrix, int n ){
+//        transposeinplace(matrix , n ,n);
+//        printMatrix(matrix);
+//}
 
 
 
@@ -373,7 +415,7 @@ static void transposeinplace(int arr[][], int r, int c) {
 //        printMatrix(sum);
 //    }
 
-    static void printMatrix1 (int [] [] matrix){
+    static void printMatrix (int [] [] matrix){
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++){
                 System.out.print(matrix[i][j] +"  ");
@@ -386,7 +428,7 @@ static void transposeinplace(int arr[][], int r, int c) {
     }
 
 //    static void printMatrix (int [] [] matrix){
-    // used to print the reverse matrix
+//    // used to print the reverse matrix
 //        for (int i = 0; i < matrix.length; i++) {
 //            for(int j=matrix[i].length-1 ; j>=0 ; j--){
 //                System.out.print(matrix[i][j] +"  ");
