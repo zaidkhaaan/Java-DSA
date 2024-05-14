@@ -37,14 +37,14 @@ public class Arrays2D {
 
          */
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of rows & cols");
+        System.out.println("Enter the number of rows & cols for matrix 1 ");
 
         int r = sc.nextInt();
         int c = sc.nextInt();
 
         int[][] a = new int[r][c];
 
-        System.out.println("Enter the matrix value");
+        System.out.println("Enter the matrix value for matrix 1");
 
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
@@ -61,6 +61,41 @@ public class Arrays2D {
                  */
             }
         }
+        System.out.println("Enter the number of rows & cols for matrix 2 ");
+        int r1 = sc.nextInt();
+        int c1 = sc.nextInt();
+
+        int[][] a1 = new int[r1][c1];
+
+        System.out.println("Enter the matrix value for matrix 2");
+
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c1; j++) {
+                a1[i][j] = sc.nextInt();
+
+                /*
+                 (Row , Col)
+
+               Col(row, 0),  Col (row , 1) , Col (Row ,2)
+ Row(0,Col)         0 0  ,        0 1      ,     0 2
+ Row(1,Col)         1 0 ,         1 1      ,     1 2
+ Row(2,Col)         2 0 ,         2 1      ,     2 2
+
+                 */
+            }
+        }
+//
+//        if (r!=r1 || c!=c1){
+//            System.out.println("Incorrect Matrix");
+//        }else{
+//            printMatrix1(a);
+//            printMatrix1(a1);
+//
+//        }
+//        findsum(a,a1,r,c,r1,c1);
+        matrixmul(a,a1,r,c,r1,c1);
+
+
 
 //
 //        System.out.println("Enter the number of rows & cols for 2nd matrix ");
@@ -78,20 +113,19 @@ public class Arrays2D {
 //        }
 
 
-        System.out.println("Matrix 1");
-        printMatrix1(a);
+
 //        System.out.println("Matrix 2");
 //        printMatrix(a1);
 
 
-        System.out.println("Enter rectangle boundaries l1,r1,l2,r2");
-        int l1 =sc.nextInt();
-        int r1 =sc.nextInt();
-        int l2 =sc.nextInt();
-        int r2 =sc.nextInt();
+//        System.out.println("Enter rectangle boundaries l1,r1,l2,r2");
+//        int l1 =sc.nextInt();
+//        int r1 =sc.nextInt();
+//        int l2 =sc.nextInt();
+//        int r2 =sc.nextInt();
 
 
-        System.out.println("Rectangle sum "+findsum2(a,l1,r1,l2,r2));
+//        System.out.println("Rectangle sum "+findsum2(a,l1,r1,l2,r2));
 
         // matMUL(a,r1,c1,a1,r2,c2);
 
@@ -118,38 +152,94 @@ public class Arrays2D {
 //        System.out.println(sum);
 //
 //    }
+
+
+
     }
 
-    static void findPrefixSumMatrix(int matrix [] []){
-        int r = matrix.length;
-        int c = matrix[0].length;
 
-        // traverse horizontally
 
-        // calculate row wise prefix sum
 
-        for ( int i = 0; i< r; i++){
-            for (int j = 1; j < c;j++){
-                matrix[i][j] += matrix[i][j-1];
+
+
+
+
+
+
+
+    static void matrixmul (int a[][] ,int a1 [][], int r1, int c1, int r2,int c2){
+        if (c1 != r2 ){
+            System.out.println("Incorrect Matrix for multiplication");
+            return;
+        }
+
+        int ans[][] = new int [r1][c2];
+
+        for ( int i = 0 ; i < r1;i++){
+            for ( int j = 0; j< c2;j++){
+                for (int k = 0 ; k < c1 ;k++){
+                    /*
+                    mul [] [] = ith row of a *  jth col b
+                    */
+
+                    ans[i][j] +=(a[i][k] * a1[k][j]);
+                }
             }
         }
+        printMatrix1(ans);
+//            int ans [][] = new int[r1][c2];
+//            for (int i = 0; i < r1; i++) {
+//            for ( int j = 0;  j < c1;j++ ){
+//                ans[i][j]  = a[i][j]+a1[i][j];
+//            }
+//        }
+//            printMatrix1(ans);
     }
 
-    static int findsum2 ( int[][] matrix , int l1 , int r1,int l2 , int r2 ){
-        int sum = 0;
-        findPrefixSumMatrix(matrix);
 
-        for (int i = l1 ; i<= l2;i++ ){
-            // r1 to r2 sum for row i
-            if (r1 >= 1){
-                sum += matrix[i][r2]-matrix[i][r1-1];
-            }else {
-                sum += matrix[i][r2];
-            }
 
-        }
-        return sum;
-    }
+
+    s
+
+
+
+
+
+
+
+
+
+
+//    static void findPrefixSumMatrix(int matrix [] []){
+//        int r = matrix.length;
+//        int c = matrix[0].length;
+//
+//        // traverse horizontally
+//
+//        // calculate row wise prefix sum
+//
+//        for ( int i = 0; i< r; i++){
+//            for (int j = 1; j < c;j++){
+//                matrix[i][j] += matrix[i][j-1];
+//            }
+//        }
+//    }
+//
+//    static int findsum2 ( int[][] matrix , int l1 , int r1,int l2 , int r2 ){
+//        int sum = 0;
+//        findPrefixSumMatrix(matrix);
+//
+//        for (int i = l1 ; i<= l2;i++ ){
+//            // r1 to r2 sum for row i
+//            if (r1 >= 1){
+//                sum += matrix[i][r2]-matrix[i][r1-1];
+//            }else {
+//                sum += matrix[i][r2];
+//            }
+//
+//        }
+//        return sum;
+//    }
 // just for commit
 
 
@@ -273,17 +363,18 @@ public class Arrays2D {
         }
     }
 
-    static void printMatrix (int [] [] matrix){
-        for (int i = 0; i < matrix.length; i++) {
-            for(int j=matrix[i].length-1 ; j>=0 ; j--){
-                System.out.print(matrix[i][j] +"  ");
-            }
-            System.out.println();
-
-            // for(int j=matrix[i].length-1 ; j>=0 ; j--)
-            // for (int j = 0; j < matrix[i].length; j++)
-        }
-    }
+//    static void printMatrix (int [] [] matrix){
+    // used to print the reverse matrix
+//        for (int i = 0; i < matrix.length; i++) {
+//            for(int j=matrix[i].length-1 ; j>=0 ; j--){
+//                System.out.print(matrix[i][j] +"  ");
+//            }
+//            System.out.println();
+//
+//            // for(int j=matrix[i].length-1 ; j>=0 ; j--)
+//            // for (int j = 0; j < matrix[i].length; j++)
+//        }
+//    }
 
 
 }
