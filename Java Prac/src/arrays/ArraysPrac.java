@@ -2170,27 +2170,110 @@ public class Main {
 
          */
 
-        int arr [] = {1,0,0,1,0,1,1,0};
+//        int arr [] = {1,0,0,1,0,1,1,0};
+//
+//        int left = 0;
+//        int right = arr.length-1 ;
+//
+//        while (left < right){
+//            if (arr[left]==1 && arr[right]==0){
+//                int temp =arr[left];
+//                arr[left] =arr[right];
+//                arr[right]= temp;
+//                left++;
+//                right--;
+//            }
+//            if (arr[left]==0){
+//                left++;
+//            }
+//            if (arr[right]==1){
+//                right--;
+//            }
+//        }
+//        printArray(arr);
+//    }
 
-        int left = 0;
-        int right = arr.length-1 ;
+//        int arr[] = {1,2,3,4,5,6};
+//        int index = 0;
+//        int ans [] = new int[arr.length];
+//        for ( int i = 0 ; i <arr.length ; i++){
+//            if (arr[i] % 2 ==0){
+//               ans[index++]=arr[i];
+//            }
+//        }
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] % 2 != 0) {
+//                ans[index++] = arr[i];
+//            }
+//        }
+//        printArray(ans);
 
-        while (left < right){
-            if (arr[left]==1 && arr[right]==0){
-                int temp =arr[left];
-                arr[left] =arr[right];
-                arr[right]= temp;
-                left++;
-                right--;
-            }
-            if (arr[left]==0){
-                left++;
-            }
-            if (arr[right]==1){
-                right--;
-            }
+//        int arr [] = {-10,-5,-2,1,4,9};
+//        int left = 0, right = arr.length - 1;
+//        while (left < right) {
+//            if (arr[left] % 2 != 0 && arr[right] % 2 == 0) {
+//                // Swap arr[left] and arr[right]
+//                int temp = arr[left];
+//                arr[left] = arr[right];
+//                arr[right] = temp;
+//            }
+//            if (arr[left] % 2 == 0) {
+//                left++;
+//            }
+//            if (arr[right] % 2 != 0) {
+//                right--;
+//            }
+//        }
+//
+//      int arr1 []= sortsquares(arr);
+//
+//      reverse(arr1);
+//      printArray(arr1);
+
+        int arr [] = {1,2,3,4,5,6};
+        int ans [] = new int[arr.length];
+        int p = 1;
+        ans[0]=arr[0];
+
+        for ( int i = 1 ; i < arr.length;i++){
+            ans[i]=ans[i-1]+arr[i];
         }
-        printArray(arr);
+        printArray(ans);
+
+
+    }
+//    static int [] sortsquares (int arr[]){
+//        int n = arr.length;
+//        int left = 0 , right= arr.length-1;
+//        int [] ans = new int[n];
+//        int k =  0;
+//
+//        while (left <= right){
+//            if (Math.abs(arr[left]) > Math.abs(arr[right]) ){
+//                ans[k++]=arr[left]*arr[left];
+//                left++;
+//            } else {
+//                ans[k++]=arr[right]*arr[right];
+//                right--;
+//            }
+//        }
+//        return ans;
+//
+//    }
+
+
+    public static void reverse (int [] arr) {
+        int i =0;
+        int j =arr.length-1;
+
+        while (i<j){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
+            i++;
+            j--;
+        }
     }
 
     static void printArray( int arr[]){
@@ -2339,20 +2422,6 @@ public class Main {
 
 
 
-
-//    public static void reverse (int [] arr) {
-//        int i =0;
-//        int j =arr.length-1;
-//
-//        while (i<j){
-//            int temp = arr[i];
-//            arr[i] = arr[j];
-//            arr[j] = temp;
-//
-//            i++;
-//            j--;
-//        }
-//    }
 
 
 
