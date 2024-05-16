@@ -2072,7 +2072,6 @@ public class Main {
 //        System.out.println(max);
 
 
-
 //        int [] arr1 ={1,2,3,4};
 //
 //        findMax(arr1);
@@ -2119,33 +2118,97 @@ public class Main {
 //                count++;
 //            }
 //        }
+//
+//        int arr[] ={3,2,4,7,10,6,5};
+//        int [] result = new int[removeEven(arr)];
+//
+//        int idx =0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] %2 !=0){
+//                result[idx++]=arr[i];
+//            }
+//        }
+//
+//        System.out.println(Arrays.toString(result));
 
-        int arr[] ={3,2,4,7,10,6,5};
-        int [] result = new int[removeEven(arr)];
 
-        int idx =0;
+//        int arr[] = {1, 0, 1, 0, 1, 0, 1};
+//        Arrays.sort(arr);
+//        int p = 0;
+//        for ( int i = 0; i <arr.length;i++){
+//            if (arr[i]==0){
+//                p++;
+//            }
+//        }
+//        for (int j = 0 ; j < arr.length;j++ ){
+//            if (j < p)   {
+//                arr[j]=0;
+//            }else{
+//                arr[j]=1;
+//            }
+//        }
+//        printArray(arr);
+//
+//    }
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] %2 !=0){
-                result[idx++]=arr[i];
+        /*
+        public void sortArray(int[] arr) {
+    int left = 0, right = arr.length - 1;
+    while (left < right) {
+        if (arr[left] == 1) {
+            // swap arr[left] and arr[right]
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            right--;
+        } else {
+            left++;
+        }
+    }
+}
+
+         */
+
+        int arr [] = {1,0,0,1,0,1,1,0};
+
+        int left = 0;
+        int right = arr.length-1 ;
+
+        while (left < right){
+            if (arr[left]==1 && arr[right]==0){
+                int temp =arr[left];
+                arr[left] =arr[right];
+                arr[right]= temp;
+                left++;
+                right--;
+            }
+            if (arr[left]==0){
+                left++;
+            }
+            if (arr[right]==1){
+                right--;
             }
         }
-
-        System.out.println(Arrays.toString(result));
-
-
+        printArray(arr);
     }
 
-    static  int removeEven ( int [] arr){
-        int oddcount=0;
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 !=0){
-                oddcount++;
-            }
+    static void printArray( int arr[]){
+        for (int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+" ");
         }
-        return oddcount;
     }
+
+//    static  int removeEven ( int [] arr){
+//        int oddcount=0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] % 2 !=0){
+//                oddcount++;
+//            }
+//        }
+//        return oddcount;
+//    }
 
 
 
