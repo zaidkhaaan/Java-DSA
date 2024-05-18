@@ -2230,15 +2230,52 @@ public class Main {
 //      reverse(arr1);
 //      printArray(arr1);
 
-        int arr [] = {1,2,3,4,5,6};
-        int ans [] = new int[arr.length];
-        int p = 1;
-        ans[0]=arr[0];
+        int arr [] = {5,3,2,6,3,1};
+      //  int pref [] = new int[arr.length];
+//        int p = 1;
+    //    pref[0]=arr[0];
 
-        for ( int i = 1 ; i < arr.length;i++){
-            ans[i]=ans[i-1]+arr[i];
+
+
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            sum+=arr[i];
         }
-        printArray(ans);
+
+        // prefix sum
+        int prefsum=0;
+        for ( int i = 0 ; i < arr.length;i++){
+      //      arr[i]=arr[i-1]+arr[i];
+            prefsum+=arr[i];
+            int suffixsum = sum -prefsum;
+            if (suffixsum == prefsum){
+                System.out.println(i);
+            }
+        }
+//        System.out.println(prefsum);
+//        printArray(arr);
+
+
+
+//        int suff [] = new int[arr.length];
+//        suff[arr.length-1]=arr[arr.length-1];
+//        for ( int j = arr.length-2 ; j >= 0 ; j-- ){
+//            suff[j]=suff[j+1]+arr[j];
+//        }
+//        System.out.println();
+//        printArray(suff);
+        //
+
+//        for (int i = 0 ; i < arr.length-2;i++){
+//            if (pref[i]==suff[i+1]){
+//                System.out.println();
+//                System.out.println(i);
+//
+//            }
+//        }
+
+
 
 
     }
