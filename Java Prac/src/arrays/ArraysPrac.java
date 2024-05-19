@@ -2230,29 +2230,29 @@ public class Main {
 //      reverse(arr1);
 //      printArray(arr1);
 
-        int arr [] = {5,3,2,6,3,1};
+//        int arr [] = {5,3,2,6,3,1};
       //  int pref [] = new int[arr.length];
 //        int p = 1;
     //    pref[0]=arr[0];
 
 
 
-        int sum = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-            sum+=arr[i];
-        }
-
-        // prefix sum
-        int prefsum=0;
-        for ( int i = 0 ; i < arr.length;i++){
-      //      arr[i]=arr[i-1]+arr[i];
-            prefsum+=arr[i];
-            int suffixsum = sum -prefsum;
-            if (suffixsum == prefsum){
-                System.out.println(i);
-            }
-        }
+//        int sum = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            sum+=arr[i];
+//        }
+//
+//        // prefix sum
+//        int prefsum=0;
+//        for ( int i = 0 ; i < arr.length;i++){
+//      //      arr[i]=arr[i-1]+arr[i];
+//            prefsum+=arr[i];
+//            int suffixsum = sum -prefsum;
+//            if (suffixsum == prefsum){
+//                System.out.println(i);
+//            }
+//        }
 //        System.out.println(prefsum);
 //        printArray(arr);
 
@@ -2276,6 +2276,41 @@ public class Main {
 //        }
 
 
+        int z = 0;
+        int store;
+        z++;
+//        store == (z % 0);
+////            System.out.println(z%i);
+//        z++;
+//        store == (z % 1);
+////            System.out.println(z%i);
+//        z++;
+//        store == (z % 2);
+////            System.out.println(z%i);
+//        z++;
+//        store == (z % 3);
+////            System.out.println(z%i);
+//        z++;
+//        store == (z % 4);
+////            System.out.println(z%i);
+//        z++;
+//        store == (z % 5);
+////            System.out.println(z%i);
+//        z++;
+//        store == (z % 6);
+////            System.out.println(z%i);
+//        z++;
+//        store == (z % 7);
+////            System.out.println(z%i);
+//        z++;
+//        store == (z % 8);
+////            System.out.println(z%i);
+//        z++;
+//        store == (z % 9);
+////            System.out.println(z%i);
+//        z++;
+//        store == (z % 10);
+////            System.out.println(z%i);
 
 
     }
