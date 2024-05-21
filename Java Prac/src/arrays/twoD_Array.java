@@ -81,23 +81,37 @@ public class twoD_Array {
 
          */
 
+        /*
         // Diagonal Traversal
         int n = r;
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; i < r; i++) {
-                for (int k = 0; j < c; j++) {
+        for (int g = 0; g < a.length; g++) {
+//
+            for (int i = 0 , j =g ; j < a.length;i++,j++ ){
+                System.out.print(a[i][j]+"  ");
 
-                    if (i == j){
-                        System.out.print(a[i][j]);
-                    }
-                    
+
+
                 }
             }
+
+         */
+
+        // Saddle point in an matrix
+        // minimum value in row and maximum value in column
+
+
+        for (int i = 0; i < a.length; i++) {
+
+        }
+        
         }
 
 
-    }
+
+
+
+
 
 
 //    static void wavetraversal(int [][] arr , int r , int c) {
