@@ -2276,9 +2276,9 @@ public class Main {
 //        }
 
 
-        int z = 0;
-        int store;
-        z++;
+//        int z = 0;
+//        int store;
+//        z++;
 //        store == (z % 0);
 ////            System.out.println(z%i);
 //        z++;
@@ -2311,6 +2311,52 @@ public class Main {
 //        z++;
 //        store == (z % 10);
 ////            System.out.println(z%i);
+
+
+
+
+        // Union of two array
+
+//        int arr [] = {1,2,3};
+//        int arr1[] = {4,5,6};
+//
+//        int arr3[] = new int[arr.length + arr1.length];
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr3[i]=arr[i];
+//        }
+//
+//        for ( int i = 0 ;  i < arr1.length ; i++){
+//            arr3[i+ arr.length]=arr1[i];
+//        }
+//
+//        printArray(arr3);
+//
+        // intersection of array
+
+        int arr[] = {1,2,3};
+        int arr2[] = {4,1,0};
+
+
+        int sum = 0;
+        for ( int i = 0; i <arr.length ; i++){
+            for ( int j = 0 ; j < arr2.length;j++){
+                if (arr[i]==arr2[j]){
+                    sum++;
+                }
+            }
+        }
+
+
+        int int3[] = new int[sum];
+        for ( int i = 0; i <arr.length ; i++){
+            for ( int j = 0 ; j < arr2.length;j++){
+                if (arr[i]==arr2[j]){
+                   int3[i]=arr[i];
+                }
+            }
+        }
+        printArray(int3);
 
 
     }
