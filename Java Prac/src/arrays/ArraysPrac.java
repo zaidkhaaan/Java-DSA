@@ -2399,8 +2399,31 @@ public class Main {
 //        System.out.println(min);
 
 
-        int arr[] = {10,5,10,15,10,5};
+        // median of odd numbers in array
+//
+//        int arr[] = {2,5,1,7};
+//
+//        int n = arr.length;
+//
+//        double median = 0;
+//
+//        Arrays.sort(arr);
+//
+//        if (n%2==0){
+//            // for even
+//
+//            median = (arr[(n/2)-1] + arr[((n/2))]) / 2.0;
+//            System.out.println(median);
+//
+//
+//        }else {
+//            // for odd
+//
+//            System.out.println(arr[n/2]);
+//        }
 
+
+        //
 
 
         /*
