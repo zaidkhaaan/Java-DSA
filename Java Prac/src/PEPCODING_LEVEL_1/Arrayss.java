@@ -89,7 +89,6 @@ public class Arrayss {
 //        }
 
 
-
 //
 //        int k = removeDuplicates(arr);
 //        System.out.println("The array after removing duplicate elements is ");
@@ -98,23 +97,128 @@ public class Arrayss {
 //
 //        }
 
-        int arr[] = {1,1,2,2,2,3,3};
-        int k = removeDuplicates(arr);
-        System.out.println("The array after removing duplicate elements is ");
-        for (int i = 0; i < k; i++) {
-            System.out.print(arr[i] + " ");
-        }
+//        int arr[] = {1,1,2,2,2,3,3};
+//        int k = removeDuplicates(arr);
+//        System.out.println("The array after removing duplicate elements is ");
+//        for (int i = 0; i < k; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+
+
+        // Remove Duplicates From an Unsorted Array
+
+//        int arr[] = {2,3,1,9,3,1,3,9};
+//
+//        int k = removeDuplicate(arr);
+//        System.out.println("After removal of  duplicate elements");
+//
+//        for ( int i = 0 ; i < k ; i++){
+//            System.out.print(arr[i]+"  ");
+//        }
+
+
+//    static int removeDuplicate (int[] arr){
+//        int i = 0;
+//
+//        for (int j = 1; j <arr.length ; j++) {
+//
+//            if (arr[i] != arr[j]){
+//                i++;
+//                arr[i]=arr[j];
+//
+//            }
+//        }
+//
+//        return i+1;
+
+
+
+//        int arr[] = {2,3,1,9,3,1,3,9};
+//        int n = arr.length;
+//        duplicate(arr, n);
+
+
+        int [] arr = {2,3,1,9,3,1,3,9};
+        int n = arr.length;
+        n = removeDuplicates(arr, n);
+
+        // Print updated array
+        for (int i=0; i<n; i++)
+            System.out.print(arr[i]+" ");
     }
-    static int removeDuplicates(int[] arr) {
-        int i = 0;
-        for (int j = 1; j < arr.length; j++) {
-            if (arr[i] != arr[j]) {
-                i++;
-                arr[i] = arr[j];
-            }
-        }
-        return i + 1;
+
+    static int removeDuplicates(int[] arr, int n) {
+        if (n==0 || n==1)
+            return n;
+
+        // Sort the array
+        Arrays.sort(arr);
+
+        int[] temp = new int[n];
+        int j = 0;
+
+        // Start traversing the sorted array
+        for (int i=0; i<n-1; i++)
+            // If current element is not equal to next element, then store that current element
+            if (arr[i] != arr[i+1])
+                arr[j++] = arr[i];
+
+        // Store the last element as whether it is unique or repeated, it hasn't been stored yet
+        arr[j++] = arr[n-1];
+
+        return j;
     }
+
+//    static void duplicate(int arr[] , int n ){
+//          int mark [] = new int [n];
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            mark[i]=1;
+//        }
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if (mark[i]==1){
+//                for (int j = i+1; j <arr.length ; j++) {
+//                    if (arr[i]==arr[j]){
+//                        mark[j]=0;
+//                    }
+//                }
+//            }
+//        }
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            if (mark[i]==1){
+//                System.out.print(arr[i]+"  ");
+//            }
+//        }
+//    }
+//    static void duplicate(int arr[], int n) {
+//
+//        int mark[] = new int[n];
+//
+//        for (int i = 0; i < n; i++) {
+//            mark[i] = 1;
+//        }
+//
+//        for (int i = 0; i < n; i++) {
+//            if (mark[i] == 1) {
+//                for (int j = i + 1; j < n; j++) {
+//                    if (arr[i] == arr[j]) {
+//                        mark[j] = 0;
+//                    }
+//                }
+//            }
+//        }
+//
+//        for (int i = 0; i < n; i++) {
+//            if (mark[i] == 1) {
+//                System.out.print(arr[i] + ",");
+//            }
+//        }
+//    }
+
+}
+
 
 
 
@@ -176,5 +280,5 @@ public class Arrayss {
 //        return arr1;
 //    }
 
-}
+
 
