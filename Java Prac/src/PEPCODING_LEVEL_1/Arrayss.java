@@ -1,6 +1,7 @@
 package PEPCODING_LEVEL_1;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Arrayss {
     public static void main(String[] args) {
@@ -132,66 +133,219 @@ public class Arrayss {
 //        return i+1;
 
 
-
 //        int arr[] = {2,3,1,9,3,1,3,9};
 //        int n = arr.length;
 //        duplicate(arr, n);
 
 
-        int [] arr = {2,3,1,9,3,1,3,9};
-        int n = arr.length;
-        n = removeDuplicates(arr, n);
+//        int[] arr = {2, 3, 1, 9, 3, 1, 3, 9, 1, 2, 3, 10, 10, 11};
+//        int n = arr.length;
+//        n = removeDuplicates(arr, n);
+//
+//        // Print updated array
+//        for (int i=0; i<n; i++)
+//            System.out.print(arr[i]+" ");c
 
-        // Print updated array
-        for (int i=0; i<n; i++)
-            System.out.print(arr[i]+" ");
+//        int k = removeDuplicates(arr, arr.length);
+//        System.out.println("After removal of  duplicate elements");
+//
+//        for (int i = 0; i < k; i++) {
+//            System.out.print(arr[i] + "  ");
+//        }
+
+
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the number you want to insert & position to :");
+//        int n = sc.nextInt() ;
+//        int pos = sc.nextInt();
+
+//        resize(arr,n );
+
+//        int n = 8 ;
+
+//        int value = 40;
+//        int pos = 5;
+
+//        insertatbegin(arr, n, value);
+//        printarray(arr);
+//        insertatEnd(arr,n,value);
+//        printarray(arr);
+
+//        insertatposition(arr, n,value,pos);
+//        printarray(arr);
+
+        int arr[] = {1,1,2,3,4,4,5,2};
+        int n = arr.length;
+//       repeatelements(arr, n);
+        printRepeating(arr);
+
+
+
+
     }
 
-    static int removeDuplicates(int[] arr, int n) {
-        if (n==0 || n==1)
-            return n;
+//    static int  repeatelements(int arr[], int n) {
+//
+////        boolean[] ans = new boolean[n];
+//
+//
+////        for (int i = 0; i < arr.length; i++) {
+////            if (ans[i] = true)
+////                continue;
+//        Arrays.sort(arr);
+//        int i = 0;
+//
+//
+//        for (int j = 1; j < arr.length; j++) {
+//
+//            if (arr[i] == arr[j]) {
+//               arr[j]=arr[j+1];
+//               i++;
+//            }
+//        }
+//        return i+1;
 
-        // Sort the array
+
+//
+
+//        for (int i = 0; i < arr.length; i++) {
+//            for (int j = i+1; j <arr.length ; j++) {
+//               if (arr[i]!=arr[j]){
+//                   System.out.print(arr[i]+"  ");
+//               }
+//            }
+//        }
+
+//
+//    }
+
+    static void printRepeating(int[] arr) {
+        // First sort the array so duplicate elements become neighbors
         Arrays.sort(arr);
 
-        int[] temp = new int[n];
-        int j = 0;
-
-        // Start traversing the sorted array
-        for (int i=0; i<n-1; i++)
-            // If current element is not equal to next element, then store that current element
-            if (arr[i] != arr[i+1])
-                arr[j++] = arr[i];
-
-        // Store the last element as whether it is unique or repeated, it hasn't been stored yet
-        arr[j++] = arr[n-1];
-
-        return j;
+        for (int i = 1; i < arr.length; i++) {
+            // If current element is the same as the previous
+            if (arr[i] == arr[i - 1]) {
+                // Print the element
+                System.out.print(arr[i] + " ");
+                // Skip over all duplicates of this element
+                while (i < arr.length && arr[i] == arr[i - 1]) {
+                    i++;
+                }
+            }
+        }
     }
 
-//    static void duplicate(int arr[] , int n ){
-//          int mark [] = new int [n];
+    static void duplicate(int arr[] , int n ){
+        int mark [] = new int [n];
+
+        for (int i = 0; i < arr.length; i++) {
+            mark[i]=1;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (mark[i]==1){
+                for (int j = i+1; j <arr.length ; j++) {
+                    if (arr[i]==arr[j]){
+                        mark[j]=0;
+                    }
+                }
+            }
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (mark[i]==1){
+                System.out.print(arr[i]+"  ");
+            }
+        }
+    }
+
+
+    static void printarray(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
 //
-//        for (int i = 0; i < arr.length; i++) {
-//            mark[i]=1;
+//    static void insertatbegin( int arr[] , int n , int value){
+//        for (int i = n-1 ; i>=0 ; i--){
+//            arr[i+1]=arr[i];
 //        }
-//
-//        for (int i = 0; i < arr.length; i++) {
-//            if (mark[i]==1){
-//                for (int j = i+1; j <arr.length ; j++) {
-//                    if (arr[i]==arr[j]){
-//                        mark[j]=0;
-//                    }
-//                }
-//            }
-//        }
-//
-//        for (int i = 0; i < arr.length; i++) {
-//            if (mark[i]==1){
-//                System.out.print(arr[i]+"  ");
-//            }
-//        }
+//        arr[0]=value;
 //    }
+//
+//    static void insertatEnd(int[] arr, int n, int value)
+//    {
+//        arr[n] = value;
+//    }
+//
+//    static void insertatposition(int[] arr, int n, int value, int pos)
+//    {
+//        for (int i = n; i >= pos; i--)
+//        {
+//            arr[i] = arr[i - 1];
+//        }
+//        arr[pos - 1] = value;
+//    }
+
+
+//    static void resize(int arr[] , int n ){
+//
+//    int arr1[] = new int [arr.length+1];
+//        arr1[arr1.length-1]=n;
+//        for (int i = 0; i < arr.length ; i++) {
+//            arr1[i]=arr[i];
+//        }
+//
+//        for (int i = 0; i < arr1.length; i++) {
+//            System.out.print(arr1[i]+" ");
+//        }
+//
+//    }
+
+
+//    static int removeDuplicate(int[] arr) {
+//        int i = 0;
+//        Arrays.sort(arr);
+//
+//        for (int j = 1; j < arr.length; j++) {
+//
+//            if (arr[i] != arr[j]) {
+//                i++;
+//                arr[i] = arr[j];
+//
+//            }
+//        }
+//
+//        return i + 1;
+//    }
+
+
+//    static int removeDuplicates(int[] arr, int n) {
+//        if (n == 0 || n == 1)
+//            return n;
+//
+//        // Sort the array
+//        Arrays.sort(arr);
+//
+//        int j = 0;
+//
+//        // Start traversing the sorted array
+//        for (int i = 0; i < n - 1; i++)
+//            // If current element is not equal to next element, then store that current element
+//            if (arr[i] != arr[i + 1])
+//                arr[j++] = arr[i];
+//
+//        // Store the last element as whether it is unique or repeated, it hasn't been stored yet
+//        arr[j++] = arr[n - 1];
+//
+//        return j;
+//    }
+//}
+
+
 //    static void duplicate(int arr[], int n) {
 //
 //        int mark[] = new int[n];
@@ -217,7 +371,7 @@ public class Arrayss {
 //        }
 //    }
 
-}
+
 
 
 
