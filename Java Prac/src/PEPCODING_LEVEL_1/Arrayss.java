@@ -185,27 +185,117 @@ public class Arrayss {
 //        Arrays.fill(arr,1);
 //        printarray(arr);
 
-        int nums[] = {1,1,2};
-        removeDuplicates(nums);
+
+//        int nums[] = { 9,6,4,2,3,5,7,0,1};
+//         int k = missingNumber(nums);
+//        System.out.println(k);
+
+
+
+        int arr [] = {1,0,1};
+
+        moveZeroes(arr);
+
 
 
     }
+    static void moveZeroes(int[] nums) {
 
-    static int removeDuplicates(int[] nums) {
-        int i = 0;
-        int k = 1;
+        int j = 1;
 
-        for (int j = 1; j < nums.length; j++) {
-            if (nums[i] != nums[j]) {
+        for ( int i = 0 ; i < nums.length ; ){
+
+            if (nums[i]==0 && nums[j] != 0){
+                int temp = nums[i];
+                nums [i]= nums[j];
+                nums[j] = temp;
+
+                j++;
                 i++;
-                nums[i] = nums[j];
-                k++;
 
-
+            }else{
+                j++;
             }
+
+            if (nums[i] != 0 ){
+                i++;
+            }
+
         }
-        return k;
+
     }
+
+//    static int missingNumber(int[] nums) {
+//        Arrays.sort(nums);
+//        int n = nums.length;
+//
+//        // Case 1
+//        // if all no missing number
+//        if (nums[0] != 0) return 0;
+//
+//        // Case 2
+//        // if x number is not equal to arr.length
+//        if (nums[n - 1] != n) return n;
+//
+//        // Case 3
+//        // replace it with arr.index
+//        for (int i = 1; i < nums.length; i++) {
+//            if (nums[i] != i) return i;
+//        }
+//
+//        return 0;
+//    }
+
+//    static int missingNumber(int[] nums) {
+//        Arrays.sort(nums);
+//        int n = nums.length;
+//
+//        // Case 1
+//        if (nums[0] != 0) return 0;
+//
+//        // Case 2
+//        if (nums[n - 1] != n) return n;
+//
+//        // Case 3
+//        for (int i = 1; i < nums.length; i++) {
+//            if (nums[i] != i) return i;
+//        }
+//
+//        return 0;
+//    }
+
+
+//    static int removeDuplicates(int[] nums) {
+//        int i = 0;
+//        int k = 1;
+//
+//        for (int j = 1; j < nums.length; j++) {
+//            if (nums[i] != nums[j]) {
+//                i++;
+//                nums[i] = nums[j];
+//                k++;
+//
+//
+//            }
+//        }
+//        return k;
+//    }
+//static int missingNumber(int[] nums) {
+//    int n = nums.length;
+//    int ans = 0;
+//
+//    // first ietrating over every element and X-OR it with every element
+//    for (int i = 1; i <= n; i++) {
+//        ans = ans ^ i;
+//    }
+//
+//    // second iteration over every element with ans which will be zero this time with index value
+//    for (int i = 0; i < nums.length; i++) {
+//        ans = ans ^ nums[i];
+//    }
+//    return ans;
+//}
+
 }
 
 //    static int[] twoSum(int[] nums, int target) {
