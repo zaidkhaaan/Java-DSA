@@ -175,17 +175,55 @@ public class Arrayss {
 //        insertatposition(arr, n,value,pos);
 //        printarray(arr);
 
-        int arr[] = {1,1,2,3,4,4,5,2};
-        int n = arr.length;
+//        int arr[] = new int [];
+//
+
+
+//         int n =arr.length;
 //       repeatelements(arr, n);
-        printRepeating(arr);
+//        printRepeating(arr);
+//        Arrays.fill(arr,1);
+//        printarray(arr);
 
-
+        int nums[] = {1,1,2};
+        removeDuplicates(nums);
 
 
     }
 
-//    static int  repeatelements(int arr[], int n) {
+    static int removeDuplicates(int[] nums) {
+        int i = 0;
+        int k = 1;
+
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[i] != nums[j]) {
+                i++;
+                nums[i] = nums[j];
+                k++;
+
+
+            }
+        }
+        return k;
+    }
+}
+
+//    static int[] twoSum(int[] nums, int target) {
+////        Arrays.sort(nums);
+//        int j = 0;
+//        for(int i = 0; i <  nums.length   ;  i++){
+//            {
+//                if (nums[i] + nums[j+1] == target){
+//                    j++;
+//                    return new int [] {i,i+1};
+//                }
+//            }
+//        }
+//        return null;
+//
+//    }
+
+//    static int repeatelements(int arr[], int n) {
 //
 ////        boolean[] ans = new boolean[n];
 //
@@ -200,12 +238,12 @@ public class Arrayss {
 //        for (int j = 1; j < arr.length; j++) {
 //
 //            if (arr[i] == arr[j]) {
-//               arr[j]=arr[j+1];
-//               i++;
+//                arr[j] = arr[j + 1];
+//                i++;
 //            }
 //        }
-//        return i+1;
-
+//        return i + 1;
+//    }
 
 //
 
@@ -219,55 +257,56 @@ public class Arrayss {
 
 //
 //    }
+//
+//        static void printRepeating( int[] arr){
+//            // First sort the array so duplicate elements become neighbors
+//            Arrays.sort(arr);
+//
+//            for (int i = 1; i < arr.length; i++) {
+//                // If current element is the same as the previous
+//                if (arr[i] == arr[i - 1]) {
+//                    // Print the element
+//                    System.out.print(arr[i] + " ");
+//                    // Skip over all duplicates of this element
+//                    while (i < arr.length && arr[i] == arr[i - 1]) {
+//                        i++;
+//                    }
+//                }
+//            }
+//        }
 
-    static void printRepeating(int[] arr) {
-        // First sort the array so duplicate elements become neighbors
-        Arrays.sort(arr);
-
-        for (int i = 1; i < arr.length; i++) {
-            // If current element is the same as the previous
-            if (arr[i] == arr[i - 1]) {
-                // Print the element
-                System.out.print(arr[i] + " ");
-                // Skip over all duplicates of this element
-                while (i < arr.length && arr[i] == arr[i - 1]) {
-                    i++;
-                }
-            }
-        }
-    }
-
-    static void duplicate(int arr[] , int n ){
-        int mark [] = new int [n];
-
-        for (int i = 0; i < arr.length; i++) {
-            mark[i]=1;
-        }
-
-        for (int i = 0; i < arr.length; i++) {
-            if (mark[i]==1){
-                for (int j = i+1; j <arr.length ; j++) {
-                    if (arr[i]==arr[j]){
-                        mark[j]=0;
-                    }
-                }
-            }
-        }
-
-        for (int i = 0; i < arr.length; i++) {
-            if (mark[i]==1){
-                System.out.print(arr[i]+"  ");
-            }
-        }
-    }
-
-
-    static void printarray(int arr[]) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-    }
-}
+//        static void duplicate ( int arr[], int n ){
+//            int mark[] = new int[n];
+//
+//            for (int i = 0; i < arr.length; i++) {
+//                mark[i] = 1;
+//            }
+//
+//            for (int i = 0; i < arr.length; i++) {
+//                if (mark[i] == 1) {
+//                    for (int j = i + 1; j < arr.length; j++) {
+//                        if (arr[i] == arr[j]) {
+//                            mark[j] = 0;
+//                        }
+//                    }
+//                }
+//            }
+//
+//            for (int i = 0; i < arr.length; i++) {
+//                if (mark[i] == 1) {
+//                    System.out.print(arr[i] + "  ");
+//                }
+//            }
+//        }
+//
+//
+//        static void printarray ( int arr[]){
+//            for (int i = 0; i < arr.length; i++) {
+//                System.out.print(arr[i] + " ");
+//            }
+//        }
+//    }
+//}
 //
 //    static void insertatbegin( int arr[] , int n , int value){
 //        for (int i = n-1 ; i>=0 ; i--){
