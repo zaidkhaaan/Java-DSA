@@ -192,36 +192,92 @@ public class Arrayss {
 
 
 
-        int arr [] = {1,0,1};
+        int arr [] = {0,1,0,3,12};
 
         moveZeroes(arr);
 
 
-
     }
+
+
+//    1st approach
+
+//   static void moveZeroes(int[] nums) {
+//         int snowBallSize = 0;
+//        for (int i=0;i<nums.length;i++){
+//            if (nums[i]==0){
+//                snowBallSize++;
+//            }
+//            else if (snowBallSize > 0) {
+//                int t = nums[i];
+//                nums[i]=0;
+//                nums[i-snowBallSize]=t;
+//            }
+//        }
+//    }
+
+
+    // 2nd approach
+
     static void moveZeroes(int[] nums) {
+        int left = 0;
 
-        int j = 1;
-
-        for ( int i = 0 ; i < nums.length ; ){
-
-            if (nums[i]==0 && nums[j] != 0){
-                int temp = nums[i];
-                nums [i]= nums[j];
-                nums[j] = temp;
-
-                j++;
-                i++;
-
-            }else{
-                j++;
+        for (int right = 0; right < nums.length; right++) {
+            if (nums[right] != 0) {
+                int temp = nums[right];
+                nums[right] = nums[left];
+                nums[left] = temp;
+                left++;
             }
-
-            if (nums[i] != 0 ){
-                i++;
-            }
-
         }
+    }
+
+
+//    static void moveZeroes(int[] nums) {
+//        if (nums.length == 1) {
+//            return;
+//        }
+//
+//        int nonZeroIndex = 0;
+//
+//        for (int i = 0; i < nums.length; i++) {
+//            if (nums[i] != 0) {
+//                nums[nonZeroIndex] = nums[i];
+//                nonZeroIndex++;
+//            }
+//        }
+//
+//
+//        while(nonZeroIndex<nums.length){
+//            nums[nonZeroIndex] = 0;
+//            nonZeroIndex++;
+//        }
+//    }
+
+
+//    static void moveZeroes(int[] nums) {
+//
+//        int j = 1;
+//
+//        for ( int i = 0 ; i < nums.length ; ){
+//
+//            if (nums[i]==0 && nums[j] != 0){
+//                int temp = nums[i];
+//                nums [i]= nums[j];
+//                nums[j] = temp;
+//
+//                j++;
+//                i++;
+//
+//            }else{
+//                j++;
+//            }
+//
+//            if (nums[i] != 0 ){
+//                i++;
+//            }
+//
+//        }
 
     }
 
@@ -296,7 +352,7 @@ public class Arrayss {
 //    return ans;
 //}
 
-}
+
 
 //    static int[] twoSum(int[] nums, int target) {
 ////        Arrays.sort(nums);
