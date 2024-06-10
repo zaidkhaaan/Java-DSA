@@ -191,13 +191,98 @@ public class Arrayss {
 //        System.out.println(k);
 
 
+//        int arr [] = {0,1,0,3,12};
+//
+//        moveZeroes(arr);
 
-        int arr [] = {0,1,0,3,12};
+        int arr[] = {1, 1, 2, 3, 4, 4, 5, 2};
 
-        moveZeroes(arr);
+//        dupiplace(arr);
+//       remdupiun(arr);
+//        repited(arr);
 
 
     }
+//    static void repited(int arr[]){
+//
+//        int count = 0;
+//        int dup [] = new int[arr.length];
+//        for (int i = 0; i < arr.length-1; i++) {
+//            for (int j = i+1; j < arr.length ; j++) {
+//                if (arr[i]==arr[j]) dup[count++]=arr[i];
+//
+//            }
+//        }
+//
+//        for (int i = 0; i < count; i++) {
+//            System.out.print(dup[i] +"  ");
+//        }
+//    }
+
+
+//    static void remdupiun ( int arr[]) {
+//        boolean[] ans = new boolean[arr.length];
+//
+//
+////        int j =1;
+//        for (int i = 0; i < arr.length; i++) {
+//
+//
+//        }
+//    }
+
+//    static void duplicate(int arr[], int n) {
+//
+//        int mark[] = new int[n];
+//
+//        for (int i = 0; i < n; i++) {
+//            mark[i] = 1;
+//        }
+//
+//        for (int i = 0; i < n; i++) {
+//            if (mark[i] == 1) {
+//                for (int j = i + 1; j < n; j++) {
+//                    if (arr[i] == arr[j]) {
+//                        mark[j] = 0;
+//                    }
+//                }
+//            }
+//        }
+//
+//        for (int i = 0; i < n; i++) {
+//            if (mark[i] == 1) {
+//                System.out.print(arr[i] + " ");
+//            }
+//        }
+//    }
+
+
+    static void dupiplace(int arr[]) {
+
+        int j = 1;
+        int count = 0;
+
+
+        for (int i = 0; i < arr.length; ) {
+            if (arr[i] != arr[j]) {
+                i++;
+                arr[i] = arr[j];
+                count++;
+            }
+            j++;
+            if (j >= arr.length)
+                break;
+        }
+
+
+        for (int i = 0; i <= count; i++) {
+            System.out.print(arr[i] + "  ");
+        }
+
+
+    }
+}
+
 
 
 //    1st approach
@@ -218,19 +303,19 @@ public class Arrayss {
 
 
     // 2nd approach
-
-    static void moveZeroes(int[] nums) {
-        int left = 0;
-
-        for (int right = 0; right < nums.length; right++) {
-            if (nums[right] != 0) {
-                int temp = nums[right];
-                nums[right] = nums[left];
-                nums[left] = temp;
-                left++;
-            }
-        }
-    }
+//
+//    static void moveZeroes(int[] nums) {
+//        int left = 0;
+//
+//        for (int right = 0; right < nums.length; right++) {
+//            if (nums[right] != 0) {
+//                int temp = nums[right];
+//                nums[right] = nums[left];
+//                nums[left] = temp;
+//                left++;
+//            }
+//        }
+//    }
 
 
 //    static void moveZeroes(int[] nums) {
@@ -279,7 +364,7 @@ public class Arrayss {
 //
 //        }
 
-    }
+
 
 //    static int missingNumber(int[] nums) {
 //        Arrays.sort(nums);

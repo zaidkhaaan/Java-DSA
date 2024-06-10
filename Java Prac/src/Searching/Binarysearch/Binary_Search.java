@@ -1,4 +1,4 @@
-package Searching;
+package Searching.Binarysearch;
 
 public class Binary_Search {
 
@@ -40,8 +40,8 @@ public class Binary_Search {
          */
 
         /*
-******************** Binary Search using descn array  ******************************************
-        */
+         ******************** Binary Search using descn array  ******************************************
+         */
 
 
 
@@ -81,9 +81,40 @@ public class Binary_Search {
 
          */
 
+// ************************************ Ceiling of the number **********************************************************
+        int arr[] = {2, 3, 5, 9, 14, 18};
+        int target = 16;
 
+        System.out.println(bsrev(arr,target));
+
+        // ceiling is the smallest element in array greater or = target
+    }
+
+    static int bsrev ( int arr[] , int target){
+        int start = 0;
+        int end = arr.length-1;
+
+        while (start <= end){
+            int mid = start+(end-start)/2;
+
+            if (arr[mid] == target ){
+                return mid;
+            } else if (arr[mid] > target) {
+                end=mid-1;
+
+            } else if (arr[mid] < target ) {
+                start=mid+1;
+            }
+        }
+        return arr[end];
 
 
     }
+
+
+
+
+
+
 
 }
