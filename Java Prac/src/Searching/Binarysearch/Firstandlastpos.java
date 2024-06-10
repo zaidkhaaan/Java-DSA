@@ -48,7 +48,13 @@ public class Firstandlastpos {
 
             } else if (nums[mid] < target ) {
                 start=mid+1;
-            }
+            } else{
+                // nums[mid] == target
+                 end=mid-1;
+                 start=start=mid+1;
+
+
+             }
         }
         return ans;
 
