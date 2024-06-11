@@ -201,6 +201,22 @@ public class Arrayss {
 //       remdupiun(arr);
 //        repited(arr);
 
+        peakmount(arr);
+
+
+    }
+
+    static int peakmount(int arr[] ){
+        int max = arr[0];
+        // int end = arr.length-1;
+
+        for (int i = 0 ;i < arr.length ; i++){
+            if(arr[i] > arr[max]){
+                max = i;
+            }
+        }
+
+        return max;
 
     }
 //    static void repited(int arr[]){
@@ -257,30 +273,30 @@ public class Arrayss {
 //    }
 
 
-    static void dupiplace(int arr[]) {
-
-        int j = 1;
-        int count = 0;
-
-
-        for (int i = 0; i < arr.length; ) {
-            if (arr[i] != arr[j]) {
-                i++;
-                arr[i] = arr[j];
-                count++;
-            }
-            j++;
-            if (j >= arr.length)
-                break;
-        }
-
-
-        for (int i = 0; i <= count; i++) {
-            System.out.print(arr[i] + "  ");
-        }
-
-
-    }
+//    static void dupiplace(int arr[]) {
+//
+//        int j = 1;
+//        int count = 0;
+//
+//
+//        for (int i = 0; i < arr.length; ) {
+//            if (arr[i] != arr[j]) {
+//                i++;
+//                arr[i] = arr[j];
+//                count++;
+//            }
+//            j++;
+//            if (j >= arr.length)
+//                break;
+//        }
+//
+//
+//        for (int i = 0; i <= count; i++) {
+//            System.out.print(arr[i] + "  ");
+//        }
+//
+//
+//    }
 }
 
 
