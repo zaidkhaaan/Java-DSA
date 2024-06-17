@@ -1035,9 +1035,9 @@ public class Strings {
 //        }
 //
 //        System.out.println("Total duplicate characters: " + count);
-
-        String s = "ABBAz";
-        s=s.toLowerCase();
+//
+//        String s = "ABBAz";
+//        s=s.toLowerCase();
 
 //        StringBuilder sb = new StringBuilder(s);
 //        sb=sb.reverse();
@@ -1076,7 +1076,60 @@ public class Strings {
 //        System.out.println("Palindrome");
 
 
+
+//        String s1 = "";
+//
+//        for ( int i = s.length()-1; i >=0  ; i--){
+//            char ch  = s.charAt(i);
+//            s1 +=ch;
+//        }
+//
+//        if (s.equals(s1)) System.out.println("Palindrome");
+//        else System.out.println("Not Palindrome");
+//
+//        Scanner sc = new Scanner(System.in);
+//        String s =sc.nextLine();
+//        s=s.toLowerCase();
+//        int vowel = 0;
+//        int consonants = 0;
+//        int spaces = 0;
+//
+//       for ( int i = 0 ; i < s.length() ; i++){
+//           char ch = s.charAt(i);
+//
+//           if (ch == 'a'|| ch =='e'|| ch=='i'|| ch=='o'|| ch=='u'){
+//               vowel++;
+//           } else if (ch ==' ') {
+//               spaces++;
+//           } else if ( ch >= 'a' && ch <= 'z') {
+//               consonants++;
+//           }
+//       }
+//
+//        System.out.print(vowel+"  "+consonants+"  "+spaces);
+
+
+        char ch = 'a';
+        int ascii = ch;
+
+
+
+
+
     }
+//    static boolean isPalindrome (String s){
+//       int start = 0;
+//       int end = s.length()-1;
+//
+//        while (start <= end ){
+//            if (s.charAt(start) != s.charAt(end)) {
+//                return false;
+//            }
+//            start++;
+//            end--;
+//        }
+//        return true;
+//    }
 
 
     }
