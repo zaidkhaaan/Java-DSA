@@ -1021,20 +1021,64 @@ public class Strings {
 
          */
 
+//
+//        String s = "ZAIDDIAZ";
+//        s = s.toLowerCase();
+//        int count = 0;
+//        for (int i = 0; i < s.length(); i++) {
+//            char ch = s.charAt(i);
+//            for (int j = i + 1; j < s.length(); j++) { // Use j < s.length() instead of j <= s.length()
+//                if (ch == s.charAt(j)) { // Compare characters using s.charAt(j)
+//                    count++;
+//                }
+//            }
+//        }
+//
+//        System.out.println("Total duplicate characters: " + count);
 
-        String s = "ZAIDDIAZ";
-        s = s.toLowerCase();
-        int count = 0;
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            for (int j = i + 1; j < s.length(); j++) { // Use j < s.length() instead of j <= s.length()
-                if (ch == s.charAt(j)) { // Compare characters using s.charAt(j)
-                    count++;
-                }
-            }
-        }
-        System.out.println("Total duplicate characters: " + count);
+        String s = "ABBAz";
+        s=s.toLowerCase();
+
+//        StringBuilder sb = new StringBuilder(s);
+//        sb=sb.reverse();
+//
+//        if (s.equals(sb.toString())){
+//            System.out.println("Palindrome");
+//
+//        }else{
+//            System.out.println("Not palindrome");
+//        }
+
+//        int start = 0;
+//        int end = s.length()-1;
+//
+//        for ( int i = 0 ; i < s.length() ; i++){
+//
+//            while (start<= end) {
+//                char ch = s.charAt(start);
+//                char ch1 = s.charAt(end);
+//
+//
+//                if (ch == ch1) {
+//                    start++;
+//                    end--;
+//                }
+//
+//                if (ch != ch1)
+//                {
+//                    System.out.println("Not Palindrome");
+//                    break;
+//                }
+//
+//            }
+//
+//        }
+//        System.out.println("Palindrome");
+
+
     }
+
+
     }
         /*
 
