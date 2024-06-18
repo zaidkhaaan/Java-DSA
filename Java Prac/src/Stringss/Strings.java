@@ -1109,13 +1109,119 @@ public class Strings {
 //        System.out.print(vowel+"  "+consonants+"  "+spaces);
 
 
-        char ch = 'a';
-        int ascii = ch;
+//        char ch = 'a';
+//        int ascii = ch;
+
+
+//        String str = "take u forward";
+//        str=str.toLowerCase();
+//        str=str.replace('a','b');
+//        System.out.println(str);
+
+
+//        System.out.println(RemoveSpaces(str));
+
+//        String str = "take u forward";
+//        System.out.println(str.substring(0,1));
+
+
+
+//        int s= 1011121314;
+//        String str = String.valueOf(s);
+//        char [] str1 = str.toCharArray();
+//        System.out.println(Arrays.toString(str1));
+//        String st2 = String.valueOf(str1);
+//        char[] st3 = st2.toCharArray();
+//        System.out.println(Arrays.toString(st3));
+
+//        char [] str ;
+//        System.out.println(str);
+
+//        for (char letter : str) {
+//            System.out.print(letter+" ");
+//        }
+
+
+//        Scanner sc = new Scanner(System.in);
+//        String s = sc.nextLine();
+//        s=s.toLowerCase();
+//        char[] str = s.toCharArray();
+//        int count = removeSpaces(str);
+//        System.out.println(String.valueOf(str).subSequence(0, count));
+
+//        String str = "take12% *&u ^$#forward";
+//        str = str.replaceAll("[^a-zA-Z0-9]", "");
+//        System.out.println(str);
+
+        String str = "take12% *&u ^$#forward";
+//        str=str.toLowerCase();
+//        System.out.println(removeSpchra(str));
+        int n = str.length();
+
+        System.out.println("Resultant String");
+        System.out.println(solve(str,n));
 
 
 
 
 
+    }
+
+    public static String solve(String str, int n) {
+        StringBuffer ans = new StringBuffer();
+
+        for (int i = 0; i < n; i++) {
+            int ascii = (int) str.charAt(i); //ascii value
+
+            if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) // if alphabets
+                ans.append(str.charAt(i));
+        }
+
+        return ans.toString();
+    }
+
+
+
+    static String removeSpchra(String str){
+        String s = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) >='a' && str.charAt(i) <= 'z'){
+                s +=str.charAt(i);
+            }
+        }
+        return s;
+
+    }
+
+//    static int removeSpaces (char [] str){
+//
+//        int count = 0;
+//
+//        for ( int i = 0 ; i < str.length ; i++){
+//
+//            if (str[i] != ' '){
+//                str[count] = str[i];
+//                count++;
+//            }
+//        }
+//        return count;
+//    }
+    static String RemoveVowels(String str){
+        for ( int i = 0 ; i <str.length(); i++){
+            if (str.charAt(i)=='a'|| str.charAt(i)=='e'|| str.charAt(i)=='i'|| str.charAt(i)=='o'|| str.charAt(i)=='u'){
+                str=str.substring(0,i)+str.substring(i+1);
+            }
+        }
+        return str;
+    }
+    static String RemoveSpaces(String str){
+        for ( int i = 0 ; i <str.length(); i++){
+            if (str.charAt(i)==' '){
+                str=str.substring(0,i)+str.substring(i+1);
+            }
+        }
+        return str;
     }
 //    static boolean isPalindrome (String s){
 //       int start = 0;
