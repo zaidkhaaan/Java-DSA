@@ -3,6 +3,7 @@ package Stringss;
 import javax.swing.*;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Strings {
 
@@ -992,11 +993,11 @@ public class Strings {
 
          */
 
-/*
+        /*
 
 
 
- */
+         */
 
         /*
         String str = "zaiddiazdiaz";
@@ -1076,7 +1077,6 @@ public class Strings {
 //        System.out.println("Palindrome");
 
 
-
 //        String s1 = "";
 //
 //        for ( int i = s.length()-1; i >=0  ; i--){
@@ -1125,7 +1125,6 @@ public class Strings {
 //        System.out.println(str.substring(0,1));
 
 
-
 //        int s= 1011121314;
 //        String str = String.valueOf(s);
 //        char [] str1 = str.toCharArray();
@@ -1153,46 +1152,186 @@ public class Strings {
 //        str = str.replaceAll("[^a-zA-Z0-9]", "");
 //        System.out.println(str);
 
-        String str = "take12% *&u ^$#forward";
+//        String str = "take12% *&u ^$#forward";
 //        str=str.toLowerCase();
 //        System.out.println(removeSpchra(str));
-        int n = str.length();
+//        int n = str.length();
 
-        System.out.println("Resultant String");
-        System.out.println(solve(str,n));
+//        System.out.println("Resultant String");
+//        System.out.println(solve(str,n));
+
+//        String s = "zaid";
+//        StringBuilder sb = new StringBuilder(s);
+//        sb=sb.reverse();
+//        StringBuffer sbf = new StringBuffer(s);
+//        sbf=sbf.reverse();
+//        System.out.println(sbf);
+
+//        String S = "";
+//        for ( int i = s.length()-1 ; i >= 0 ;i--){
+//            char c = s.charAt(i);
+//            S+=c;
+//        }
+//        System.out.println(S);
 
 
+//        String str = "Hello";
+//        char [] reverseString = new char[str.length()];
+//        Stack<Character> stack = new Stack<Character>();
+//
+//        for ( int i = 0; i < str.length() ; i++){
+//            stack.push(str.charAt(i));
+//        }
+//
+//        int i = 0;
+//        while (!stack.isEmpty()){
+//            reverseString[i++] = stack.pop();
+//
+//        }
 
+
+//       str = new String (reverseString);
+//        str = String.valueOf(reverseString);
+//        System.out.println("The reversed String is " +str);
+//
+//        String s = "a+((b-c)+d";
+//        s=s.replace("(","");
+//        s=s.replace(")","");
+//        System.out.println(s);
+
+
+//        String s =  "a+((b-c)+d)";
+//        System.out.println(removeBrack(s));
+//        System.out.println(s.substring(0,0));
+//        System.out.println(s.substring(0,1));
+//        System.out.println(s.substring(0,2));
+//        System.out.println(s.substring(0));
+//        System.out.println(s.substring(0,s.length()));
+
+
+//        int c = arr.length;
+//        System.out.println(c);
+
+//        int count =removeBrackk(arr);
+//        s=String.valueOf(arr).substring(0).trim();
+//        System.out.println(s);
+
+//        String s =  "a+((b-c)+d)";
+//        char [] arr =s.toCharArray();
+//        int count =removeSpaces(arr);
+//        s=String.valueOf(arr).substring(0).trim();
+//        System.out.println(s);
+
+
+        String str = "1bc268";
+        System.out.print("Sum: ");
+        System.out.println(findSum(str));
 
 
     }
 
-    public static String solve(String str, int n) {
-        StringBuffer ans = new StringBuffer();
-
-        for (int i = 0; i < n; i++) {
-            int ascii = (int) str.charAt(i); //ascii value
-
-            if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) // if alphabets
-                ans.append(str.charAt(i));
-        }
-
-        return ans.toString();
-    }
-
-
-
-    static String removeSpchra(String str){
-        String s = "";
-
+    static int findSum(String str) {
+        String tempSum = "0";
+        int sum = 0;
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) >='a' && str.charAt(i) <= 'z'){
-                s +=str.charAt(i);
+            char s = str.charAt(i);
+
+            if (Character.isDigit(s))
+                tempSum += s;
+
+            else {
+                sum += Integer.parseInt(tempSum);
+                tempSum = "0";
             }
         }
-        return s;
 
-    }
+        return sum + Integer.parseInt(tempSum);
+
+//    static int removeSpaces ( char[] arr ){
+//        Stack<Character> str = new Stack<Character>();
+//
+//        for (char ch : arr) {
+//            if (ch != ')' && ch!='(' ){
+//                str.push(ch);
+//            }
+//        }
+//
+//        int count = str.size();
+//        for (int i = count - 1; i >= 0; i--) {
+//            arr[i] = str.pop();
+//        }
+//
+//        for (int i = count; i < arr.length; i++) {
+//            arr[i] = '\0'; // Null character to indicate unused space
+//        }
+//
+//        return count;
+//    }
+
+//    static String removeBrack(String s) {
+//        StringBuilder sb = new StringBuilder();
+//        for (int i = 0; i < s.length(); i++) {
+//            char ch = s.charAt(i);
+//            if (ch != '(' && ch != ')') {
+//                sb.append(ch);
+//            }
+//        }
+//        return sb.toString();
+//    }
+
+//        static int removeBrackk(char [] arr){
+//
+//        int count = 0;
+//
+//        for ( int i = 0 ; i < arr.length ; i++){
+//
+//            if (arr[i] != '(' && arr[i] != ')'){
+//                arr[count] = arr[i];
+//                count++;
+//            }
+//        }
+//            for (int i = count; i < arr.length; i++) {
+//                arr[i] = '\0'; // Null character to indicate unused space
+//            }
+//        return count;
+//    }
+
+//    static String removeBrack(String s){
+//        for (int i = 0; i < s.length(); i++) {
+//            char ch = s.charAt(i);
+//            if (ch == '(' || ch==')' ){
+//                s=s.substring(0,i)+s.substring(i+1);
+//                i--;
+//            }
+//        }
+//        return s;
+//    }
+
+//    public static String solve(String str, int n) {
+//        StringBuffer ans = new StringBuffer();
+//
+//        for (int i = 0; i < n; i++) {
+//            int ascii = (int) str.charAt(i); //ascii value
+//
+//            if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) // if alphabets
+//                ans.append(str.charAt(i));
+//        }
+//
+//        return ans.toString();
+//    }
+
+
+//    static String removeSpchra(String str){
+//        String s = "";
+//
+//        for (int i = 0; i < str.length(); i++) {
+//            if (str.charAt(i) >='a' && str.charAt(i) <= 'z'){
+//                s +=str.charAt(i);
+//            }
+//        }
+//        return s;
+//
+//    }
 
 //    static int removeSpaces (char [] str){
 //
@@ -1207,22 +1346,26 @@ public class Strings {
 //        }
 //        return count;
 //    }
-    static String RemoveVowels(String str){
-        for ( int i = 0 ; i <str.length(); i++){
-            if (str.charAt(i)=='a'|| str.charAt(i)=='e'|| str.charAt(i)=='i'|| str.charAt(i)=='o'|| str.charAt(i)=='u'){
-                str=str.substring(0,i)+str.substring(i+1);
-            }
-        }
-        return str;
-    }
-    static String RemoveSpaces(String str){
-        for ( int i = 0 ; i <str.length(); i++){
-            if (str.charAt(i)==' '){
-                str=str.substring(0,i)+str.substring(i+1);
-            }
-        }
-        return str;
-    }
+
+
+//    static String RemoveVowels(String str){
+//        for ( int i = 0 ; i <str.length(); i++){
+//            if (str.charAt(i)=='a'|| str.charAt(i)=='e'|| str.charAt(i)=='i'|| str.charAt(i)=='o'|| str.charAt(i)=='u'){
+//                str=str.substring(0,i)+str.substring(i+1);
+//            }
+//        }
+//        return str;
+//    }
+//    static String RemoveSpaces(String str){
+//        for ( int i = 0 ; i <str.length(); i++){
+//            if (str.charAt(i)==' '){
+//                str=str.substring(0,i)+str.substring(i+1);
+//            }
+//        }
+//        return str;
+//    }
+
+
 //    static boolean isPalindrome (String s){
 //       int start = 0;
 //       int end = s.length()-1;
@@ -1239,6 +1382,7 @@ public class Strings {
 
 
     }
+}
         /*
 
 

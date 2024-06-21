@@ -13,7 +13,9 @@ public class StringFUN {
         // SUBSTRING METHOD USED TP PRINT START AND END CHARACHTER OF AN GIVEN STRING
 
 //        s=s.substring(0,s.length());  // PASS START & END INDEX BOTH
+//        WHILE PASSING BOTH THE VALUE IT PRINTS THE CHARCHTER -1 FROM THE END
 //        System.out.println(s);
+
 
 //************** BASIC PROGRAM TO PRINT ALL SUBSTRING IN A STRING ***************************
 
