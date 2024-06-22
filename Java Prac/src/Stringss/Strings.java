@@ -1223,29 +1223,98 @@ public class Strings {
 //        System.out.println(s);
 
 
-        String str = "1bc268";
-        System.out.print("Sum: ");
-        System.out.println(findSum(str));
+//        String input = "1bc2b6e84o5";
+//        System.out.print("Sum: ");
+//        int sum=0;
+//        System.out.println(findSum(str));
+//        for (int i = 0; i < input.length(); i++) {
+//            char temp = input.charAt(i);
+//            if (Character.isDigit(temp)) {
+//                int digit = Character.getNumericValue(temp);
+//                sum += digit;
+//            }
+//        }
+//
+//        System.out.println("Sum of all numbers in the string: " + sum);
+
+//        Scanner sc = new Scanner (System.in);
+//        String input = sc.nextLine();
+//        input= input.toLowerCase();
+//
+//        String result = CaptailizeFsandLas (input);
+//        System.out.println(result);
+
+        String str = "Take u Forward is Awesome";
+        int size = str.length();
+
+        System.out.println("String after capitalizing first and last letter of each word of the string: ");
+        System.out.println(Capitalize(str, size));
+
+    }
+//    static String CaptailizeFsandLas(String input){
+//
+//        String [] words = input.split("\\s+");
+//        StringBuilder result = new StringBuilder();
+//
+//        for (String word :words ) {
+//            if (word.length() > 0) {
+//
+//                char firstchar = Character.toUpperCase(word.charAt(0));
+//                char lastchar = Character.toUpperCase(word.charAt(word.length() - 1));
+//
+//                if (word.length() > 1) {
+//                    result.append(firstchar).append(word,1,word.length()-1).append(lastchar).append(" ");
+//                }else {
+//                    result.append(firstchar).append(" ");
+//                }
+//            }
+//        }
+//        return result.toString().trim();
+//    }
+
+
+    static String Capitalize(String str, int size) {
+        StringBuffer sb = new StringBuffer(str);
+
+        for (int i = 0; i < size; i++) {
+            if (i == 0 || i == (size - 1)) // Converting first and last index character to
+              //  uppercase
+            {
+                sb.setCharAt(i, Character.toUpperCase((char)(int) str.charAt(i)));
+            } else if (str.charAt(i) == ' ') // Converting characters present before and
+               // after space to uppercase
+            {
+                sb.setCharAt(i - 1, Character.toUpperCase((char)(int) str.charAt(i - 1)));
+                sb.setCharAt(i + 1, Character.toUpperCase((char)(int) str.charAt(i + 1)));
+            }
+        }
+
+        return sb.toString();
+    }
 
 
     }
 
-    static int findSum(String str) {
-        String tempSum = "0";
-        int sum = 0;
-        for (int i = 0; i < str.length(); i++) {
-            char s = str.charAt(i);
+//    static int findSum(String str) {
+//        String tempsum = "0";
+//        int sum = 0;
+//
+//        for (int i = 0; i < str.length(); i++) {
+//
+//            char c = str.charAt(i);
+//
+//            if (Character.isDigit(c)) {
+//                tempsum += c;
+//            } else {
+//                sum += Integer.parseInt(tempsum);
+//                tempsum = "0";
+//            }
+//        }
+//            return sum += Integer.parseInt(tempsum);
+//
+//    }
 
-            if (Character.isDigit(s))
-                tempSum += s;
 
-            else {
-                sum += Integer.parseInt(tempSum);
-                tempSum = "0";
-            }
-        }
-
-        return sum + Integer.parseInt(tempSum);
 
 //    static int removeSpaces ( char[] arr ){
 //        Stack<Character> str = new Stack<Character>();
@@ -1381,8 +1450,8 @@ public class Strings {
 //    }
 
 
-    }
-}
+
+
         /*
 
 

@@ -108,5 +108,11 @@ public class StringFUN {
     // STRING BUILDER FUNCTIONS
 
     // STRING BUFFER FUNCTIONS
+    // Charahter Class
+
+    //parseInt
+
+    // Character.getNumericValue
+
 
 }
