@@ -115,4 +115,8 @@ public class StringFUN {
     // Character.getNumericValue
 
 
+    // char indexing appraoch
+
+
+
 }

@@ -1244,13 +1244,159 @@ public class Strings {
 //        String result = CaptailizeFsandLas (input);
 //        System.out.println(result);
 
-        String str = "Take u Forward is Awesome";
-        int size = str.length();
 
-        System.out.println("String after capitalizing first and last letter of each word of the string: ");
-        System.out.println(Capitalize(str, size));
+//        String str = "Take u Forward is Awesome";
+//        int size = str.length();
+//
+//        System.out.println("String after capitalizing first and last letter of each word of the string: ");
+//        System.out.println(Capitalize(str, size));
+
+
+//        String str = "takeuforward";
+//        Printfrequency(str);
+
+//        String inputString = "takeuforward";
+//        inputString = inputString.toLowerCase();
+//        int[] frequency = new int[26]; // Assuming ASCII characters
+//
+//        for (char ch : inputString.toCharArray()) {
+//            if (Character.isLetter(ch)) {
+//                frequency[ch - 'a']++;
+//            }
+//        }
+//
+//        System.out.println("Frequencies:");
+//
+//        for (int i = 0; i < frequency.length; i++) {
+//            if (frequency[i] != 0) {
+//                System.out.println((char) (i + 'a') + " = " + frequency[i]);
+//            }
+//        }
+
+//        Scanner sc = new Scanner(System.in);
+//        String s = sc.nextLine();
+//        s=s.toLowerCase();
+//        int[] freq = new int [26];
+//
+//        for(char ch : s.toCharArray() )
+//        {
+//            if(Character.isLetter(ch))
+//            {
+//                int index = ch-'a';
+//                freq[index]++;
+//            }
+//
+//        }
+//
+//        for (int i = 0 ; i < freq.length;i++){
+//
+//            if (freq[i]!=2){
+//                System.out.print((char)(i+'a')+" ");
+////                System.out.print(freq[i]+" ");
+//            }
+//        }
+
+//        String str = "takeuforward";
+//        Printfrequency(str);
+
+
+
+
+//        String s1 = "CATE";
+//        s1=s1.toLowerCase();
+//
+//        String s2 = "ACT";
+//        s2=s2.toLowerCase();
+//
+//        char [] arr = s2.toCharArray();
+//        char [] arr1 = s1.toCharArray();
+//
+//        Arrays.sort(arr);
+//        Arrays.sort(arr1);
+//
+//        boolean isequals = Arrays.equals(arr,arr1);
+//
+//        if (isequals)System.out.println("Anagrams");
+//        else System.out.println("NOT anagrams");
+
+
+//        String str1 = "zaid";
+//        String str2 = "daiz";
+//        System.out.println(checkanagrams(str1,str2));
+
+        String s = "google";
+        Nonrepeat(s);
+//        Printfrequency(s);
+
+
+
+
 
     }
+
+    static void Nonrepeat (String s){
+        char[] ch = s.toCharArray();
+        int [] freq = new int [s.length()];
+
+        for ( int i =0 ; i < s.length(); i++){
+            freq[i]=1;
+            for (int j = i+1; j <s.length() ; j++) {
+                if (ch[i]==ch[j]){
+                    freq[i]++;
+                    ch[j]='-';
+
+                }
+            }
+        }
+        for (int i =0 ; i < s.length(); i++){
+            if (freq[i] == 1 && ch[i]!= '-'){
+                System.out.print(ch[i]+"  ");
+            }
+        }
+
+
+    }
+
+//    static String SortString (String str){
+//        char c [] = str.toCharArray();
+//        Arrays.sort(c);
+//        return new String(c);
+//    }
+//    static boolean checkanagrams (String str1 , String str2){
+//        if (str1.length() != str2.length()) return false;
+//
+//        str1=SortString(str1);
+//        str2=SortString(str2);
+//
+//
+//        if (str1.equals(str2)){
+//            return true;
+//        }
+//
+//        return false;
+//    }
+
+    static void Printfrequency(String str)
+    {
+        int[] freq = new int[26];
+        for (int i = 0; i < str.length(); i++)
+        {
+            freq[str.charAt(i) - 'a']++;
+        }
+        for (int i = 0; i < 26; i++)
+        {
+            if (freq[i] == 1)
+            {
+                System.out.print((char)(i + 'a')+"  ");
+//                System.out.print(freq[i] + " ");
+            }
+        }
+    }
+
+
+
+
+
 //    static String CaptailizeFsandLas(String input){
 //
 //        String [] words = input.split("\\s+");
@@ -1274,6 +1420,7 @@ public class Strings {
 
 
     static String Capitalize(String str, int size) {
+
         StringBuffer sb = new StringBuffer(str);
 
         for (int i = 0; i < size; i++) {
@@ -1290,6 +1437,7 @@ public class Strings {
         }
 
         return sb.toString();
+
     }
 
 
