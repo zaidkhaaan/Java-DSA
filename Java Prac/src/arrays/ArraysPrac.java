@@ -2479,9 +2479,32 @@ public static void main(String args[]) {
          */
 
 
-        int arr[] ={10,5,10,15,10,5};
-        int n = arr.length;
-        countFreq(arr, n);
+//        int arr[] ={10,5,10,15,10,5};
+//        int n = arr.length;
+//        countFreq(arr, n);
+        int nums[]= {-1};
+        System.out.println(singleNumber(nums));
+
+
+    }
+    static int singleNumber(int[] nums) {
+
+
+        // int count;
+        // Arrays.sort(nums);
+
+        for ( int i = 0 ; i < nums.length ; i++){
+            int j = i+1;
+            while ( j <= nums.length ){
+                if (nums[i] != nums[j]){
+                    return nums[i];
+                }else{
+                    j++;
+                    i=j;
+                }
+            }
+        }
+        return 1;
 
 
     }
