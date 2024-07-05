@@ -2482,12 +2482,142 @@ public static void main(String args[]) {
 //        int arr[] ={10,5,10,15,10,5};
 //        int n = arr.length;
 //        countFreq(arr, n);
-        int nums[]= {-1};
-        System.out.println(singleNumber(nums));
+
+
+
+//        int [] arr ={3,4,5,6,7,0,1,2};
+//        int pivot = maximum(arr);
+//        int bs = binarys(arr,0, pivot,6);
+//        int bs2 = binarys(arr,pivot+1,arr.length-1,6);
+//
+//        if (bs>0){
+//            System.out.println(bs);
+//        }else if (bs2 >0){
+//            System.out.println(bs2);
+//        }else {
+//            System.out.println("No element found");
+//        }
+
+//        int [] arr = {4,5,6,7,8,0,1,2};
+//        System.out.println(findpivot(arr));
 
 
 
 
+        int nums[] = {4,1,2,1,2};
+        System.out.println(singleNumber1(nums));
+
+    }
+
+    static int singleNumber1(int[] nums) {
+        int count=0 ;
+        for ( int i = 0 ; i <nums.length ; i++){
+            for ( int j = i+1 ; j<nums.length ; j++){
+                if(nums[i]==nums[j]){
+                    nums[i]=0;
+                    nums[j]=0;
+                }
+            }
+        }
+
+        for ( int  i =0 ; i <nums.length ; i++){
+            if (nums[i]!=0){
+                count=nums[i];
+            }
+        }
+        return count;
+
+
+    }
+
+    static boolean check(int[] nums) {
+        Arrays.sort(nums);
+
+        for ( int i = 0 ; i <nums.length; i++){
+            if(nums[i] < nums[i+1]){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static int findpivot(int [] nums){
+        int start = 0;
+        int end = nums.length-1;
+
+        while(start <= end){
+            int mid = start + (end-start)/2;
+            // 4 cases
+            if (mid < nums.length-1 && nums[mid] >nums[ mid+1]){
+                return mid;
+
+            } if (mid > start && nums[mid]<mid-1){
+                return mid-1;
+            }  if (nums[mid] <= nums[start]) {
+                end=mid-1;
+            }else{
+                start=mid+1;
+            }
+
+        }
+        return -1 ;
+
+
+    }
+
+    static int search ( int nums[] , int target) {
+
+        int pivot = findpivot(nums);
+
+        if (pivot == -1) {
+            // just do normal binary search
+            return binarysearch(nums,target,0,nums.length-1);
+
+        }
+        // if pivot is found , you have found 2 asc sorted arrays
+        if (nums[pivot] == target){
+            return pivot;
+        }
+
+        if (target >= nums[0]){
+            return binarysearch(nums,target,0,pivot-1);
+        }
+
+        return binarysearch(nums, target, pivot +1 ,nums.length -1  );
+
+    }
+
+    static  int binarysearch (int[] arr, int target , int start , int end){
+
+
+        while (start <=end) {
+            int mid = start + (end - start) / 2;
+
+            if (arr[mid] > target) {
+                end = mid - 1;
+            } else if (arr[mid] < target) {
+                start = mid + 1;
+
+            }else {
+                return mid;
+            }
+        }
+
+        return -1;
+
+    }
+
+
+    static int  maximum (int [] arr) {
+        int max = arr[0];
+
+        for ( int i = 0 ; i <arr.length; i++){
+
+            if (arr[i]>max){
+                max=i;
+            }
+        }
+        return max;
     }
     static int singleNumber(int[] nums) {
 

@@ -1324,20 +1324,103 @@ public class Strings {
 //        String str2 = "daiz";
 //        System.out.println(checkanagrams(str1,str2));
 
-        String s = "google";
-        Nonrepeat(s);
+//        String s = "google";
+//        Nonrepeat(s);
+
 //        Printfrequency(s);
+//
+//        char ch = 'a';
+//        int a = ch;
+//        System.out.println(a);
+//
+//        String ss = "";
+//        ss.length();
+
+//        char c = 's';
+//        int ch = (int)c;
+
+//        String str = "hello";
+
+//        int j = 0;
+//        for ( int i = 0 ; i < str.length(); i++){
+//            int ch = (int)str.charAt(i);
+//            System.out.println(ch);
+//        }
+
+//        int j = 0;
+//        int sum = 0;
+//        for ( int i = 1 ; i <str.length() ; i++){
+//            int ch = (int)str.charAt(i);
+//            int ch1 = (int)str.charAt(j);
+//
+//            if(j < str.length()-1){
+//                if (ch1-ch <0){
+//                    sum += -1*(ch1-ch);
+//                }else {
+//                    sum += ch1-ch;
+//                }
+//                j++;
+//            }
+//
+//        }
+//        System.out.println(sum);
 
 
+
+
+
+
+
+
+        String ss ="{[]}";
+        System.out.println(isValid(ss));
 
 
 
     }
 
+    static boolean isValid(String s) {
+
+        int first = 0;
+        int second = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            first=(int) ch;
+            for (int j = i + 1; j < s.length(); j++) {
+                char ch1 = s.charAt(j);
+                second = (int) ch1;
+
+                int min = second-first;
+                if ((min <= 1 && min >0)  || (min <= 2 && min >0)|| (min <= 3 && min >0)){
+                    return true;
+                }else {
+                    return false;
+                }
+            }
+//            if (ch == '(' || ch == '[' || ch == '{') {
+//                for (int j = i + 1; j < s.length(); j++) {
+//                    char ch1 = s.charAt(j);
+//                    if (ch != ch1) {
+//                        return true;
+//                    }
+//                }
+//            } else {
+//                return false;
+//            }
+//            int min = second-first;
+//            if (min>=1 || min >=2|| min>=3){
+//                return true;
+//            }else {
+//                return false;
+//            }
+
+        }
+        return false;
+    }
     static void Nonrepeat (String s){
         char[] ch = s.toCharArray();
         int [] freq = new int [s.length()];
-
         for ( int i =0 ; i < s.length(); i++){
             freq[i]=1;
             for (int j = i+1; j <s.length() ; j++) {

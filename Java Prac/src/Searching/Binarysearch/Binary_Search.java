@@ -82,12 +82,86 @@ public class Binary_Search {
          */
 
 // ************************************ Ceiling of the number **********************************************************
-        int arr[] = {2, 3, 5, 9, 14, 18};
-        int target = 16;
-
-        System.out.println(bsrev(arr,target));
+//        int arr[] = {2, 3, 5, 9, 14, 18};
+//        int target = 16;
+//
+//        System.out.println(bsrev(arr,target));
 
         // ceiling is the smallest element in array greater or = target
+
+
+        //********************************* Last occurence of a number ************************
+
+//        int ar[] ={1,2,5,5,5,6};
+//        int tar = 5;
+//        System.out.print("["+ Bsearchfo(ar,tar)+",");
+//        System.out.println(Bsearchlo(ar,tar)+"]");
+        int x = 24;
+        System.out.println(sqrt(x));
+
+    }
+    static int sqrt(int x){
+        int start = 0 , end = x;
+        int ans = -1;
+
+          while (start <= end){
+              int mid = start + (end-start)/2;
+              long value = mid*mid;
+              if (value == x){
+                  return mid;
+              } else if (value < x) {
+                  ans= mid;
+                  start = mid+1;
+              }else{
+                  end = mid-1;
+              }
+
+          }
+          return ans;
+    }
+
+
+
+
+    static int Bsearchfo (int ar[] , int target){
+        int start = 0;
+        int end = ar.length-1;
+        int f0 = 0;
+
+        while (start < end){
+            int mid = start + (end-start) /2;
+
+            if (ar[mid] == target){
+                f0 = mid;
+                end = mid -1;
+            } else if (ar[mid] > target){
+                end = mid - 1;
+
+            } else if (ar[mid] < target) {
+                start = mid +1;
+            }
+        }
+        return f0;
+    }
+    static int Bsearchlo (int ar[] , int target){
+        int start = 0;
+        int end = ar.length-1;
+        int l0 = 0;
+
+        while (start < end){
+            int mid = start + (end-start) /2;
+
+            if (ar[mid] == target){
+                l0 = mid;
+                start = mid  + 1;
+            } else if (ar[mid] > target){
+                end = mid - 1;
+
+            } else if (ar[mid] < target) {
+                start = mid +1;
+            }
+        }
+        return l0;
     }
 
     static int bsrev ( int arr[] , int target){
