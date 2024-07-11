@@ -1371,13 +1371,74 @@ public class Strings {
 
 
 
+//
+//        String ss ="{[]}";
+//        System.out.println(isValid(ss));
 
-        String ss ="{[]}";
-        System.out.println(isValid(ss));
+//
+
+            Scanner sc = new Scanner(System.in);
+//            int n = sc.nextInt();
+            String s = sc.nextLine();
+            s = s.toLowerCase();
+
+            int a = 0;
+            int e = 0;
+            int i = 0;
+            int o = 0;
+            int u = 0;
+
+            for (int j = 0; j < s.length(); j++) {
+                char ch = s.charAt(j);
+                if (ch == 'a') {
+                    a++;
+                } else if (ch == 'e') {
+                    e++;
+                } else if (ch == 'i') {
+                    i++;
+                } else if (ch == 'o') {
+                    o++;
+                } else if (ch == 'u') {
+                    u++;
+                }
+            }
+
+            // Find the maximum count among vowels
+            int maxCount = Math.max(Math.max(Math.max(Math.max(a, e), i), o), u);
+
+            // Determine which vowel(s) have the maximum count
+            StringBuilder result = new StringBuilder("Most repeated vowel(s): ");
+            if (a == maxCount) {
+                result.append("a ");
+            }
+            if (e == maxCount) {
+                result.append("e ");
+            }
+            if (i == maxCount) {
+                result.append("i ");
+            }
+            if (o == maxCount) {
+                result.append("o ");
+            }
+            if (u == maxCount) {
+                result.append("u ");
+            }
+
+            System.out.println(result.toString().trim());
+        }
 
 
 
-    }
+
+
+//    static char countvowel (String s){
+//        int count = 0;
+//        for ( int i = 0 ; i <s.length() ; i++){
+//            char ch = s.charAt(i);
+//
+//            if (ch =='a'==)
+//        }
+//    }
 
     static boolean isValid(String s) {
 
