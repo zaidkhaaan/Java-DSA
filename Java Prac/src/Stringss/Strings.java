@@ -2,6 +2,7 @@ package Stringss;
 
 import javax.swing.*;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -1381,6 +1382,8 @@ public class Strings {
 //            int n = sc.nextInt();
             String s = sc.nextLine();
             s = s.toLowerCase();
+       Character.
+
 
             int a = 0;
             int e = 0;

@@ -135,7 +135,8 @@ public class StringFUN {
 //******************************STRING BOOLEAN FUNCTIONS *************************
 //        String s = "geeks for geeks ";
 
-//        System.out.println(s.contains("AID")); --> matches the charachter ( specified sequence of char values) and return boolean value from the string
+//        System.out.println(s.contains("AID")); --> matches the charachter ( specified sequence of char values)
+//        and return boolean value from the string
 //        System.out.println(s.matches("geeks")); --> method checks if the entire string matches the given regular expression
 
         // regionMatches() --> checks for the subregion
@@ -146,8 +147,21 @@ public class StringFUN {
 
         // region match with boolean
 
+        /*
+        Usage: regionMatches() is used to compare specific regions (substrings) within strings, allowing you to compare parts of one string with parts of another.
+       Parameters: regionMatches() requires you to specify starting indices and lengths for both strings being compared, offering more control over which parts of the strings are compared.
+       Return Value  Value: regionMatches() returns true or false based on whether the specified regions match exactly.
+      contentEquals(): is used to check if the entire content of one string matches another string or CharSequence, and it returns a boolean value.
+
+       Summary:
+              regionMatches() compares specific regions of two strings.
+              contentEquals() checks if the entire content of one string matches another CharSequence.
+         */
+
 
         /*
+        // it checks for charchters equence (words in a string)
+
         boolean contains(CharSequence s)
         Purpose: Checks if the string contains the specified sequence of char values.
 
@@ -177,6 +191,9 @@ public class StringFUN {
         String str3 = new String("Hello");
         System.out.println(str1.equals(str2)); // true
         System.out.println(str1.equals(str3)); // true
+
+        // checks for contents and the memory location the string
+
 
         boolean equalsIgnoreCase(String anotherString)
         Purpose: Compares this string to another string, ignoring case considerations.
@@ -300,6 +317,146 @@ public class StringFUN {
 
 
 
+****************************STRING INTERGER BASED FUNCTION**************************************
+// RETURN'S A NUMERIC VALUE
+
+
+
+
+codePointAt(int index):
+
+Returns the Unicode code point value at the specified index within the string.
+If the index is within the valid range of the string, it returns the Unicode code point of the character at that index.
+This method handles supplementary characters (those with code points above \uFFFF).
+
+String str = "Hello";
+int codePoint = str.codePointAt(1); // Returns the code point for 'e'
+
+
+
+codePointBefore (int index)
+Returns the Unicode code point value before the specified index within the string.
+Similar to codePointAt, but it returns the code point of the character just before the specified index.
+
+String str = "Hello";
+int codePoint = str.codePointBefore(2); // Returns the code point for 'e'
+
+
+
+
+
+codePointCount (int beginIndex, int endIndex);
+
+Returns the number of Unicode code points in the specified range of the string.
+The range is from beginIndex (inclusive) to endIndex (exclusive).
+
+EXAMPLE:-
+
+String str = "Hello";
+int codePointCount = str.codePointCount(1, 4); // Returns 3 (for 'ell')
+
+
+
+compareTo (String anotherString)
+Compares two strings lexicographically.
+Returns a negative integer, zero, or a positive integer as
+the calling string is less than, equal to, or greater than anotherString.
+
+String str1 = "hello";
+String str2 = "world";
+int result = str1.compareTo(str2); // Returns a negative value since "hello" is lexicographically less than "world"
+
+Compares two strings lexicographically, ignoring case differences.
+Returns a negative integer, zero, or a positive integer as
+the calling string is lexicographically less than, equal to, or greater than str, ignoring case considerations.
+
+
+compareToIgnoreCase (String str)
+Compares two strings lexicographically, ignoring case differences.
+
+Returns a negative integer, zero, or a positive integer as
+the calling string is lexicographically less than, equal to, or
+greater than str, ignoring case considerations.
+
+
+String str1 = "Hello";
+String str2 = "HELLO";
+int result = str1.compareToIgnoreCase(str2); // Returns 0 since "Hello" is equal to "HELLO" ignoring case
+
+
+
+hashCode ()
+Returns a hash code value for the string.
+The hash code is computed based on
+the characters of the string and is used in hash-based data structures like HashMap
+
+String str = "Hello";
+int hashCode = str.hashCode();
+
+
+
+indexof (int ch)
+
+Returns the index within the string of the first occurrence of the specified character (ch).
+Returns -1 if the character does not occur in the string.
+
+String str = "Hello";
+int index = str.indexOf('e'); // Returns 1 (index of 'e' in "Hello")
+
+
+
+
+index0f (String str)
+
+Returns the index within the string of the first occurrence of the specified substring (str).
+Returns -1 if the substring does not occur in the string
+
+String str = "Hello";
+int index = str.indexOf("lo"); // Returns 3 (index of "lo" in "Hello")
+
+
+LastIndex0f(int ch)
+
+Returns the index within the string of the last occurrence of the specified character (ch).
+Searches backward from the end of the string.
+Returns -1 if the character does not occur in the string.
+
+String str = "Hello";
+int index = str.lastIndexOf('l'); // Returns 3 (last index of 'l' in "Hello")
+
+
+lastIndex0f (String str)
+Returns the index within the string of the last occurrence of the specified substring (str).
+Searches backward from the end of the string.
+Returns -1 if the substring does not occur in the string
+
+String str = "Hello";
+int index = str.lastIndexOf("l"); // Returns 3 (last index of "l" in "Hello")
+
+
+lastIndexof (int ch, int fromIndex)
+Returns the index within the string of the last occurrence of the specified character (ch), searching backward starting at the specified index (fromIndex).
+Returns -1 if the character does not occur in the string from the specified index.
+
+String str = "Hello";
+int index = str.lastIndexOf('l', 2); // Returns 2 (last index of 'l' before index 2 in "Hello")
+
+
+LastIndex0f (String str, int fromindex)
+
+Returns the index within the string of the last occurrence of the specified substring (str), searching backward starting at the specified index (fromIndex).
+Returns -1 if the substring does not occur in the string from the specified index.
+
+String str = "Hello";
+int index = str.lastIndexOf("l", 3); // Returns 3 (last index of "l" before index 3 in "Hello")
+
+
+startswith (String prefix)
+Checks whether the string starts with the specified prefix (prefix).
+Returns true if the string starts with the prefix; otherwise, false.
+
+String str = "Hello";
+boolean startsWith = str.startsWith("He"); // Returns true
 
 
 
@@ -314,10 +471,9 @@ public class StringFUN {
 
 
 
+**********************************CHARACHTER CLASS FUNCTION********************************
 
-
-
-
+     Character.getNumericValue
 
 
 
@@ -349,9 +505,71 @@ public class StringFUN {
 
          */
 
-        //**************************** String.valueOf(str) *****************************
+        //**************************** STRING CLASS FUNCTION *****************************
         // Direct string class function (String.____())
+/*
+        String.valueOf();
+        The String.valueOf() method is used to convert different types of data into their string representation.
+         It has several overloaded versions for different data types such as int, long, char, char[], boolean, etc.
+         This is particularly useful when you want to convert other types of objects into strings
 
+         EXAMPLE:-
+         int num = 100;
+        String str = String.valueOf(num);  // str becomes "100"
+
+          char ch = 'A';
+          String str2 = String.valueOf(ch);  // str2 becomes "A"
+
+           boolean bool = true;
+           String str3 = String.valueOf(bool);  // str3 becomes "true"
+
+
+
+        String.copyValueOf();
+        The String.copyValueOf() method is similar to String.valueOf() when dealing with character arrays.
+        It returns a String that represents the character sequence in the specified array.
+        There are two versions: one that takes the entire array and one that takes a subarray (with specified offset and count).
+
+        char[] data = {'h', 'e', 'l', 'l', 'o'};
+        String str = String.copyValueOf(data);  // str becomes "hello"
+
+        String str2 = String.copyValueOf(data, 1, 3);  // str2 becomes "ell"
+
+
+
+        String.format();
+        The String.format() method returns a formatted string using
+        the specified format string and arguments.
+        It works similarly to the printf function in C. Y
+        ou can use format specifiers to include variables in the string in a formatted way.
+
+        String name = "John";
+        int age = 30;
+        String formattedString = String.format("My name is %s and I am %d years old.", name, age);
+        // formattedString becomes "My name is John and I am 30 years old."
+
+          double value = 12.34567;
+          String formattedString2 = String.format("Value: %.2f", value);
+          // formattedString2 becomes "Value: 12.35"
+
+
+
+
+
+        String.join()
+
+        The String.join() method joins multiple strings into a single string with a specified delimiter.
+        It is useful for concatenating strings with a delimiter between each part.
+
+        EXAMPLE;-
+        String result = String.join("-", "2024", "07", "23");
+        // result becomes "2024-07-23"
+
+         List<String> items = Arrays.asList("apple", "banana", "cherry");
+          String result2 = String.join(", ", items);
+          // result2 becomes "apple, banana, cherry"
+
+*/
 
 
         //****************************** String subsequence **************************
@@ -362,17 +580,20 @@ public class StringFUN {
 
     // STRING BUILDER FUNCTIONS
 
+
+
     // STRING BUFFER FUNCTIONS
-    // Charahter Class
+
+
 
     //parseInt
-
-    // Character.getNumericValue
 
 
     // char indexing appraoch
 
 
+
+    // PLACE HOLDER IN STRINGS
 
 
 
