@@ -472,8 +472,96 @@ boolean startsWith = str.startsWith("He"); // Returns true
 
 
 **********************************CHARACHTER CLASS FUNCTION********************************
+    the Character class is typically used in programming languages like Java
+    to represent and manipulate single characters
 
-     Character.getNumericValue
+
+Character.isDigit(char ch)
+Description: Determines if the specified character is a digit.
+Example: Character.isDigit('5') returns true.
+
+
+Character.isLetter(char ch)
+Description: Determines if the specified character is a letter.
+Example: Character.isLetter('a') returns true.
+
+
+
+Character.isLetterOrDigit(char ch)
+Description: Determines if the specified character is a letter or a digit.
+Example: Character.isLetterOrDigit('a') returns true.
+
+
+Character.isWhitespace(char ch)
+Description: Determines if the specified character is a whitespace character.
+Example: Character.isWhitespace(' ') returns true.
+
+
+
+Character.isUpperCase(char ch)
+Description: Determines if the specified character is an uppercase letter.
+Example: Character.isUpperCase('A') returns true
+
+
+Character.isLowerCase(char ch)
+Description: Determines if the specified character is a lowercase letter.
+Example: Character.isLowerCase('a') returns true.
+
+
+
+Character.toUpperCase(char ch)
+Description: Converts the specified character to uppercase.
+Example: Character.toUpperCase('a') returns 'A'.
+
+
+
+
+Character.toLowerCase(char ch)
+Description: Converts the specified character to lowercase.
+Example: Character.toLowerCase('A') returns 'a'.
+
+
+Character.isSpaceChar(char ch)
+Description: Determines if the specified character is a Unicode space character.
+Example: Character.isSpaceChar(' ') returns true.
+
+
+
+Character.isJavaIdentifierStart(char ch)
+Description: Determines if the specified character is permissible as the first character in a Java identifier.
+Example: Character.isJavaIdentifierStart('A') returns true.
+
+
+Character.isJavaIdentifierPart(char ch)
+Description: Determines if the specified character is permissible as part of a Java identifier.
+Example: Character.isJavaIdentifierPart('1') returns true.
+
+
+
+Character.isDefined(char ch)
+Description: Determines if the specified character is defined in Unicode.
+Example: Character.isDefined('A') returns true.
+
+
+
+Character.isSurrogate(char ch)
+Description: Determines if the specified character is a Unicode surrogate code unit.
+Example: Character.isSurrogate('\uD800') returns true.
+
+
+
+Character.getType(char ch)
+Description: Returns a value indicating the general category of the character.
+Example: Character.getType('A') returns Character.UPPERCASE_LETTER.
+
+
+Character.toString(char ch)
+Description: Returns a String object representing the specified character.
+Example: Character.toString('A') returns "A".
+
+
+
+  Character.getNumericValue
 
 
 
@@ -579,6 +667,18 @@ boolean startsWith = str.startsWith("He"); // Returns true
     // NOTE :- " " are used for string literals  & ' ' are used for chrachter literals
 
     // STRING BUILDER FUNCTIONS
+/*
+  StringBuilder allows you to modify the sequence without creating new objects
+
+  Diffrent functions:-
+
+  append(String str):- Appends the specified string to this character sequence.
+  insert(int offset, String str):-Inserts the specified string at the specified position.
+  replace(int start, int end, String str):-Replaces the characters in a substring of this sequence with characters in the specified string.
+  delete(int start, int end):-Removes the characters in a substring of this sequence.
+  toString():- Converts the StringBuilder to a String
+
+ */
 
 
 
@@ -587,6 +687,46 @@ boolean startsWith = str.startsWith("He"); // Returns true
 
 
     //parseInt
+
+    /*
+      Method Signatures
+      public static int parseInt(String s)
+
+      Parameters: String s - the string to be parsed.
+      Returns: The integer value represented by the string argument.
+      Example: Integer.parseInt("123") returns 123.
+      public static int parseInt(String s, int radix)
+
+      Parameters
+      String s - the string to be parsed.
+      int radix - the radix to be used while parsing.
+      Returns: The integer value represented by the string argument in the specified radix.
+      Example: Integer.parseInt("1010", 2) returns 10 (binary to decimal conversion).
+
+
+     EXAMPLE:-
+        String str1 = "123";
+        String str2 = "1010";
+
+        // Parse with default radix (decimal)
+        int num1 = Integer.parseInt(str1);
+        System.out.println("Parsed number (decimal): " + num1); // Output: 123
+
+        // Parse with specified radix (binary)
+        int num2 = Integer.parseInt(str2, 2);
+        System.out.println("Parsed number (binary): " + num2); // Output: 10
+
+        // Handling NumberFormatException
+        try {
+            int num3 = Integer.parseInt("abc");
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number format: " + e.getMessage());
+        }
+
+
+
+
+     */
 
 
     // char indexing appraoch

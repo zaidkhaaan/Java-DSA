@@ -1,10 +1,7 @@
 package Stringss;
 
 import javax.swing.*;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class Strings {
 
@@ -1301,8 +1298,6 @@ public class Strings {
 //        Printfrequency(str);
 
 
-
-
 //        String s1 = "CATE";
 //        s1=s1.toLowerCase();
 //
@@ -1367,71 +1362,378 @@ public class Strings {
 //        System.out.println(sum);
 
 
-
-
-
-
-
 //
 //        String ss ="{[]}";
 //        System.out.println(isValid(ss));
 
 //
 
-            Scanner sc = new Scanner(System.in);
-//            int n = sc.nextInt();
-            String s = sc.nextLine();
-            s = s.toLowerCase();
-       Character.
+//            Scanner sc = new Scanner(System.in);
+////            int n = sc.nextInt();
+//            String s = sc.nextLine();
+//            s = s.toLowerCase();
+//
+//
+//
+//            int a = 0;
+//            int e = 0;
+//            int i = 0;
+//            int o = 0;
+//            int u = 0;
+//
+//            for (int j = 0; j < s.length(); j++) {
+//                char ch = s.charAt(j);
+//                if (ch == 'a') {
+//                    a++;
+//                } else if (ch == 'e') {
+//                    e++;
+//                } else if (ch == 'i') {
+//                    i++;
+//                } else if (ch == 'o') {
+//                    o++;
+//                } else if (ch == 'u') {
+//                    u++;
+//                }
+//            }
+//
+//            // Find the maximum count among vowels
+//            int maxCount = Math.max(Math.max(Math.max(Math.max(a, e), i), o), u);
+//
+//            // Determine which vowel(s) have the maximum count
+//            StringBuilder result = new StringBuilder("Most repeated vowel(s): ");
+//            if (a == maxCount) {
+//                result.append("a ");
+//            }
+//            if (e == maxCount) {
+//                result.append("e ");
+//            }
+//            if (i == maxCount) {
+//                result.append("i ");
+//            }
+//            if (o == maxCount) {
+//                result.append("o ");
+//            }
+//            if (u == maxCount) {
+//                result.append("u ");
+//            }
+//
+//            System.out.println(result.toString().trim());
 
 
-            int a = 0;
-            int e = 0;
-            int i = 0;
-            int o = 0;
-            int u = 0;
+//
+//        String s = "ZaId";
+//        char [] ch = s.toCharArray();
+//        int ascii2 = 0;
+//        int ascii3 = 0;
+//        char ch2 = 0;
+//
+//        char ch3 = 0;
+//
+//        for(char ch1: ch){
+//            int ascii = (int) ch1;
+//            ascii2=0;
+//            ascii3=0;
+//            if(ascii >=97 & ascii <= 122  ){
+//                ascii2 = ascii-32;
+//            }else{
+//                 ascii3 = ascii+32;
+//            }
+//
+//            if(ascii2>0){
+//               ch2 =(char)ascii2;
+//                System.out.print(ch2);
+//            }else{
+//                 ch3 =(char)ascii3;
+//                System.out.print(ch3);
 
-            for (int j = 0; j < s.length(); j++) {
-                char ch = s.charAt(j);
-                if (ch == 'a') {
-                    a++;
-                } else if (ch == 'e') {
-                    e++;
-                } else if (ch == 'i') {
-                    i++;
-                } else if (ch == 'o') {
-                    o++;
-                } else if (ch == 'u') {
-                    u++;
+//
+//        Scanner sc = new Scanner(System.in);
+//        String s = sc.nextLine();
+//        s = s.toLowerCase();
+//
+//        int count = 1;
+//
+//
+//        if (s.isEmpty()) {
+//            System.out.println("Empty String");
+//        } else {
+//            for (int i = 0; i < s.length() - 1; i++) {
+//
+//
+//                char ch = s.charAt(i);
+//                char ch1 = s.charAt(i + 1);
+//
+//                if (ch == ch1) {
+//                    count++;
+//                } else {
+//                    System.out.print(ch);
+//                    System.out.print(count);
+//                    count = 1;
+//                }
+//
+//
+//            }
+//
+//        }
+//
+//        if (count >= 1) {
+//
+//            System.out.print(s.charAt(s.length() - 1));
+//            System.out.print(count);
+//        }
+
+
+//        String s = "aaabbbccdd";
+//        char[] ch =s.toCharArray();
+//        System.out.println(compress(ch));
+
+//        String s = "Hello World";
+//        s=s.trim();
+//        int count = 0;
+//
+//        for (int i = s.length()-1; i >=0 ; i--) {
+//            if (s.charAt(i) != ' '){
+//                count++;
+//            }else{
+//                break;
+//            }
+//        }
+//        System.out.println(count);
+
+//        String haystack = "sadbutsad";
+//        String needle ="sad";
+//
+//        System.out.println(Str(haystack,needle));
+
+//        StringBuilder str = new StringBuilder();
+//        String s = "zaid pathan";
+
+//        StringBuilder str = new StringBuilder(s.length());
+//        str=str.reverse();
+//        return str.toString();
+//        System.out.println(reverseWords(s));
+//        System.out.println(Reversewords(s));
+
+//        Scanner sc = new Scanner(System.in);
+//        String s = sc.nextLine();
+//        s=s.toLowerCase().trim();
+//        String s1 = sc.nextLine();
+//        s1=s1.toLowerCase().trim();
+//
+//        char [] ch = s.toCharArray();
+//        char [] ch1 = s1.toCharArray();
+//
+//        Arrays.sort(ch);
+//        Arrays.sort(ch1);
+//
+//        if (Arrays.equals(ch,ch1)){
+//            System.out.println("Anagram");
+//        }else{
+//            System.out.println("Not Anagram");
+//        }
+
+//        String s = "hello";
+//        s=s.toLowerCase();
+//
+//        for ( int i = s.length()-1 ; i >= 0 ; i--){
+//            System.out.print(s.charAt(i));
+//        }
+
+
+//        int start = StartisVowel(s);
+//        int end = EndisVowel(s);
+//        char ch [] = s.toCharArray();
+//
+//                char temp = ch[start];
+//                ch[start]= ch[end];
+//                ch[end]= temp;
+//
+//
+//        s=new String(ch);
+//        System.out.println(s);
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        String s1 = "aA";
+//        s1=reverseVowels(s1);
+//        System.out.println(s1);
+
+
+
+
+
+    }
+//  static String reverseVowels(String s){
+//        s=s.toLowerCase();
+//        int n = s.length();
+//        char ch [] = s.toCharArray();
+//        int start = 0;
+//        int end = s.length()-1;
+//
+//        while (start < end){
+//
+//            if (!isVowel(ch[start])){
+//                start++;
+//            } else if (!isVowel(ch[end])){
+//             end--;
+//            } else{
+//                char temp = ch[start];
+//                ch[start]=ch[end];
+//                ch[end]= temp;
+//                start++;
+//                end--;
+//            }
+//        }
+//       return String.valueOf(ch);
+//    }
+//
+//    static boolean isVowel(char c) {
+//        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+//    }
+
+
+//        int end = 0;
+//        int max_length = 0;
+//
+//        List<Character> list = new ArrayList<Character>();
+//
+//        while (end < s.length()){
+//
+//            if (!list.contains(s.charAt(end))){
+//                list.add(s.charAt(end));
+//                end++;
+//                max_length = Math.max(max_length , list.size());
+//            }else{
+//                list.remove(Character.valueOf(s.charAt(start)));
+//                start++;
+//            }
+//        }
+//
+//        return max_length;
+//    }
+//    static String reverseWords(String s) {
+//        StringBuilder str = new StringBuilder(s);
+//        str=str.reverse();
+//
+//
+//        return str.toString().trim();
+//    }
+
+
+
+    static String Reversewords(String s ){
+
+        String words [] = s.split(" +");
+        StringBuilder str =new StringBuilder();
+
+        for (int i = words.length-1; i >= 0 ; i--) {
+            str.append(words[i]);
+            str.append(" ");
+
+
+        }
+        return str.toString().trim();
+    }
+
+    static int Str(String haystack , String needle){
+
+
+//        for( int i = 0 ; i < haystack.length() - needle.length()+1 ; i++){
+//            if (haystack.charAt(i) == needle.charAt(0)){
+//                if (haystack.substring(i,needle.length()+i).equals(needle)){
+//                    return i;
+//                }
+//            }
+//
+//        }
+//        return -1;
+
+        if(haystack.contains(needle)){
+            return haystack.indexOf(needle);
+        }
+        return -1;
+    }
+
+    static int compress(char[] chars) {
+        int n = chars.length;
+
+        int i = 0;
+        int index = 0;
+
+        while (i < n) {
+            char curr = chars[i];
+
+            int count = 0;
+            // Find count of duplicates
+            while (i < n && chars[i] == curr) {
+                i++;
+                count++;
+            }
+
+            // Assign it to chars and move index ahead to add the count
+            chars[index++] = curr;
+
+            // Add the count
+            if (count > 1) {
+                String countStr = Integer.toString(count);
+                for (char ch : countStr.toCharArray()) {
+                    chars[index++] = ch;
                 }
             }
-
-            // Find the maximum count among vowels
-            int maxCount = Math.max(Math.max(Math.max(Math.max(a, e), i), o), u);
-
-            // Determine which vowel(s) have the maximum count
-            StringBuilder result = new StringBuilder("Most repeated vowel(s): ");
-            if (a == maxCount) {
-                result.append("a ");
-            }
-            if (e == maxCount) {
-                result.append("e ");
-            }
-            if (i == maxCount) {
-                result.append("i ");
-            }
-            if (o == maxCount) {
-                result.append("o ");
-            }
-            if (u == maxCount) {
-                result.append("u ");
-            }
-
-            System.out.println(result.toString().trim());
         }
 
+        return index;
+    }
 
 
+
+
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int count = 1;
+
+        for (int i = 0; i < s.length(); i++) {
+            while (i < s.length() - 1) { // Ensure we don't go out of bounds
+                char ch = s.charAt(i);
+                char ch1 = s.charAt(i + 1);
+
+                if (ch == ch1) {
+                    count++;
+                } else {
+                    System.out.print(ch);
+                    System.out.print(count);
+                    count = 1;
+                }
+                i++; // Increment i to avoid infinite loop
+            }
+        }
+         */
+
+//                char ch = s.charAt(i);
+//                char ch1 =s.charAt(i+1);
+//
+//                if (ch == ch1){
+//                    count++;
+//                }else{
+//                    System.out.print(ch);
+//                    System.out.print(count);
+//                    count=0;
+//                }
 
 
 //    static char countvowel (String s){
@@ -1450,15 +1752,15 @@ public class Strings {
 
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            first=(int) ch;
+            first = (int) ch;
             for (int j = i + 1; j < s.length(); j++) {
                 char ch1 = s.charAt(j);
                 second = (int) ch1;
 
-                int min = second-first;
-                if ((min <= 1 && min >0)  || (min <= 2 && min >0)|| (min <= 3 && min >0)){
+                int min = second - first;
+                if ((min <= 1 && min > 0) || (min <= 2 && min > 0) || (min <= 3 && min > 0)) {
                     return true;
-                }else {
+                } else {
                     return false;
                 }
             }
@@ -1482,22 +1784,23 @@ public class Strings {
         }
         return false;
     }
-    static void Nonrepeat (String s){
+
+    static void Nonrepeat(String s) {
         char[] ch = s.toCharArray();
-        int [] freq = new int [s.length()];
-        for ( int i =0 ; i < s.length(); i++){
-            freq[i]=1;
-            for (int j = i+1; j <s.length() ; j++) {
-                if (ch[i]==ch[j]){
+        int[] freq = new int[s.length()];
+        for (int i = 0; i < s.length(); i++) {
+            freq[i] = 1;
+            for (int j = i + 1; j < s.length(); j++) {
+                if (ch[i] == ch[j]) {
                     freq[i]++;
-                    ch[j]='-';
+                    ch[j] = '-';
 
                 }
             }
         }
-        for (int i =0 ; i < s.length(); i++){
-            if (freq[i] == 1 && ch[i]!= '-'){
-                System.out.print(ch[i]+"  ");
+        for (int i = 0; i < s.length(); i++) {
+            if (freq[i] == 1 && ch[i] != '-') {
+                System.out.print(ch[i] + "  ");
             }
         }
 
@@ -1523,25 +1826,18 @@ public class Strings {
 //        return false;
 //    }
 
-    static void Printfrequency(String str)
-    {
+    static void Printfrequency(String str) {
         int[] freq = new int[26];
-        for (int i = 0; i < str.length(); i++)
-        {
+        for (int i = 0; i < str.length(); i++) {
             freq[str.charAt(i) - 'a']++;
         }
-        for (int i = 0; i < 26; i++)
-        {
-            if (freq[i] == 1)
-            {
-                System.out.print((char)(i + 'a')+"  ");
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] == 1) {
+                System.out.print((char) (i + 'a') + "  ");
 //                System.out.print(freq[i] + " ");
             }
         }
     }
-
-
-
 
 
 //    static String CaptailizeFsandLas(String input){
@@ -1572,14 +1868,14 @@ public class Strings {
 
         for (int i = 0; i < size; i++) {
             if (i == 0 || i == (size - 1)) // Converting first and last index character to
-              //  uppercase
+            //  uppercase
             {
-                sb.setCharAt(i, Character.toUpperCase((char)(int) str.charAt(i)));
+                sb.setCharAt(i, Character.toUpperCase((char) (int) str.charAt(i)));
             } else if (str.charAt(i) == ' ') // Converting characters present before and
-               // after space to uppercase
+            // after space to uppercase
             {
-                sb.setCharAt(i - 1, Character.toUpperCase((char)(int) str.charAt(i - 1)));
-                sb.setCharAt(i + 1, Character.toUpperCase((char)(int) str.charAt(i + 1)));
+                sb.setCharAt(i - 1, Character.toUpperCase((char) (int) str.charAt(i - 1)));
+                sb.setCharAt(i + 1, Character.toUpperCase((char) (int) str.charAt(i + 1)));
             }
         }
 
@@ -1587,8 +1883,6 @@ public class Strings {
 
     }
 
-
-    }
 
 //    static int findSum(String str) {
 //        String tempsum = "0";
@@ -1608,7 +1902,6 @@ public class Strings {
 //            return sum += Integer.parseInt(tempsum);
 //
 //    }
-
 
 
 //    static int removeSpaces ( char[] arr ){
@@ -1747,37 +2040,17 @@ public class Strings {
 
 
 
-        /*
+    /*
 
 
-         */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     */
 
 
 //        String input = "hello   world,   how   are   you?"; // Example input with extra spaces
 //
 //        // Split the input string into words
 //         String[] words = input.split("\\s+");
-        // Split by one or more spaces
+    // Split by one or more spaces
 
 
 
@@ -1985,4 +2258,4 @@ public class Strings {
 
          */
 
-
+}
