@@ -2503,9 +2503,40 @@ public static void main(String args[]) {
 
 
 
+//
+//        int nums[] = {4,1,2,1,2};
+//        System.out.println(singleNumber1(nums));
 
-        int nums[] = {4,1,2,1,2};
-        System.out.println(singleNumber1(nums));
+//
+//        int n = 1211;
+//        int num = n;
+//        int rev=0;
+//        while(num>0){
+//            int rem = num%10;
+//             rev=(rev*10)+rem;
+//            num=num/10;
+//        }
+//        System.out.println(rev);
+
+        int arr[] = {1,1,3,3,4,7,8,9,9};
+
+        int max = arr[0];
+        int secondmax=0;
+        for ( int i = 0 ; i <arr.length ; i++){
+
+            if (arr[i]>max){
+                secondmax=max;
+                max=arr[i];
+            }else if(arr[i]>secondmax && arr[i]!= max){
+                secondmax=arr[i];
+            }
+        }
+        System.out.println(secondmax);
+
+
+
+
+
 
     }
 

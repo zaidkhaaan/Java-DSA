@@ -1,6 +1,7 @@
 package Stringss;
 
-import javax.swing.*;
+import oops.smartprogramming.Employee;
+
 import java.util.*;
 
 public class Strings {
@@ -1552,7 +1553,14 @@ public class Strings {
 //        s=new String(ch);
 //        System.out.println(s);
 
-        
+//        String s1 = "abba";
+//        String s2 = "dog cat cat dog";
+//        String[] s3 = s2.split(" ");
+//
+//        for(String s :s3 ){
+//            System.out.println(s);
+//        }
+
 
 
 
@@ -1573,8 +1581,249 @@ public class Strings {
 
 
 
+//        String pattern = "abba";
+//        String s = "dog cat cat fish";
+//        System.out.println(wordpattern(pattern,s));
+
+//
+
+//        String s = "anagram";
+//        String t = "nagaram";
+//        System.out.println(Validanagram(s,t));
+
+//        String [] str = {"flower","flow","flight"};
+//        System.out.println(CommonPrefix(str));
+
+//        String s = "abcd";
+//        String t ="abcde";
+//        System.out.println(findTheDifference(s,t));
 
 
+//        String word1="abcdeef";
+//        String word2="abaaacc";
+////        System.out.println(Equivalent(word1,word2));
+//        int n1 = (int) Math.pow(2,0);
+
+//
+//        if(n==0){
+//            return false;
+//        }
+//        while (n!=1){
+//            if (n%2!=0){
+//                return false
+//            }else{
+//                n=n/2;
+//
+//            }
+//        }
+//        return true;
+
+//        String s = "anagram";
+//        String t = "nagaram";
+//
+//        int arr[] = new int[26];
+//
+//
+//        if (s.length() != t.length()){
+//            System.out.println("FAlSE");
+//        }
+//        for (int i = 0; i < s.length() ; i++) {
+//
+//
+//
+//                arr[ s.charAt(i)-'a']++;
+//                arr[t.charAt(i)-'a']--;
+//
+//        }
+//
+//        for (int i = 0; i < t.length(); i++) {
+//            if (arr[i]!=0){
+//                System.out.println("FALSE");
+//            }
+//        }
+//
+//        System.out.println("TRUE");
+//
+
+//        String s = "nl";
+//        String t = "cx";
+//        int arr[] = new int[26];
+//        if (s.length() != t.length()){
+//            System.out.println("F");
+//        }
+//        for (int i = 0; i < s.length() ; i++) {
+//            arr[s.charAt(i)-'a']++;
+//            arr[t.charAt(i)-'a']--;
+//
+//        }
+//
+//        for (int i = 0; i < t.length(); i++) {
+//            if (arr[i]!=0){
+//                System.out.println("F");
+//            }
+//        }
+//
+//        System.out.println("T");
+
+        String s = "nl";
+        String t = "cx";
+        int arr[] = new int[26];
+
+        if (s.length() != t.length()) {
+            System.out.println("F");
+            return; // Exit the program if lengths are not equal
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            arr[s.charAt(i) - 'a']++;
+            arr[t.charAt(i) - 'a']--;
+        }
+
+        for (int i = 0; i < arr.length; i++) { // Iterate over the entire array
+            if (arr[i] != 0) {
+                System.out.println("F");
+                return; // Exit the program if any count is not zero
+            }
+        }
+
+        System.out.println("T");
+
+
+
+
+    }
+
+    static boolean anagram(String s , String t){
+        int code1 = 0;
+        int code2 = 0;
+
+
+        for (int i = 0; i < s.length() && i < t.length(); i++) {
+
+            code1 +=(int)s.charAt(i);
+            code2 +=(int)s.charAt(i);
+
+        }
+
+        if (code1 != code2){
+            return false;
+        }
+        return true;
+    }
+    public static boolean Equivalent(String word1 , String word2){
+
+        int len = word1.length();
+        int[] freq= new int[26];
+
+        for(int i =0 ; i < len ;i++){
+            freq[word1.charAt(i)-'a']++;
+            freq[word2.charAt(i)-'a']--;
+
+        }
+
+        for (int i = 0; i < 26; i++) {
+
+            if (Math.abs(freq[i]) > 3) {
+                return false;
+            }
+
+        }
+        return true;
+    }
+
+
+
+    static char findTheDifference(String s, String t) {
+        int sum1=0;
+
+        for ( int i = 0 ; i < t.length() ; i++){
+            char ch = t.charAt(i);
+            sum1 += (int) ch;
+        }
+        for ( int i = 0 ; i < s.length() ; i++){
+            char ch = s.charAt(i);
+             sum1 -= (int) ch;
+        }
+
+
+
+       return (char)sum1 ;
+    }
+
+
+
+
+    static String CommonPrefix(String[] str){
+        Arrays.sort(str);
+
+        String s1 =str[0];
+        String s2 =str[str.length-1];
+
+        int index = 0;
+        while (index < s1.length()){
+
+            if (s1.charAt(index) == s2.charAt(index)){
+                index++;
+            }else{
+                break;
+            }
+
+
+        }
+        return index == 0 ? "" : s1.substring(0,index) ;
+    }
+
+    static boolean Validanagram (String s , String t){
+        if (s.length() != t.length()){
+            return false;
+        }else{
+
+            int[] count = new int[26];
+
+            for( int i = 0 ; i < t.length() ;i++){
+                count[s.charAt(i)-'a']++;
+                count[t.charAt(i)-'a']--;
+            }
+            for (int i = 0; i <Math.min(count.length,s.length()) ; i++) {
+
+                if (count[i]!=0 ){
+                    return false;
+                }
+
+            }
+            return true;
+        }
+    }
+
+    static boolean wordpattern (String pattern , String s){
+        String [] arr = s.split(" ");
+
+        if (pattern.length() != arr.length){
+            return false;
+        }
+
+        HashMap<Character,String> hm  = new HashMap<Character,String>();
+
+        for (int i = 0; i < pattern.length(); i++) {
+            char ch = pattern.charAt(i);
+            // to check with the pattern string
+
+            boolean containsKey = hm.containsKey(ch);
+
+            if (hm.containsValue(arr[i]) && !containsKey){
+              return false;
+            }
+            if (containsKey && !hm.get(ch).equals(arr[i])){
+                return  false;
+            }
+
+            else{
+                hm.put(ch,arr[i]);
+            }
+
+
+        }
+        return true;
     }
 //  static String reverseVowels(String s){
 //        s=s.toLowerCase();
@@ -1745,7 +1994,7 @@ public class Strings {
 //        }
 //    }
 
-    static boolean isValid(String s) {
+    static boolean isValid(String s, String t) {
 
         int first = 0;
         int second = 0;
