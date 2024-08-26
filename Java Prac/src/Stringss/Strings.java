@@ -1176,7 +1176,7 @@ public class Strings {
 
 //        String str = "Hello";
 //        char [] reverseString = new char[str.length()];
-//        Stack<Character> stack = new Stack<Character>();
+//        StackandQueues.Stack<Character> stack = new StackandQueues.Stack<Character>();
 //
 //        for ( int i = 0; i < str.length() ; i++){
 //            stack.push(str.charAt(i));
@@ -2154,7 +2154,7 @@ public class Strings {
 
 
 //    static int removeSpaces ( char[] arr ){
-//        Stack<Character> str = new Stack<Character>();
+//        StackandQueues.Stack<Character> str = new StackandQueues.Stack<Character>();
 //
 //        for (char ch : arr) {
 //            if (ch != ')' && ch!='(' ){

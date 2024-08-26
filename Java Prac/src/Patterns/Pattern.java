@@ -1,5 +1,6 @@
 package Patterns;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 
@@ -255,9 +256,195 @@ public class Pattern {
 //
 //        for (int i = 0; i < n; i++) {
 //
+//     }
+
+
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//
+//
+//        for (int i = 0; i < n; i++) {
+//
+//            // to print stars
+//            int breal
+//            for (int j = 0; j <(2*n)-(2*i); j++) {
+//                System.out.print("* ");
+//            }
+//            System.out.println();
+//        }
+
+        /*
+        // upper half
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n-i; j++) {
+                System.out.print("*");
+            }
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < n-i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+        }
+
+        //lowerhalf
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int j = 0; j < n-i-1; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < n-i-1; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+
+        }
+
+
+
+         */
+        //upper half
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j <= i; j++) {
+//                System.out.print("*");
+//            }
+//            for (int j = 0; j < n-i-1; j++) {
+//                System.out.print(" ");
+//            }
+//
+//            for (int j = 0; j < n-i-1; j++) {
+//                System.out.print(" ");
+//            }
+//
+//            for (int j = 0; j <= i; j++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//
+//        }
+//        //lower half
+//        for (int i = 0; i < n-1; i++) {
+//            for (int j = 0; j < n-i-1; j++) {
+//                System.out.print("*");
+//            }
+//            for (int j = 0; j <= i; j++) {
+//                System.out.print(" ");
+//            }
+//
+//            for (int j = 0; j <= i; j++) {
+//                System.out.print(" ");
+//            }
+//
+//            for (int j = 0; j < n-i-1; j++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//
+//        }
+
+//        for (int i = 0; i < n; i++) {
+//
+//            for (int j = 0; j < n; j++) {
+//                if (i == 0 || j==0 || i==n-1 || j==n-1)
+//                    System.out.print("*");
+//                else
+//                    System.out.print(" ");
+//            }
+//            System.out.println();
+//
+//        }
+
+//        Pattern s = new Pattern();
+//        System.out.println(s.isArmstrong(153));
+
+
+
+
+//
+//        int n1  = 13;
+//
+//        int count = 0;
+//
+//        int max = 0;
+//
+//
+//        for (int i = 2; i <= n1 ; i++) {
+//             max=0;
+//            for (int j = 2; j <=i ; j++) {
+//                if (i%j==0){
+//                    max++;
+//                }
+//                if (max==2){
+//                    count++;
+//                }
+//            }
+//
+//        }
+//        System.out.println(count);
+
+
+
+        int n1 = 13;
+        int count = 0;
+
+        for (int i = 2; i <= n1; i++) {
+            int max = 0; // Reset max for each i
+            for (int j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    max++;
+                }
+            }
+            if (max == 2) { // Check if i has exactly two divisors
+                count++;
+            }
+        }
+        System.out.println(count);
+
+//        int max = 0;
+
+//
+//        for (int i = 1; i < Math.sqrt(n)  ; i++) {
+//            if (n%i==0){
+//                System.out.println("FALSE");
+//            }
+//        }
+//        System.out.println("TRUE");
+
+    }
+//        public boolean isArmstrong(int n) {
+//            int num = n;
+//            int count = 0;
+//            while ( num > 0 ){
+//                num = num/10;
+//                count++;
+//            }
+//            num = n;
+//            int sum = 1;
+//
+//            while ( num > 0){
+//                int rem = num %10;
+//                sum += Math.pow(rem , count);
+//                num = num /10;
+//            }
+//
+//            return (sum == n) ? true : false;
+//
 //        }
 
 
-    }
 
 }

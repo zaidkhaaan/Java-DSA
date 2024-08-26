@@ -1,5 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Stack;
+import java.util.Vector;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -657,18 +659,175 @@ int length = str.length();
         System.out.println(compression2(str));
 
          */
-        Scanner sc = new Scanner (System.in);
+//        Scanner sc = new Scanner (System.in);
+//
+//        int n = sc.nextInt();
+//        int b1= sc.nextInt();
+//        int b2= sc.nextInt();
 
-        int n = sc.nextInt();
-        int b1= sc.nextInt();
-        int b2= sc.nextInt();
+//        int d = getValue(n,b1,b2);
+//        {
+//            System.out.println(d);
+//        }
 
-        int d = getValue(n,b1,b2);
-        {
-            System.out.println(d);
+
+//        int n = sc.nextInt();
+        int arr[] = {3, 4, 5, 6, 1, 2};
+//        bubblesort(arr);
+//        System.out.println(selectionsort(arr));
+
+
+//        Vector<Character> vector = new Vector<>();
+//
+//
+//
+//        vector.add('a');
+//        vector.add('b');
+//        vector.add('c');
+//
+//        int size = vector.size();
+//
+//        for (int i = 0; i < size; i++) {
+////            char ch = vector.elementAt(i);
+////            System.out.println(ch);
+//            System.out.println(vector.elementAt(i));
+//        }
+
+//        String s ="boolean";
+////        System.out.println(reverse(s));
+//        reverse(s);
+
+//        String input = "GeeksforGeeks";
+//
+//        // getBytes() method to convert string
+//        // into bytes[].
+//        byte[] strAsByteArray = input.getBytes();
+//
+//        byte[] result = new byte[strAsByteArray.length];
+//
+//        // Store result in reverse order into the
+//        // result byte[]
+//        for (int i = 0; i < strAsByteArray.length; i++)
+//            result[i] = strAsByteArray[strAsByteArray.length - i - 1];
+//
+//        System.out.println(new String(result));
+
+
+//        Scanner sc = new Scanner(System.in);
+////        String s = sc.nextLine();
+//        Vector<Character> s = new Vector<>();
+//
+//        Stack<Character> st = new Stack<>();
+//
+//        for (int i = 0; i < s.size(); i++) {
+//            char ch = s.elementAt(i);
+//            st.push(ch);
+//        }
+//
+//
+//        while (!st.empty()) {
+//            char ch = st.peek();
+//            System.out.print(ch);
+//            st.pop();
+//        }
+//
+//        }
+
+        String s = "2031468";
+        int num =-1;
+
+        for (int i = 0; i < s.length(); i++) {
+               int number = Integer.parseInt( s.substring(0,i+1));
+
+               if (number%2!=0){
+                   if (number>num){
+                       num=number;
+                   }
+                   System.out.println(num);
+               }
+               }
+
+        }
+        /*
+        String s = "zaid";
+
+        for (int i = 0; i < s.length(); i++) { // Outer loop
+        for (int j = 0; j <= i; j++) { // Inner loop
+             System.out.print(s.substring(j, i + 1) + " ");
+         }
+          System.out.println(); // Move to the next line after each outer loop iteration
+          }
+
+         */
+
+
+
+
+    static void reverse (String s) {
+        char[] arr = s.toCharArray();
+        int low = 0;
+        int high = s.length() - 1;
+
+
+        for (; low < high; low++, high--) {
+            char chl = arr[low];
+            char chh = arr[high];
+
+            char temp = arr[low];
+            arr[low] = arr[high];
+            arr[high] = temp;
+        }
+            for (char ch :
+                    arr) {
+                System.out.print(ch);
+            }
+
+    }
+
+
+
+
+
+
+
+
+
+    static int[]  selectionsort (int arr[]){
+
+        int min ;
+        int temp = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            min=i;
+
+            for (int j = i+1; j < arr.length ; j++) {
+                if (arr[j] < arr[min]){
+                    min=j;
+                }
+            }
+            temp = arr[i];
+            arr[i]=arr[min];
+            arr[min]=temp;
+        }
+        return arr;
+    }
+
+
+    static void bubblesort (int arr[]){
+
+        for (int i = 0; i < arr.length ; i++) {
+            for (int j = 1 ; j < arr.length-1-i; j++) {
+                if (arr[j-1]>arr[j]){
+                    int temp = arr[j];
+                    arr[j]= arr[j-1];
+                    arr[j-1]= temp;
+                }
+            }
         }
 
-
+        for (int i = 0; i < arr.length-1; i++) {
+            System.out.print(arr[i]+" ");
+        }
     }
 
     public static int getValue(int n , int b1 , int b2){
