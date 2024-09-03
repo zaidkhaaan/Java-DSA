@@ -388,7 +388,7 @@ int result = str1.compareToIgnoreCase(str2); // Returns 0 since "Hello" is equal
 hashCode ()
 Returns a hash code value for the string.
 The hash code is computed based on
-the characters of the string and is used in hash-based data structures like HashMap
+the characters of the string and is used in hash-based data structures like Hashing.HashMap
 
 String str = "Hello";
 int hashCode = str.hashCode();

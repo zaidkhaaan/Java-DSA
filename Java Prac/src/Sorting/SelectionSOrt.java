@@ -65,6 +65,10 @@ public class SelectionSOrt {
         for (int i = 0; i < size - 1; i++) {
 
             /*
+
+            TO find the smllaest element in first ieration
+            to find second smallest element in the second iteration
+
             pointer minindex & pointer i are diffrent
             step 1) assign the minindex -->
             step 2) assign the 2nd(jth) for loop start with i+1 next element
@@ -106,4 +110,7 @@ public class SelectionSOrt {
 
         }
     }
+
+
+
 }
