@@ -4,9 +4,9 @@ public class DSA_Master_class {
 
     public static void main(String[] args) {
 
-//        int n = 10;
-//        int i = 1;
-//        bit(n,i);
+        int n = 11;
+        int i = 1;
+        bit(n,i);
 
 //        int n1 = 10;
 //        String BinaryString = Integer.toBinaryString(n1);
@@ -14,18 +14,21 @@ public class DSA_Master_class {
 
 
 
-        int n1 = 10;
-        int x = 0;
 
-        int arr[] = new int[32];
+//        int n1 = 10;
+//        int x = 0;
+//
+//        int arr[] = new int[32];
+//
+//        while (x<32){
+//            int mask = 1<<x;
+//            x=n1&mask;
+//            arr[31-x]=x;
+//            x++;
+//
+//        }
 
-        while (x<32){
-            int mask = 1<<x;
-            x=n1&mask;
-            arr[31-x]=x;
-            x++;
 
-        }
         /*
         int n1 = 10;
         int arr[] = new int[32];
@@ -43,13 +46,18 @@ public class DSA_Master_class {
 //        }
 
 
-        int count = 0;
-        for (int j = 0; j < arr.length; j++) {
-            if (arr[j] == 1){
-                count++;
-            }
-        }
-        System.out.println(count);
+
+
+//        int count = 0;
+//        for (int j = 0; j < arr.length; j++) {
+//            if (arr[j] == 1){
+//                count++;
+//            }
+//        }
+//        System.out.println(count);
+
+
+
 
 //        int x = 10;
 //        int y = 20;
@@ -69,6 +77,13 @@ public class DSA_Master_class {
 //
 //        }
 
+        // 1st complement
+
+//        int n = 13;
+//        n=~n;
+////        n=n+1;
+//        System.out.println(n);
+
 
 
 
@@ -84,10 +99,10 @@ public class DSA_Master_class {
 
         int mask =  1<<j;
 
-        if ((i&mask)==0){
-            System.out.println("OFF");
-        }else{
+        if ((i&mask)!=0){
             System.out.println("ON");
+        }else{
+            System.out.println("OFF");
         }
 
     }

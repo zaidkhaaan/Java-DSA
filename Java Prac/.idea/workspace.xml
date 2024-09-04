@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5837aa43-f863-4a29-aa3c-f67ff7bc133d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stringss/StringFUN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stringss/StringFUN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stringss/Strings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stringss/Strings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PRAC2.2/src/TEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PRAC2.2/src/TEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CodeBIX/Bitmanipulation/DSA_Master_class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeBIX/Bitmanipulation/DSA_Master_class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/IdeaProjects/CodeBIX/Bitmanipulation/DSA_Master_class.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/IdeaProjects/CodeBIX/Bitmanipulation/DSA_Master_class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/IdeaProjects/CodeBIX/Bitmanipulation/bitM_Assing.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/IdeaProjects/CodeBIX/Bitmanipulation/bitM_Assing.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
