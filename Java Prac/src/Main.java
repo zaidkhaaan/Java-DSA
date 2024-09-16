@@ -733,21 +733,102 @@ int length = str.length();
 //
 //        }
 
-        String s = "2031468";
-        int num =-1;
+//        String s = "2031468";
+//        int num =-1;
+//
+//        for (int i = 0; i < s.length(); i++) {
+//               int number = Integer.parseInt( s.substring(0,i+1));
+//
+//               if (number%2!=0){
+//                   if (number>num){
+//                       num=number;
+//                   }
+//                   System.out.println(num);
+//               }
+//               }
 
-        for (int i = 0; i < s.length(); i++) {
-               int number = Integer.parseInt( s.substring(0,i+1));
 
-               if (number%2!=0){
-                   if (number>num){
-                       num=number;
-                   }
-                   System.out.println(num);
-               }
-               }
+//        int num = 123;
+//
+//        int temp = num;
+//        int rev = 0;
+//
+//
+//        while (temp>0){
+//            int prev = temp%10;
+//             rev = rev*10+prev;
+//            temp= temp/10;
+//
+//        }
+//
 
+//        System.out.println(rev);
+
+//
+
+//        int n1 = 100;
+//        int n2 = 150;
+//
+//        for (int i = n1; i <= n2 ; i++) {
+//            int palidrome = isPalindromeRange(i);
+////            System.out.println(palidrome);
+//            if (i==palidrome){
+//                System.out.println(palidrome);
+//            }
+//        }
+
+//        int n = 10;
+//        int count = 0;
+//        for (int i = 1; i <=n ; i++) {
+//            if (n%i==0){
+//                count++;
+//            }
+//        }
+//
+//        if (count==2){
+//            System.out.println("prime number "+n);
+//        }else{
+//            System.out.println("Not prime");
+//        }
+
+
+//
+        int n = 11;
+        boolean isPrime = true;
+
+        if (n <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
         }
+
+        if (isPrime) {
+            System.out.println(n + " is prime");
+        } else {
+            System.out.println(n + " is not prime");
+        }
+
+
+
+    }
+
+//        static int isPalindromeRange (int n ){
+//
+//        int temp = n;
+//        int rev = 0;
+//
+//        while (temp > 0){
+//            int prev = temp%10;
+//            rev=rev*10+prev;
+//            temp=temp/10;
+//        }
+//        return rev;
+//        }
         /*
         String s = "zaid";
 
